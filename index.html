@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1a2332;
+    --text: #e8e6e3;
+    --text2: #8b949e;
+    --accent: #6c63ff;
+    --accent2: #00b4d8;
+    --accent3: #e63946;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero {
+    max-width: 800px;
+    padding: 80px 24px 40px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero .subtitle {
+    font-size: 1.1em;
+    color: var(--text2);
+    margin-bottom: 32px;
+  }
+  .hero .author {
+    font-size: 1em;
+    color: var(--text2);
+    margin-bottom: 40px;
+  }
+  .abstract {
+    max-width: 800px;
+    padding: 0 24px 40px;
+    text-align: left;
+  }
+  .abstract-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 24px 28px;
+    border-left: 4px solid var(--accent);
+    line-height: 1.7;
+    color: var(--text2);
+    font-size: 0.95em;
+  }
+  .abstract-card strong { color: var(--text); }
+  .cards {
+    max-width: 800px;
+    padding: 0 24px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+  .card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 28px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 1px solid transparent;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    border-color: var(--accent);
+  }
+  .card .icon { font-size: 2em; margin-bottom: 12px; }
+  .card h2 { font-size: 1.2em; margin-bottom: 8px; font-weight: 700; }
+  .card p { color: var(--text2); font-size: 0.9em; line-height: 1.5; }
+  .card .badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+  .badge-purple { background: rgba(108,99,255,0.15); color: var(--accent); }
+  .badge-blue { background: rgba(0,180,216,0.15); color: var(--accent2); }
+  .badge-red { background: rgba(230,57,70,0.15); color: var(--accent3); }
+  .badge-green { background: rgba(0,200,83,0.15); color: #00c853; }
+
+  .stats {
+    max-width: 800px;
+    padding: 0 24px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat .num { font-size: 1.8em; font-weight: 800; color: var(--accent); }
+  .stat .label { font-size: 0.8em; color: var(--text2); margin-top: 4px; }
+
+  .architecture {
+    max-width: 800px;
+    padding: 0 24px 60px;
+    width: 100%;
+  }
+  .arch-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 24px 28px;
+  }
+  .arch-card h3 { margin-bottom: 16px; color: var(--accent2); }
+  .level {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--surface2);
+  }
+  .level:last-child { border-bottom: none; }
+  .level-num {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.9em;
+    flex-shrink: 0;
+  }
+  .level-num.l1 { background: rgba(230,57,70,0.2); color: var(--accent3); }
+  .level-num.l2 { background: rgba(0,180,216,0.2); color: var(--accent2); }
+  .level-num.l3 { background: rgba(108,99,255,0.2); color: var(--accent); }
+  .level-content h4 { font-size: 0.95em; margin-bottom: 4px; }
+  .level-content p { font-size: 0.85em; color: var(--text2); line-height: 1.5; }
+
+  .footer {
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 0.85em;
+    border-top: 1px solid var(--surface2);
+    width: 100%;
+    max-width: 800px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .cards { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8em; }
+    .stats { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Beyond the Bat</h1>
+  <div class="subtitle">Dissolving the Explanatory Gap Through Meaningful Integration</div>
+  <div class="author">Daniel Simon Jr. &middot; Independent Researcher &middot; 2026</div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">11</div><div class="label">Sections (I&ndash;XI)</div></div>
+  <div class="stat"><div class="num">5</div><div class="label">Mathematical Appendixes</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">Falsifiable Predictions</div></div>
+  <div class="stat"><div class="num">15</div><div class="label">Theories Compared</div></div>
+  <div class="stat"><div class="num">9</div><div class="label">Objections Addressed</div></div>
+</div>
+
+<div class="abstract">
+  <div class="abstract-card">
+    <strong>Abstract.</strong> Thomas Nagel's question "What is it like to be a bat?" rests on a flawed assumption: that phenomenal experience consists of "raw qualia." This paper proposes the <strong>Recursive Social Prediction (RSP)</strong> model, a three-level architecture in which phenomenal consciousness arises from the brain's integration of biological core affect with learned conceptual categories through recursive self-modeling. The paper defends a <strong>strong dissolution</strong> of the hard problem: phenomenology IS recursive self-modeling, not a separate property that could be absent from it. The framework is formalized across five mathematical appendixes with proofs of cross-formalism equivalence, generates seven falsifiable predictions, addresses nine philosophical objections, and compares RSP against fifteen competing theories of consciousness.
+  </div>
+</div>
+
+<div class="cards">
+  <a class="card" href="paper.html">
+    <div class="icon">&#128220;</div>
+    <h2>Read the Paper</h2>
+    <p>The full paper with rendered mathematical equations, all 11 sections, and 5 appendixes. Opens in your browser.</p>
+    <span class="badge badge-purple">HTML + KaTeX Math</span>
+  </a>
+
+  <a class="card" href="playground.html">
+    <div class="icon">&#127922;</div>
+    <h2>Interactive Playground</h2>
+    <p>Explore the RSP theory across 20 interactive tabs: architecture diagrams, theory comparisons, clinical evidence, and a live simulation.</p>
+    <span class="badge badge-blue">20 Tabs + Live Simulation</span>
+  </a>
+
+  <a class="card" href="Beyond%20the%20Bat.pdf">
+    <div class="icon">&#128196;</div>
+    <h2>Download PDF</h2>
+    <p>Print-ready PDF with all equations rendered via UpMath. 175 pages including appendixes and index.</p>
+    <span class="badge badge-red">3.2 MB &middot; 175 Pages</span>
+  </a>
+
+  <a class="card" href="algorithm.tex">
+    <div class="icon">&#9881;</div>
+    <h2>Algorithm Source</h2>
+    <p>LaTeX source for Algorithm 1: the RSP consciousness generation loop with subroutines and phylogenetic variation table.</p>
+    <span class="badge badge-green">LaTeX &middot; MIT License</span>
+  </a>
+</div>
+
+<div class="architecture">
+  <div class="arch-card">
+    <h3>The RSP Architecture</h3>
+    <div class="level">
+      <div class="level-num l1">1</div>
+      <div class="level-content">
+        <h4>Core Affect (&tau; &asymp; 100ms)</h4>
+        <p>Interoceptive monitoring produces valence (good/bad) and arousal (calm/activated). Conserved across vertebrates since ~450 Mya.</p>
+      </div>
+    </div>
+    <div class="level">
+      <div class="level-num l2">2</div>
+      <div class="level-content">
+        <h4>Core Schemas (&tau; &asymp; 1&ndash;10s)</h4>
+        <p>Five foundational schemas (body, spatial, affective-homeostatic, attention, self) organize raw affect into structured experience.</p>
+      </div>
+    </div>
+    <div class="level">
+      <div class="level-num l3">3</div>
+      <div class="level-content">
+        <h4>Recursive Social Prediction (&tau; &asymp; 10s&ndash;min)</h4>
+        <p><strong>3a</strong>: Conceptual categorization (culturally learned emotion categories). <strong>3b</strong>: The "strange loop" &mdash; social prediction machinery redirected at the self, constituting phenomenal consciousness.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Daniel Simon Jr. &middot; Independent Researcher</p>
+  <p style="margin-top:8px">
+    Paper: <a href="paper.html">HTML</a> &middot; <a href="Beyond%20the%20Bat.pdf">PDF</a> &middot;
+    <a href="playground.html">Playground</a> &middot;
+    <a href="https://github.com/danielsimonjr/beyond-the-bat">GitHub</a>
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+
+\title{Algorithm: Recursive Social Prediction Model of Consciousness}
+\author{Formalization of the ``Beyond the Bat'' Framework}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present an algorithmic formalization of the Recursive Social Prediction (RSP) theory of consciousness proposed in \emph{Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration}. The theory holds that phenomenal consciousness arises from the brain's recursive application of social prediction machinery to itself---modeling the self as a social entity whose future states require prediction. We formalize the three-level architecture (core affect, core schemas, conceptual categories) and the recursive self-modeling loop that constitutes phenomenology.
+\end{abstract}
+
+\section{Definitions}
+
+Let $\mathcal{S} = \{s_\text{body}, s_\text{self}, s_\text{attn}, s_\text{spatial}, s_\text{affective}\}$ denote the set of \textbf{core schemas}.
+
+Let $\mathbf{a}(t) = \langle v(t), \alpha(t) \rangle$ denote the \textbf{core affect} state at time $t$, where $v \in [-1, 1]$ is valence and $\alpha \in [0, 1]$ is arousal.
+
+Let $\mathcal{C}$ denote the set of available \textbf{conceptual categories} (culturally learned; e.g., ``anger,'' ``amae,'' ``schadenfreude'').
+
+Let $\mathcal{M}(t)$ denote the \textbf{self-model} at time $t$: a predictive representation of the agent's own cognitive-affective state.
+
+Let $\mathcal{O} = \{o_1, \ldots, o_k\}$ denote the set of \textbf{other-models} (theory of mind representations of other agents).
+
+Let $\Phi(t)$ denote the \textbf{phenomenal state} (conscious experience) at time $t$.
+
+\section{Core Algorithm}
+
+\begin{algorithm}[H]
+\caption{Recursive Social Prediction (RSP) --- Consciousness Generation Loop}
+\label{alg:rsp}
+\begin{algorithmic}[1]
+\Require Sensory input $\mathbf{x}(t)$, interoceptive input $\mathbf{i}(t)$, social context $\mathcal{O}$
+\Ensure Phenomenal state $\Phi(t)$, updated self-model $\mathcal{M}(t)$
+
+\Statex \textcolor{gray}{\textit{\% Level 1: Core Affect --- biological substrate}}
+\State $\mathbf{a}(t) \gets \textsc{InteroceptiveMonitor}(\mathbf{i}(t))$ \Comment{valence + arousal}
+
+\Statex
+\Statex \textcolor{gray}{\textit{\% Level 2: Schema Integration --- pre-reflective organization}}
+\For{each schema $s \in \mathcal{S}$}
+    \State $s(t) \gets \textsc{UpdateSchema}(s(t-1),\; \mathbf{x}(t),\; \mathbf{a}(t))$
+\EndFor
+\State $\mathbf{z}(t) \gets \textsc{Integrate}(\mathbf{a}(t),\; \{s(t) : s \in \mathcal{S}\})$ \Comment{structured affect}
+
+\Statex
+\Statex \textcolor{gray}{\textit{\% Level 3a: Conceptual Categorization --- meaning construction}}
+\State $c^* \gets \arg\max_{c \in \mathcal{C}} \; P(c \mid \mathbf{z}(t),\; \text{context})$ \Comment{predictive categorization}
+\State $\mathbf{e}(t) \gets \textsc{MeaningfulIntegration}(\mathbf{z}(t),\; c^*)$ \Comment{constituted experience}
+
+\Statex
+\Statex \textcolor{gray}{\textit{\% Level 3b: Recursive Social Prediction --- phenomenology generation}}
+\State $\mathcal{M}(t) \gets \textsc{UpdateSelfModel}(\mathcal{M}(t-1),\; \mathbf{e}(t))$
+
+\Statex
+\Statex \textcolor{gray}{\textit{\% The recursive loop: predict self as seen by others}}
+\For{$d = 1$ \textbf{to} $D_{\max}$} \Comment{recursion depth}
+    \For{each other-model $o_j \in \mathcal{O}$}
+        \State $\hat{\mathcal{M}}_j \gets \textsc{PredictSelfAsSeenBy}(\mathcal{M}(t),\; o_j)$
+        \Comment{``How does $o_j$ see me?''}
+    \EndFor
+    \State $\hat{\mathcal{M}}^{(d)} \gets \textsc{Aggregate}(\{\hat{\mathcal{M}}_j\})$
+    \State $\mathcal{M}(t) \gets \textsc{RecursiveUpdate}(\mathcal{M}(t),\; \hat{\mathcal{M}}^{(d)})$
+    \Comment{strange loop}
+\EndFor
+
+\Statex
+\Statex \textcolor{gray}{\textit{\% Temporal prediction: model future self-states}}
+\State $\hat{\mathbf{e}}(t+1) \gets \textsc{PredictFutureState}(\mathcal{M}(t),\; \mathbf{e}(t))$
+\State $\epsilon(t) \gets \mathbf{e}(t) - \hat{\mathbf{e}}_{\text{prev}}(t)$ \Comment{prediction error}
+\State $\mathcal{M}(t) \gets \textsc{UpdateOnError}(\mathcal{M}(t),\; \epsilon(t))$
+
+\Statex
+\Statex \textcolor{gray}{\textit{\% Phenomenology: the process experienced from within}}
+\State $\Phi(t) \gets \langle \mathbf{e}(t),\; \mathcal{M}(t),\; \hat{\mathbf{e}}(t+1) \rangle$
+\Comment{consciousness $\equiv$ this integrated state}
+
+\State \Return $\Phi(t),\; \mathcal{M}(t)$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Key Subroutines}
+
+\begin{algorithm}[H]
+\caption{\textsc{MeaningfulIntegration} --- Constituting Experience from Affect + Concepts}
+\label{alg:mi}
+\begin{algorithmic}[1]
+\Require Structured affect $\mathbf{z}$, concept $c^*$
+\Ensure Meaningful experience $\mathbf{e}$
+\State $\mathbf{e}.\text{body} \gets c^*.\text{action\_tendencies} \oplus s_\text{body}$
+    \Comment{e.g., clenched fists for anger}
+\State $\mathbf{e}.\text{self} \gets c^*.\text{self\_narrative} \oplus s_\text{self}$
+    \Comment{e.g., ``I am wronged''}
+\State $\mathbf{e}.\text{attention} \gets c^*.\text{attentional\_bias} \oplus s_\text{attn}$
+    \Comment{e.g., focus on offender}
+\State $\mathbf{e}.\text{spatial} \gets c^*.\text{spatial\_frame} \oplus s_\text{spatial}$
+    \Comment{e.g., ``against me''}
+\State $\mathbf{e}.\text{affect} \gets \mathbf{z}$
+    \Comment{valenced arousal grounding}
+\State \Return $\mathbf{e} = \bigoplus_{s \in \mathcal{S}} \mathbf{e}.s$
+    \Comment{unified phenomenal state}
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{\textsc{PredictSelfAsSeenBy} --- Social-Perspective Recursion}
+\label{alg:social}
+\begin{algorithmic}[1]
+\Require Self-model $\mathcal{M}$, other-model $o_j$
+\Ensure Predicted self-as-seen-by-other $\hat{\mathcal{M}}_j$
+\State $\hat{o}_j.\text{beliefs} \gets \textsc{EstimateBeliefs}(o_j)$
+    \Comment{what does $o_j$ know?}
+\State $\hat{o}_j.\text{goals} \gets \textsc{EstimateGoals}(o_j)$
+    \Comment{what does $o_j$ want?}
+\State $\hat{\mathcal{M}}_j \gets \textsc{Simulate}(\mathcal{M} \mid \hat{o}_j.\text{beliefs},\; \hat{o}_j.\text{goals})$
+    \Comment{run $o_j$'s model of me}
+\State \Return $\hat{\mathcal{M}}_j$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Phylogenetic Variation}
+
+The recursion depth $D_{\max}$ and schema complexity determine consciousness richness:
+
+\begin{center}
+\begin{tabular}{l c c c l}
+\hline
+\textbf{Organism} & \textbf{$|\mathcal{S}|$} & \textbf{$D_{\max}$} & \textbf{$|\mathcal{C}|$} & \textbf{Consciousness Type} \\
+\hline
+Simple organisms & 1--2 & 0 & 0 & Valenced affect only \\
+Mammals & 3--4 & 0--1 & 0 & Structured affect \\
+Social mammals & 4--5 & 1--2 & Low & Self-aware affect \\
+Great apes & 5 & 2--3 & Low--Med & Recursive self-modeling \\
+Humans & 5 & $3+$ & High & Full phenomenal consciousness \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Complexity Analysis}
+
+At each timestep, the RSP loop performs:
+\begin{itemize}
+    \item Schema updates: $O(|\mathcal{S}|)$ --- constant (5 schemas)
+    \item Conceptual categorization: $O(|\mathcal{C}|)$ --- scales with cultural repertoire
+    \item Social recursion: $O(D_{\max} \cdot |\mathcal{O}|)$ --- bounded by cognitive limits
+    \item Temporal prediction: $O(1)$ per step
+\end{itemize}
+
+Total per-step complexity: $O(|\mathcal{C}| + D_{\max} \cdot |\mathcal{O}|)$.
+
+The self-sustaining nature of the loop (each $\Phi(t)$ generates predictions feeding $\Phi(t+1)$) creates the continuous \emph{stream of consciousness} described by William James.
+
+\end{document}
