@@ -1,6 +1,6 @@
 # Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration
 
-**Daniel Simon Jr.** | Independent Researcher | 2026
+**Daniel Simon Jr.** | Independent Researcher | 2026 | [Daniel@danielsimonjr.com](mailto:Daniel@danielsimonjr.com)
 
 ## Overview
 
