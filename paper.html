@@ -214,6 +214,15 @@
 <li>E.8 Summary: The Mathematical Core of Consciousness</li>
 <li>E.9 Algorithmic Specification of the Unified Model</li>
 </ul>
+<p><strong>Appendix F: Equation Reference Sheet</strong></p>
+<ul>
+<li>F.0 Notation Guide</li>
+<li>F.1 Hierarchical Predictive Coding (Appendix A)</li>
+<li>F.2 Free Energy Formulation (Appendix B)</li>
+<li>F.3 Intrinsically Motivated Reinforcement Learning (Appendix C)</li>
+<li>F.4 Cascade Feedback Control (Appendix D)</li>
+<li>F.5 Unified Mathematical Framework (Appendix E)</li>
+</ul>
 <hr>
 <h1>Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration</h1>
 <p><em><strong>by Daniel Simon Jr.</strong></em></p>
@@ -4158,6 +4167,312 @@ g_l \to g_l \circ h_{l+1}^{-1}, \qquad \mathbf{W}_l \to (\mathbf{J}_l^{-1})^T \,
 <li>Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement Learning: An Introduction</em> (2nd ed.). MIT Press. [TD error definition and Bellman optimality]</li>
 <li>Todorov, E. (2008). General duality between optimal control and estimation. <em>47th IEEE Conference on Decision and Control</em>, 4286–4292. [Control-estimation duality]</li>
 </ul>
+<h2>Appendix F — Equation Reference Sheet</h2>
+<p>This appendix collects the defining equations of the RSP framework from Appendixes A through E. Section F.0 provides a notation guide; Sections F.1–F.5 present the core equations organized by formalism. For derivations, proofs, and full context, see the corresponding appendix.</p>
+<hr>
+<h3>F.0 Notation Guide</h3>
+<h4>State Variables</h4>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Domain</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbf%7Bi%7D(t)" alt="\mathbf{i}(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_i%7D" alt="\mathbb{R}^{n_i}" /></td>
+<td>Interoceptive sensory input (Level 1 observations)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbf%7Ba%7D(t)" alt="\mathbf{a}(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E2" alt="\mathbb{R}^2" /></td>
+<td>Core affect: valence and arousal</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbf%7Bs%7D_k(t)" alt="\mathbf{s}_k(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_k%7D" alt="\mathbb{R}^{n_k}" /></td>
+<td>Core schema <img src="https://i.upmath.me/svg/k" alt="k" />: body (<img src="https://i.upmath.me/svg/k%7B%3D%7D1" alt="k{=}1" />), spatial (<img src="https://i.upmath.me/svg/k%7B%3D%7D2" alt="k{=}2" />), attentional (<img src="https://i.upmath.me/svg/k%7B%3D%7D3" alt="k{=}3" />), affective-homeostatic (<img src="https://i.upmath.me/svg/k%7B%3D%7D4" alt="k{=}4" />), self (<img src="https://i.upmath.me/svg/k%7B%3D%7D5" alt="k{=}5" />)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbf%7Bz%7D(t)" alt="\mathbf{z}(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_z%7D" alt="\mathbb{R}^{n_z}" /></td>
+<td>Integrated Level 2 representation (all schemas + core affect)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cmu%7D_l(t)" alt="\boldsymbol{\mu}_l(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%7D" alt="\mathbb{R}^{n_l}" /></td>
+<td>Expectations (sufficient statistics) at level <img src="https://i.upmath.me/svg/l" alt="l" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BM%7D%5E%7B(d)%7D(t)" alt="\mathcal{M}^{(d)}(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_m%7D" alt="\mathbb{R}^{n_m}" /></td>
+<td>Recursive self-model at depth <img src="https://i.upmath.me/svg/d" alt="d" /> (Level 3b)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Chat%7B%5Cmathcal%7BM%7D%7D%5E%7B(d)%7D(t)" alt="\hat{\mathcal{M}}^{(d)}(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_m%7D" alt="\mathbb{R}^{n_m}" /></td>
+<td>Socially-reflected self-model estimate at depth <img src="https://i.upmath.me/svg/d" alt="d" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5CPhi(t)" alt="\Phi(t)" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_e%7D%20%5Ctimes%20%5Cmathbb%7BR%7D%5E%7Bn_m%7D%20%5Ctimes%20%5Cmathbb%7BR%7D%5E%7Bn_e%7D" alt="\mathbb{R}^{n_e} \times \mathbb{R}^{n_m} \times \mathbb{R}^{n_e}" /></td>
+<td>Phenomenal state: experience, self-model, predicted experience</td>
+</tr>
+</tbody>
+</table>
+<h4>Precision and Error</h4>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Domain</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cvarepsilon%7D_l" alt="\boldsymbol{\varepsilon}_l" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%7D" alt="\mathbb{R}^{n_l}" /></td>
+<td>Prediction error at level <img src="https://i.upmath.me/svg/l" alt="l" />: <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cvarepsilon%7D_l%20%3D%20%5Cmathbf%7By%7D_l%20-%20g_l(%5Cboldsymbol%7B%5Cmu%7D_%7Bl%2B1%7D)" alt="\boldsymbol{\varepsilon}_l = \mathbf{y}_l - g_l(\boldsymbol{\mu}_{l+1})" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cxi%7D_l" alt="\boldsymbol{\xi}_l" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%7D" alt="\mathbb{R}^{n_l}" /></td>
+<td>Precision-weighted prediction error: <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cxi%7D_l%20%3D%20%5Cboldsymbol%7B%5CPi%7D_l%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l" alt="\boldsymbol{\xi}_l = \boldsymbol{\Pi}_l \boldsymbol{\varepsilon}_l" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l" alt="\boldsymbol{\Pi}_l" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%20%5Ctimes%20n_l%7D" alt="\mathbb{R}^{n_l \times n_l}" /></td>
+<td>Precision matrix at level <img src="https://i.upmath.me/svg/l" alt="l" /> (inverse covariance)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CSigma%7D_l" alt="\boldsymbol{\Sigma}_l" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%20%5Ctimes%20n_l%7D" alt="\mathbb{R}^{n_l \times n_l}" /></td>
+<td>Covariance matrix at level <img src="https://i.upmath.me/svg/l" alt="l" />: <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CSigma%7D_l%20%3D%20%5Cboldsymbol%7B%5CPi%7D_l%5E%7B-1%7D" alt="\boldsymbol{\Sigma}_l = \boldsymbol{\Pi}_l^{-1}" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbf%7BW%7D_l" alt="\mathbf{W}_l" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%20%5Ctimes%20n_l%7D" alt="\mathbb{R}^{n_l \times n_l}" /></td>
+<td>Weight/precision matrix in unified notation (<img src="https://i.upmath.me/svg/%5Cequiv%20%5Cboldsymbol%7B%5CPi%7D_l" alt="\equiv \boldsymbol{\Pi}_l" />)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Ceta%7D_l" alt="\boldsymbol{\eta}_l" /></td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathbb%7BR%7D%5E%7Bn_l%7D" alt="\mathbb{R}^{n_l}" /></td>
+<td>Temporal prediction error: <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Ceta%7D_l%20%3D%20%5Cdot%7B%5Cboldsymbol%7B%5Cmu%7D%7D_l%20-%20D%5Cboldsymbol%7B%5Cmu%7D_l" alt="\boldsymbol{\eta}_l = \dot{\boldsymbol{\mu}}_l - D\boldsymbol{\mu}_l" /></td>
+</tr>
+</tbody>
+</table>
+<h4>Functions and Operators</h4>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/g_l(%5Ccdot)" alt="g_l(\cdot)" /></td>
+<td>Generative function: maps level <img src="https://i.upmath.me/svg/l%7B%2B%7D1" alt="l{+}1" /> expectations to level <img src="https://i.upmath.me/svg/l" alt="l" /> predictions</td>
+</tr>
+<tr>
+<td><img src="https://i.upmath.me/svg/F" alt="F" />, <img src="https://i.upmath.me/svg/F_l" alt="F_l" /></td>
+<td>(Total, level-specific) variational free energy</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/F_3%5E%7B%5Ctext%7Brec%7D%7D" alt="F_3^{\text{rec}}" /></td>
+<td>Strange loop free energy contribution (recursion depth penalty)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D%5B%5Cmathbf%7Bx%7D%2C%20%5Cmathbf%7BW%7D%2C%20%5Cmathbf%7Bu%7D%5D" alt="\mathcal{J}[\mathbf{x}, \mathbf{W}, \mathbf{u}]" /></td>
+<td>Master variational functional (Appendix E)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/G(%5Cpi)" alt="G(\pi)" /></td>
+<td>Expected free energy for policy <img src="https://i.upmath.me/svg/%5Cpi" alt="\pi" /> (action selection)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/V(%5Cmathbf%7Bz%7D)" alt="V(\mathbf{z})" /></td>
+<td>Value function over integrated state (RL formulation)</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/v(t)" alt="v(t)" /></td>
+<td>Core affect valence (scalar): positive = prediction error decreasing</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/r(t)" alt="r(t)" /></td>
+<td>Intrinsic reward signal: <img src="https://i.upmath.me/svg/r(t)%20%3D%20v(t)" alt="r(t) = v(t)" /> (valence as reward)</td>
+</tr>
+</tbody>
+</table>
+<h4>Parameters and Constants</h4>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Ckappa_l" alt="\kappa_l" /></td>
+<td>Learning rate / step size at level <img src="https://i.upmath.me/svg/l" alt="l" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Ceta_l" alt="\eta_l" /></td>
+<td>Precision learning rate at level <img src="https://i.upmath.me/svg/l" alt="l" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cbeta_d" alt="\beta_d" /></td>
+<td>Mixing weight for social reflection at recursion depth <img src="https://i.upmath.me/svg/d" alt="d" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cgamma" alt="\gamma" /></td>
+<td>Geometric discount for recursion depth penalties</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cgamma_%7B%5Ctext%7BRL%7D%7D" alt="\gamma_{\text{RL}}" /></td>
+<td>Temporal discount factor for reinforcement learning</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Ctau_l" alt="\tau_l" /></td>
+<td>Characteristic timescale at level <img src="https://i.upmath.me/svg/l" alt="l" />: <img src="https://i.upmath.me/svg/%5Ctau_1%20%5Capprox%20100" alt="\tau_1 \approx 100" /> ms, <img src="https://i.upmath.me/svg/%5Ctau_2%20%5Capprox%201%5Ctext%7B--%7D10" alt="\tau_2 \approx 1\text{--}10" /> s, <img src="https://i.upmath.me/svg/%5Ctau_3%20%5Capprox%2010" alt="\tau_3 \approx 10" /> s–min</td>
+</tr>
+<tr>
+<td><img src="https://i.upmath.me/svg/K_l" alt="K_l" />, <img src="https://i.upmath.me/svg/K_l%5EI" alt="K_l^I" />, <img src="https://i.upmath.me/svg/K_l%5ED" alt="K_l^D" /></td>
+<td>Proportional, integral, derivative control gains at level <img src="https://i.upmath.me/svg/l" alt="l" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Crho" alt="\rho" /></td>
+<td>Contraction coefficient for strange loop: <img src="https://i.upmath.me/svg/%5Crho%20%3D%20(1-%5Cbeta)%20%2B%20%5Cbeta%20L%20%3C%201" alt="\rho = (1-\beta) + \beta L &lt; 1" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/L" alt="L" /></td>
+<td>Lipschitz constant of social prediction: <img src="https://i.upmath.me/svg/L%20%3D%20%7C%5Cpartial%20%5Chat%7B%5Cmathcal%7BM%7D%7D_j%20%2F%20%5Cpartial%20%5Cmathcal%7BM%7D%7C" alt="L = |\partial \hat{\mathcal{M}}_j / \partial \mathcal{M}|" /></td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/D_%7B%5Cmax%7D" alt="D_{\max}" /></td>
+<td>Maximum recursion depth for the strange loop</td>
+</tr>
+<tr>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BS%7D" alt="\mathcal{S}" /></td>
+<td>Set of five core schemas: <img src="https://i.upmath.me/svg/%5C%7B1%2C%202%2C%203%2C%204%2C%205%5C%7D" alt="\{1, 2, 3, 4, 5\}" /></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>F.1 Hierarchical Predictive Coding (Appendix A)</h3>
+<p><strong>F.1.1 Three-Level Generative Model</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Ctext%7BLevel%201%3A%7D%20%5Cquad%20%5Cmathbf%7Bi%7D(t)%20%3D%20g_1(%5Cboldsymbol%7B%5Cmu%7D_2(t))%20%2B%20%5Cboldsymbol%7B%5CPi%7D_1%5E%7B-1%2F2%7D%20%5Cboldsymbol%7B%5Comega%7D_1%20%5Cquad%20%5Ctext%7BLevel%202%3A%7D%20%5Cquad%20%5Cboldsymbol%7B%5Cmu%7D_1(t)%20%3D%20g_2(%5Cboldsymbol%7B%5Cmu%7D_3(t))%20%2B%20%5Cboldsymbol%7B%5CPi%7D_2%5E%7B-1%2F2%7D%20%5Cboldsymbol%7B%5Comega%7D_2%20%5Cquad%20%5Ctext%7BLevel%203%3A%7D%20%5Cquad%20%5Cboldsymbol%7B%5Cmu%7D_2(t)%20%3D%20g_3(%5Cboldsymbol%7B%5Cmu%7D_3%5E%7B%5Ctext%7Brec%7D%7D(t))%20%2B%20%5Cboldsymbol%7B%5CPi%7D_3%5E%7B-1%2F2%7D%20%5Cboldsymbol%7B%5Comega%7D_3%0A" alt="
+\text{Level 1:} \quad \mathbf{i}(t) = g_1(\boldsymbol{\mu}_2(t)) + \boldsymbol{\Pi}_1^{-1/2} \boldsymbol{\omega}_1 \quad \text{Level 2:} \quad \boldsymbol{\mu}_1(t) = g_2(\boldsymbol{\mu}_3(t)) + \boldsymbol{\Pi}_2^{-1/2} \boldsymbol{\omega}_2 \quad \text{Level 3:} \quad \boldsymbol{\mu}_2(t) = g_3(\boldsymbol{\mu}_3^{\text{rec}}(t)) + \boldsymbol{\Pi}_3^{-1/2} \boldsymbol{\omega}_3
+" /></p>
+<p>Each level generates predictions for the level below, with additive Gaussian noise scaled by inverse precision.</p>
+<p><strong>F.1.2 Schema Integration</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cmathbf%7Bz%7D(t)%20%3D%20%5Ctext%7BIntegrate%7D%5Cbig(%5Cmathbf%7Ba%7D(t)%2C%20%5C%3B%20%5C%7B%5Cmathbf%7Bs%7D_k(t)%5C%7D_%7Bk%20%5Cin%20%5Cmathcal%7BS%7D%7D%5Cbig)%20%3D%20%5Csigma%5Cleft(%5Cmathbf%7BW%7D_%7B%5Ctext%7Bint%7D%7D%20%5Ccdot%20%5Ctext%7Bconcat%7D(%5Cmathbf%7Ba%7D(t)%2C%20%5Cmathbf%7Bs%7D_1(t)%2C%20%5Cldots%2C%20%5Cmathbf%7Bs%7D_5(t))%20%2B%20%5Cmathbf%7Bb%7D_%7B%5Ctext%7Bint%7D%7D%5Cright)%0A" alt="
+\mathbf{z}(t) = \text{Integrate}\big(\mathbf{a}(t), \; \{\mathbf{s}_k(t)\}_{k \in \mathcal{S}}\big) = \sigma\left(\mathbf{W}_{\text{int}} \cdot \text{concat}(\mathbf{a}(t), \mathbf{s}_1(t), \ldots, \mathbf{s}_5(t)) + \mathbf{b}_{\text{int}}\right)
+" /></p>
+<p>Core affect <img src="https://i.upmath.me/svg/%5Cmathbf%7Ba%7D(t)" alt="\mathbf{a}(t)" /> and five schemas (body, spatial, attentional, affective-homeostatic, self) integrate into a unified structured representation.</p>
+<p><strong>F.1.3 Strange Loop Recursive Update</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cmathcal%7BM%7D%5E%7B(d)%7D(t)%20%3D%20(1%20-%20%5Cbeta_d)%20%5Ccdot%20%5Cmathcal%7BM%7D%5E%7B(d-1)%7D(t)%20%2B%20%5Cbeta_d%20%5Ccdot%20%5Chat%7B%5Cmathcal%7BM%7D%7D%5E%7B(d)%7D(t)%0A" alt="
+\mathcal{M}^{(d)}(t) = (1 - \beta_d) \cdot \mathcal{M}^{(d-1)}(t) + \beta_d \cdot \hat{\mathcal{M}}^{(d)}(t)
+" /></p>
+<p>At each recursion depth <img src="https://i.upmath.me/svg/d" alt="d" />, the self-model mixes a direct estimate with a socially-reflected estimate weighted by <img src="https://i.upmath.me/svg/%5Cbeta_d" alt="\beta_d" />.</p>
+<p><strong>F.1.4 Phenomenal State</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5CPhi(t)%20%3D%20%5Cbig%5Clangle%20%5Cmathbf%7Be%7D(t)%2C%20%5C%3B%20%5Cmathcal%7BM%7D%5E%7B(D_%7B%5Cmax%7D)%7D(t)%2C%20%5C%3B%20%5Chat%7B%5Cmathbf%7Be%7D%7D(t%2B1)%20%5Cbig%5Crangle%0A" alt="
+\Phi(t) = \big\langle \mathbf{e}(t), \; \mathcal{M}^{(D_{\max})}(t), \; \hat{\mathbf{e}}(t+1) \big\rangle
+" /></p>
+<p>Consciousness as an integrated tuple: constituted experience, converged recursive self-model, and predicted future experience.</p>
+<p><strong>F.1.5 Precision-Weighted Message Passing</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cdot%7B%5Cboldsymbol%7B%5Cmu%7D%7D_l%20%3D%20D%5Cboldsymbol%7B%5Cmu%7D_l%20-%20%5Ckappa_l%20%5Ccdot%20%5Cfrac%7B%5Cpartial%20F%7D%7B%5Cpartial%20%5Cboldsymbol%7B%5Cmu%7D_l%7D%20%3D%20%5Ckappa_l%20%5Cleft%5B%20-%5Cfrac%7B%5Cpartial%20g_%7Bl-1%7D%5ET%7D%7B%5Cpartial%20%5Cboldsymbol%7B%5Cmu%7D_l%7D%20%5Cboldsymbol%7B%5Cxi%7D_%7Bl-1%7D%20%2B%20%5Cboldsymbol%7B%5Cxi%7D_%7Bl%2B1%7D%20-%20%5Cboldsymbol%7B%5CSigma%7D_l%5E%7B-1%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%20%5Cright%5D%0A" alt="
+\dot{\boldsymbol{\mu}}_l = D\boldsymbol{\mu}_l - \kappa_l \cdot \frac{\partial F}{\partial \boldsymbol{\mu}_l} = \kappa_l \left[ -\frac{\partial g_{l-1}^T}{\partial \boldsymbol{\mu}_l} \boldsymbol{\xi}_{l-1} + \boldsymbol{\xi}_{l+1} - \boldsymbol{\Sigma}_l^{-1} \boldsymbol{\eta}_l \right]
+" /></p>
+<p>The master expectation update: bottom-up prediction errors, top-down predictions, and temporal consistency.</p>
+<hr>
+<h3>F.2 Free Energy Formulation (Appendix B)</h3>
+<p><strong>F.2.1 Total Variational Free Energy</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0AF%20%3D%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cleft%5B%5Cfrac%7B1%7D%7B2%7D%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%5ET%20%5Cboldsymbol%7B%5CPi%7D_l%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%20-%20%5Cfrac%7B1%7D%7B2%7D%20%5Cln%20%7C%5Cboldsymbol%7B%5CPi%7D_l%7C%5Cright%5D%20%2B%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%5ET%20%5Cboldsymbol%7B%5CSigma%7D_l%5E%7B-1%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%0A" alt="
+F = \sum_{l=1}^{3} \left[\frac{1}{2} \boldsymbol{\varepsilon}_l^T \boldsymbol{\Pi}_l \boldsymbol{\varepsilon}_l - \frac{1}{2} \ln |\boldsymbol{\Pi}_l|\right] + \sum_{l=1}^{3} \frac{1}{2} \boldsymbol{\eta}_l^T \boldsymbol{\Sigma}_l^{-1} \boldsymbol{\eta}_l
+" /></p>
+<p>Sum of level-specific accuracy terms (precision-weighted prediction errors), complexity terms (log-precision), and temporal smoothness terms.</p>
+<p><strong>F.2.2 Recursive Self-Model Free Energy</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0AF_3%5E%7B%5Ctext%7Brec%7D%7D%20%3D%20%5Csum_%7Bd%3D1%7D%5E%7BD_%7B%5Cmax%7D%7D%20%5Cgamma%5Ed%20%5Ccdot%20%5Cfrac%7B1%7D%7B2%7D%20%5Cbig%5C%7C%5Cmathcal%7BM%7D%5E%7B(d)%7D(t)%20-%20%5Cmathcal%7BM%7D%5E%7B(d-1)%7D(t)%5Cbig%5C%7C_%7B%5Cboldsymbol%7B%5CPi%7D_3%5E%7B(d)%7D%7D%5E2%0A" alt="
+F_3^{\text{rec}} = \sum_{d=1}^{D_{\max}} \gamma^d \cdot \frac{1}{2} \big\|\mathcal{M}^{(d)}(t) - \mathcal{M}^{(d-1)}(t)\big\|_{\boldsymbol{\Pi}_3^{(d)}}^2
+" /></p>
+<p>The strange loop’s contribution to free energy: discrepancy between recursion depths penalized with geometric decay <img src="https://i.upmath.me/svg/%5Cgamma%5Ed" alt="\gamma^d" />.</p>
+<p><strong>F.2.3 Valence as Free Energy Gradient</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0Av(t)%20%5Capprox%20-%5Ctext%7Bsign%7D%5Cleft(%5Cfrac%7B%5Cpartial%20F_1%7D%7B%5Cpartial%20%5Cboldsymbol%7B%5Cmu%7D_2%7D%5Cright)%20%5Ccdot%20%5Cleft%5C%7C%5Cfrac%7B%5Cpartial%20F_1%7D%7B%5Cpartial%20%5Cboldsymbol%7B%5Cmu%7D_2%7D%5Cright%5C%7C%0A" alt="
+v(t) \approx -\text{sign}\left(\frac{\partial F_1}{\partial \boldsymbol{\mu}_2}\right) \cdot \left\|\frac{\partial F_1}{\partial \boldsymbol{\mu}_2}\right\|
+" /></p>
+<p>Core affect valence tracks the direction and magnitude of interoceptive surprise — negative valence signals rising prediction error.</p>
+<hr>
+<h3>F.3 Intrinsically Motivated Reinforcement Learning (Appendix C)</h3>
+<p><strong>F.3.1 Reward as Interoceptive Prediction Error</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0Ar(t)%20%3D%20v(t)%20%3D%20%5Cphi_v%5Cbig(%5Cboldsymbol%7B%5Cxi%7D_1(t)%5Cbig)%0A" alt="
+r(t) = v(t) = \phi_v\big(\boldsymbol{\xi}_1(t)\big)
+" /></p>
+<p>Valence functions as the intrinsic reward signal: no external reward is needed because interoceptive prediction errors are inherently motivating.</p>
+<p><strong>F.3.2 Action Selection via Expected Free Energy</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cmathbf%7Bu%7D%5E*(t)%20%3D%20%5Carg%5Cmin_%7B%5Cmathbf%7Bu%7D_%7B%5Ctext%7Bcand%7D%7D%7D%20G(%5Cmathbf%7Bu%7D_%7B%5Ctext%7Bcand%7D%7D)%20%3D%20%5Carg%5Cmin_%7B%5Cmathbf%7Bu%7D_%7B%5Ctext%7Bcand%7D%7D%7D%20%5Cleft%5B%5Chat%7BF%7D_1%20%2B%20%5Chat%7BF%7D_2%20%2B%20%5Chat%7BF%7D_3%20%2B%20%5Chat%7BF%7D_3%5E%7B%5Ctext%7Brec%7D%7D%5Cright%5D%0A" alt="
+\mathbf{u}^*(t) = \arg\min_{\mathbf{u}_{\text{cand}}} G(\mathbf{u}_{\text{cand}}) = \arg\min_{\mathbf{u}_{\text{cand}}} \left[\hat{F}_1 + \hat{F}_2 + \hat{F}_3 + \hat{F}_3^{\text{rec}}\right]
+" /></p>
+<p>Optimal action minimizes expected free energy across all three levels plus the recursive self-model term.</p>
+<p><strong>F.3.3 Social Reward Shaping</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0Ar_%7B%5Ctext%7Bsocial%7D%7D(t)%20%3D%20-%5Csum_%7Bd%3D1%7D%5E%7BD_%7B%5Cmax%7D%7D%20%5Cgamma%5Ed%20%5Ccdot%20%5Cfrac%7B1%7D%7B2%7D%5Cbig%5C%7C%5Cmathcal%7BM%7D%5E%7B(d)%7D(t)%20-%20%5Cmathcal%7BM%7D%5E%7B(d-1)%7D(t)%5Cbig%5C%7C_%7B%5Cboldsymbol%7B%5CPi%7D_3%5E%7B(d)%7D%7D%5E2%0A" alt="
+r_{\text{social}}(t) = -\sum_{d=1}^{D_{\max}} \gamma^d \cdot \frac{1}{2}\big\|\mathcal{M}^{(d)}(t) - \mathcal{M}^{(d-1)}(t)\big\|_{\boldsymbol{\Pi}_3^{(d)}}^2
+" /></p>
+<p>Self-model consistency across recursion depths acts as intrinsic social reward — coherent self-understanding is rewarding.</p>
+<hr>
+<h3>F.4 Cascade Feedback Control (Appendix D)</h3>
+<p><strong>F.4.1 PID Homeostatic Control (Level 1)</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cmathbf%7Bu%7D(t)%20%3D%20K_1%20%5Ccdot%20%5Cmathbf%7Be%7D_1%5E%7B%5Ctext%7Bctrl%7D%7D(t)%20%2B%20K_1%5EI%20%5Cint_0%5Et%20%5Cmathbf%7Be%7D_1%5E%7B%5Ctext%7Bctrl%7D%7D(%5Ctau)%20%5C%2C%20d%5Ctau%20%2B%20K_1%5ED%20%5Ccdot%20%5Cdot%7B%5Cmathbf%7Be%7D%7D_1%5E%7B%5Ctext%7Bctrl%7D%7D(t)%0A" alt="
+\mathbf{u}(t) = K_1 \cdot \mathbf{e}_1^{\text{ctrl}}(t) + K_1^I \int_0^t \mathbf{e}_1^{\text{ctrl}}(\tau) \, d\tau + K_1^D \cdot \dot{\mathbf{e}}_1^{\text{ctrl}}(t)
+" /></p>
+<p>The inner loop implements proportional-integral-derivative control on body state deviations.</p>
+<p><strong>F.4.2 Adaptive Schema Control (Level 2)</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cdot%7B%5Cboldsymbol%7B%5Cmu%7D%7D_2(t)%20%3D%20K_2(t)%20%5Ccdot%20%5Cmathbf%7Be%7D_2%5E%7B%5Ctext%7Bctrl%7D%7D(t)%20%2B%20K_2%5ED%20%5Ccdot%20%5Cdot%7B%5Cmathbf%7Be%7D%7D_2%5E%7B%5Ctext%7Bctrl%7D%7D(t)%2C%20%5Cquad%20K_2(t)%20%3D%20%5Cboldsymbol%7B%5CPi%7D_2(t)%0A" alt="
+\dot{\boldsymbol{\mu}}_2(t) = K_2(t) \cdot \mathbf{e}_2^{\text{ctrl}}(t) + K_2^D \cdot \dot{\mathbf{e}}_2^{\text{ctrl}}(t), \quad K_2(t) = \boldsymbol{\Pi}_2(t)
+" /></p>
+<p>The middle loop uses precision-based gain scheduling: higher confidence (precision) in schema predictions yields faster corrections.</p>
+<p><strong>F.4.3 Contraction Mapping Convergence</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Crho%20%3D%20(1%20-%20%5Cbeta)%20%2B%20%5Cbeta%20%5Ccdot%20L%2C%20%5Cquad%20%5Ctext%7Bwhere%20%7D%20L%20%3D%20%5Cleft%5C%7C%5Cfrac%7B%5Cpartial%20%5Chat%7B%5Cmathcal%7BM%7D%7D_j%7D%7B%5Cpartial%20%5Cmathcal%7BM%7D%7D%5Cright%5C%7C%0A" alt="
+\rho = (1 - \beta) + \beta \cdot L, \quad \text{where } L = \left\|\frac{\partial \hat{\mathcal{M}}_j}{\partial \mathcal{M}}\right\|
+" /></p>
+<p>The strange loop converges when <img src="https://i.upmath.me/svg/%5Crho%20%3C%201" alt="\rho &lt; 1" />, guaranteed when the social prediction Jacobian norm <img src="https://i.upmath.me/svg/L%20%3C%201" alt="L &lt; 1" />.</p>
+<p><strong>F.4.4 Cascade Stability Condition</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Ctau_1%20%5Cll%20%5Ctau_2%20%5Cll%20%5Ctau_3%2C%20%5Cquad%20%5Ctext%7Bwith%20%7D%20%5Cfrac%7B%5Ctau_%7Bl%2B1%7D%7D%7B%5Ctau_l%7D%20%5Cgeq%205%0A" alt="
+\tau_1 \ll \tau_2 \ll \tau_3, \quad \text{with } \frac{\tau_{l+1}}{\tau_l} \geq 5
+" /></p>
+<p>Timescale separation required for stable cascade control: <img src="https://i.upmath.me/svg/%5Ctau_1%20%5Capprox%20100" alt="\tau_1 \approx 100" /> ms, <img src="https://i.upmath.me/svg/%5Ctau_2%20%5Capprox%201%5Ctext%7B--%7D10" alt="\tau_2 \approx 1\text{--}10" /> s, <img src="https://i.upmath.me/svg/%5Ctau_3%20%5Capprox%2010" alt="\tau_3 \approx 10" /> s to minutes.</p>
+<hr>
+<h3>F.5 Unified Mathematical Framework (Appendix E)</h3>
+<p><strong>F.5.1 Master Variational Functional</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cmathcal%7BJ%7D%5B%5Cmathbf%7Bx%7D%2C%20%5Cmathbf%7BW%7D%2C%20%5Cmathbf%7Bu%7D%5D%20%3D%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathbf%7Be%7D_l%5ET%20%5Cmathbf%7BW%7D_l%20%5C%2C%20%5Cmathbf%7Be%7D_l%20%2B%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%5ET%20%5Cmathbf%7BS%7D_l%5E%7B-1%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%20-%20%5Cfrac%7B1%7D%7B2%7D%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cln%7C%5Cmathbf%7BW%7D_l%7C%20%2B%20%5Csum_%7Bd%3D1%7D%5E%7BD_%7B%5Cmax%7D%7D%20%5Cgamma%5Ed%20%5Cfrac%7B1%7D%7B2%7D%20%5C%7C%5Cmathcal%7BM%7D%5E%7B(d)%7D%20-%20%5Cmathcal%7BM%7D%5E%7B(d-1)%7D%5C%7C_%7B%5Cmathbf%7BW%7D_3%5E%7B(d)%7D%7D%5E2%0A" alt="
+\mathcal{J}[\mathbf{x}, \mathbf{W}, \mathbf{u}] = \sum_{l=1}^{3} \frac{1}{2} \mathbf{e}_l^T \mathbf{W}_l \, \mathbf{e}_l + \sum_{l=1}^{3} \frac{1}{2} \boldsymbol{\eta}_l^T \mathbf{S}_l^{-1} \boldsymbol{\eta}_l - \frac{1}{2} \sum_{l=1}^{3} \ln|\mathbf{W}_l| + \sum_{d=1}^{D_{\max}} \gamma^d \frac{1}{2} \|\mathcal{M}^{(d)} - \mathcal{M}^{(d-1)}\|_{\mathbf{W}_3^{(d)}}^2
+" /></p>
+<p>The single unified objective function from which all four formalisms derive as projections.</p>
+<p><strong>F.5.2 Master Dynamics Equation</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cdot%7B%5Cmathbf%7Bx%7D%7D_l%20%3D%20-%5Ckappa_l%20%5Cfrac%7B%5Cpartial%20%5Cmathcal%7BJ%7D%7D%7B%5Cpartial%20%5Cmathbf%7Bx%7D_l%7D%20%3D%20%5Ckappa_l%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20g_%7Bl-1%7D%5ET%7D%7B%5Cpartial%20%5Cmathbf%7Bx%7D_l%7D%20%5Cmathbf%7BW%7D_%7Bl-1%7D%20%5C%2C%20%5Cmathbf%7Be%7D_%7Bl-1%7D%20-%20%5Cmathbf%7BW%7D_%7Bl%2B1%7D%20%5Cmathbf%7Be%7D_%7Bl%2B1%7D%20-%20%5Cmathbf%7BS%7D_l%5E%7B-1%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%20%5Cright%5D%0A" alt="
+\dot{\mathbf{x}}_l = -\kappa_l \frac{\partial \mathcal{J}}{\partial \mathbf{x}_l} = \kappa_l \left[ \frac{\partial g_{l-1}^T}{\partial \mathbf{x}_l} \mathbf{W}_{l-1} \, \mathbf{e}_{l-1} - \mathbf{W}_{l+1} \mathbf{e}_{l+1} - \mathbf{S}_l^{-1} \boldsymbol{\eta}_l \right]
+" /></p>
+<p>A single equation that simultaneously implements message passing (A), free energy gradient descent (B), value maximization ©, and control error correction (D).</p>
+<p><strong>F.5.3 Precision Update (Attention)</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cdot%7B%5Cmathbf%7BW%7D%7D_l%20%3D%20-%5Ceta_l%20%5Cfrac%7B%5Cpartial%20%5Cmathcal%7BJ%7D%7D%7B%5Cpartial%20%5Cmathbf%7BW%7D_l%7D%20%3D%20%5Ceta_l%20%5Cleft(%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathbf%7BW%7D_l%5E%7B-1%7D%20-%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathbf%7Be%7D_l%20%5Cmathbf%7Be%7D_l%5ET%20%5Cright)%0A" alt="
+\dot{\mathbf{W}}_l = -\eta_l \frac{\partial \mathcal{J}}{\partial \mathbf{W}_l} = \eta_l \left( \frac{1}{2} \mathbf{W}_l^{-1} - \frac{1}{2} \mathbf{e}_l \mathbf{e}_l^T \right)
+" /></p>
+<p>Attention allocation as self-tuning precision: at equilibrium, optimal precision equals the inverse empirical error covariance.</p>
+<p><strong>F.5.4 Free Energy–Value Duality</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0AV(%5Cmathbf%7Bz%7D)%20%5Capprox%20-%5Cmathbb%7BE%7D%5Cleft%5B%5Csum_%7B%5Ctau%3D0%7D%5E%7B%5Cinfty%7D%20%5Cgamma_%7B%5Ctext%7BRL%7D%7D%5E%7B%5Ctau%7D%20F_1(t%2B%5Ctau)%20%5C%3B%5Cbigg%7C%5C%3B%20%5Cmathbf%7Bz%7D(t)%20%3D%20%5Cmathbf%7Bz%7D%5Cright%5D%20%2B%20%5Ctext%7Bconst%7D%0A" alt="
+V(\mathbf{z}) \approx -\mathbb{E}\left[\sum_{\tau=0}^{\infty} \gamma_{\text{RL}}^{\tau} F_1(t+\tau) \;\bigg|\; \mathbf{z}(t) = \mathbf{z}\right] + \text{const}
+" /></p>
+<p>The RL value function is approximately the negative cumulative interoceptive free energy — bridging reinforcement learning and variational inference.</p>
+<p><strong>F.5.5 Universal Strange Loop Convergence</strong></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5C%7C%5Cmathcal%7BM%7D%5E%7B(d)%7D%20-%20%5Cmathcal%7BM%7D%5E*%5C%7C%20%5Cleq%20%5Crho%5Ed%20%5C%7C%5Cmathcal%7BM%7D%5E%7B(0)%7D%20-%20%5Cmathcal%7BM%7D%5E*%5C%7C%2C%20%5Cquad%20%5Ctext%7Bwhere%20%7D%20%5Crho%20%3D%20(1%20-%20%5Cbeta_0)%20%2B%20%5Cbeta_0%20%5Ccdot%20L%20%3C%201%0A" alt="
+\|\mathcal{M}^{(d)} - \mathcal{M}^*\| \leq \rho^d \|\mathcal{M}^{(0)} - \mathcal{M}^*\|, \quad \text{where } \rho = (1 - \beta_0) + \beta_0 \cdot L &lt; 1
+" /></p>
+<p>Geometric convergence of the recursive self-model to a fixed point <img src="https://i.upmath.me/svg/%5Cmathcal%7BM%7D%5E*" alt="\mathcal{M}^*" />, proven identically across all four mathematical formalisms.</p>
 <h2>Index</h2>
 <h3>A</h3>
 <p><strong>Active inference</strong> — App B
