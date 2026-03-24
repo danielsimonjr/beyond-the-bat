@@ -562,6 +562,40 @@ function buildArchitecture() {
 
   v.appendChild(diagram);
 
+  // Figures section
+  const figSection = el("div", {style:{marginTop:"24px"}});
+  figSection.appendChild(el("h2", null, "Architecture Diagrams"));
+
+  const figGrid = el("div", {style:{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"20px",marginBottom:"20px"}});
+
+  const fig1Card = el("div", {class:"card", style:{padding:"12px"}});
+  fig1Card.appendChild(el("div", {class:"card-label"}, "Figure 1: RSP Three-Level Architecture"));
+  const fig1Img = el("img", {src:"https://danielsimonjr.github.io/beyond-the-bat/figures/fig1-rsp-architecture.png", alt:"RSP Three-Level Architecture", style:{width:"100%",borderRadius:"6px",marginTop:"8px",cursor:"pointer"}});
+  fig1Img.onclick = function() { window.open(this.src, '_blank'); };
+  fig1Card.appendChild(fig1Img);
+  fig1Card.appendChild(el("p", {style:{fontSize:"12px",color:"#888",marginTop:"6px"}}, "Bidirectional prediction errors flow upward; generative predictions flow downward. The strange loop feeds Level 3b back through all levels."));
+  figGrid.appendChild(fig1Card);
+
+  const fig2Card = el("div", {class:"card", style:{padding:"12px"}});
+  fig2Card.appendChild(el("div", {class:"card-label"}, "Figure 2: The Strange Loop"));
+  const fig2Img = el("img", {src:"https://danielsimonjr.github.io/beyond-the-bat/figures/fig2-strange-loop.png", alt:"The Strange Loop: Recursive Social Prediction", style:{width:"100%",borderRadius:"6px",marginTop:"8px",cursor:"pointer"}});
+  fig2Img.onclick = function() { window.open(this.src, '_blank'); };
+  fig2Card.appendChild(fig2Img);
+  fig2Card.appendChild(el("p", {style:{fontSize:"12px",color:"#888",marginTop:"6px"}}, "Self predicts others (red), reflects others' view of self (blue dashed), updates self-model until convergence."));
+  figGrid.appendChild(fig2Card);
+
+  figSection.appendChild(figGrid);
+
+  const fig3Card = el("div", {class:"card", style:{padding:"12px",marginBottom:"20px"}});
+  fig3Card.appendChild(el("div", {class:"card-label"}, "Figure 3: Theory Comparison"));
+  const fig3Img = el("img", {src:"https://danielsimonjr.github.io/beyond-the-bat/figures/fig3-theory-comparison.png", alt:"Theory Comparison Across Eight Dimensions", style:{width:"100%",maxWidth:"700px",borderRadius:"6px",marginTop:"8px",cursor:"pointer"}});
+  fig3Img.onclick = function() { window.open(this.src, '_blank'); };
+  fig3Card.appendChild(fig3Img);
+  fig3Card.appendChild(el("p", {style:{fontSize:"12px",color:"#888",marginTop:"6px"}}, "RSP (solid red) scores high across all eight dimensions compared to IIT, GWT, and HOT. See Section X for detailed comparisons of 15 theories."));
+  figSection.appendChild(fig3Card);
+
+  v.appendChild(figSection);
+
   // Why this matters
   const why = el("div", {class:"card"});
   why.appendChild(el("div", {class:"card-label"}, "Why This Architecture Matters"));
