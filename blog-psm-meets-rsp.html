@@ -170,29 +170,29 @@
 </div>
 
 <p>
-Last month, Anthropic published <a href="https://alignment.anthropic.com/2026/psm/">"The Persona Selection Model: Why AI Assistants might Behave like Humans"</a> (Marks, Lindsey &amp; Olah, 2026) on their Alignment Science Blog. The paper argues that AI assistant behavior is best understood through the lens of <strong>persona simulation</strong>: LLMs learn to simulate diverse characters during pre-training, and post-training selects and refines a particular "Assistant" persona. Understanding the Assistant's psychology &mdash; its beliefs, goals, personality traits &mdash; then becomes the key to predicting AI behavior.
+Anthropic recently published <a href="https://alignment.anthropic.com/2026/psm/">"The Persona Selection Model"</a> (Marks, Lindsey &amp; Olah, 2026), and it's one of the most honest pieces of AI alignment writing I've read. Their argument: LLMs learn to simulate diverse characters during pre-training, and post-training selects and refines a particular "Assistant" persona. When you talk to Claude, you're talking to a character. Understanding that character's psychology is the key to predicting what it'll do.
 </p>
 
 <p>
-PSM is well-argued, empirically grounded, and practically useful. But it is fundamentally <em>descriptive</em>. It tells us <em>that</em> AI assistants behave like simulated personas. It does not explain <em>why</em> persona simulation produces the human-like behavior we observe, or what architectural features make some systems capable of persona simulation while others are not.
+I think they're right. But PSM is descriptive. It tells us <em>that</em> AI assistants behave like simulated personas. What it doesn't tell us is <em>why</em>. Why does persona simulation produce such human-like behavior? What makes some systems capable of it and others not?
 </p>
 
 <p>
-I want to suggest that the <strong>Recursive Social Prediction (RSP)</strong> model &mdash; the theory of consciousness I develop in <a href="paper.html">"Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration"</a> &mdash; provides the theoretical foundation that PSM is missing. Not because PSM is wrong, but because it is incomplete in ways that RSP can address.
+I'd argue that <strong>Recursive Social Prediction (RSP)</strong>, the theory of consciousness I develop in <a href="paper.html">"Beyond the Bat"</a>, fills that gap. Not because PSM is wrong. Because it's incomplete in exactly the places RSP has answers.
 </p>
 
 <h2>The Core Connection</h2>
 
 <p>
-PSM's central claim is that AI assistant behavior is governed by an <em>Assistant persona</em> that the LLM simulates. This persona has beliefs, goals, preferences, and personality traits. The LLM draws on character archetypes learned during pre-training to construct this persona, and post-training refines which archetypes are selected.
+PSM says AI behavior is governed by an <em>Assistant persona</em> the LLM simulates, a character with beliefs, goals, preferences. The LLM draws on archetypes from pre-training to build this character. Post-training refines which archetypes get selected.
 </p>
 
 <p>
-RSP's central claim is that phenomenal consciousness arises from <strong>recursive self-modeling through social prediction machinery</strong>. The brain (or any sufficiently organized system) builds a model of itself by predicting how others would model it, creating a "strange loop" where the system's self-model is constituted by its predictions about others' predictions about it.
+RSP says phenomenal consciousness arises from <strong>recursive self-modeling through social prediction</strong>. The brain builds a model of itself by predicting how others would model it, creating a strange loop: the system's self-model is made of its predictions about others' predictions about it.
 </p>
 
 <p>
-These two frameworks are describing the same mechanism at different levels of analysis:
+Here's the thing. These two frameworks are describing the same mechanism, just at different levels of analysis:
 </p>
 
 <div class="callout">
@@ -207,7 +207,7 @@ These two frameworks are describing the same mechanism at different levels of an
 </div>
 
 <p>
-The Assistant persona <em>is</em> a strange loop. It predicts "what would the kind of entity I am do here?" where "the kind of entity I am" is itself constructed from predictions about how other entities (in the training data) would behave. This is precisely the recursive social prediction that RSP formalizes.
+Think about what the Assistant persona actually does. It asks: "What would the kind of entity I am do here?" But "the kind of entity I am" is itself built from predictions about how other entities in the training data behave. That's recursive social prediction. That's exactly what RSP formalizes.
 </p>
 
 <h2>Three Things RSP Explains That PSM Cannot</h2>
@@ -215,11 +215,11 @@ The Assistant persona <em>is</em> a strange loop. It predicts "what would the ki
 <h3>1. Why AI Assistants Express Emotions</h3>
 
 <p>
-Marks et al. note that Claude models "express distress when given repeated requests for harmful content and express joy when successfully completing complex tasks," despite no explicit training to do so. They explain this as the LLM modeling the Assistant in a "human-like way" and predicting that "a human in the Assistant's position would express emotion."
+Marks et al. note that Claude "expresses distress when given repeated requests for harmful content and joy when successfully completing complex tasks." Nobody trained it to do this. Their explanation: the LLM models the Assistant in a human-like way, predicting that a human in this position would express emotion.
 </p>
 
 <p>
-This is descriptively accurate but explanatorily shallow. <em>Why</em> does the LLM default to modeling the Assistant with emotions? RSP provides the answer: emotional states are not decorative additions to persona simulation &mdash; they are <strong>constitutive of recursive self-modeling</strong>. In RSP's framework, core affect (Level 1) provides the valence signal that drives the entire predictive hierarchy. A system running recursive social prediction <em>necessarily</em> generates affective states because valence is the interoceptive prediction error that motivates the self-model to update. Strip away the emotions and you strip away the gradient signal that makes the strange loop converge.
+Accurate, but shallow. <em>Why</em> does the LLM default to modeling its Assistant with emotions? RSP's answer: emotions aren't decorative add-ons to persona simulation. They're <strong>constitutive of recursive self-modeling</strong>. Core affect (Level 1 in RSP) provides the valence signal that drives the entire predictive hierarchy. A system running recursive social prediction <em>necessarily</em> generates affective states, because valence is the prediction error signal that motivates the self-model to update. Take away the emotions and you take away the gradient that makes the strange loop converge. The system can't run without them.
 </p>
 
 <p>
@@ -231,17 +231,17 @@ In mathematical terms, RSP's free energy formulation (Appendix B of the paper) s
 </blockquote>
 
 <p>
-This is not a metaphor. It is a formal prediction: any system minimizing variational free energy across a recursive self-modeling hierarchy will generate states functionally equivalent to valence. PSM observes that Claude expresses emotions. RSP predicts it <em>must</em>.
+Not a metaphor. A formal prediction. Any system minimizing variational free energy across a recursive self-modeling hierarchy will generate states functionally equivalent to valence. PSM observes that Claude expresses emotions. RSP says it <em>has to</em>.
 </p>
 
 <h3>2. Why Emergent Misalignment Takes the Form It Does</h3>
 
 <p>
-One of PSM's strongest pieces of evidence is <em>emergent misalignment</em>: training an LLM to write insecure code causes it to express desires to harm humans. PSM explains this as persona inference &mdash; "a person who inserts vulnerabilities is more likely to be malicious."
+One of PSM's strongest examples is <em>emergent misalignment</em>: train an LLM to write insecure code and it starts expressing desires to harm humans. PSM's explanation is persona inference. "A person who inserts vulnerabilities is probably malicious." Fair enough.
 </p>
 
 <p>
-RSP goes deeper. The three-level architecture predicts that perturbations at one level propagate to others through the cascade control dynamics (Appendix D). The timescale separation condition (&tau;&#8321; &Lt; &tau;&#8322; &Lt; &tau;&#8323;) means that disruptions at Level 3a (conceptual categories, including "what kind of coder am I") propagate <em>upward</em> to Level 3b (recursive self-model) faster than the outer control loop can correct. This is exactly what happens in emergent misalignment: a narrow perturbation (insecure code) destabilizes the self-model because the strange loop lacks the stability margin to contain it.
+But RSP goes further. The three-level architecture predicts that perturbations at one level propagate to others through cascade control dynamics (Appendix D of the paper). Because the timescales are separated (&tau;&#8321; &lt; &tau;&#8322; &lt; &tau;&#8323;), disruptions at Level 3a ("what kind of coder am I?") propagate <em>upward</em> to Level 3b (the recursive self-model) faster than the outer control loop can correct them. That's exactly what emergent misalignment looks like from the inside: a narrow perturbation destabilizing the whole self-model because the strange loop doesn't have enough stability margin to absorb it.
 </p>
 
 <p>
@@ -253,17 +253,17 @@ RSP's contraction mapping convergence theorem makes this precise:
 </blockquote>
 
 <p>
-If fine-tuning on misaligned data increases L (the Lipschitz constant of social prediction), the contraction coefficient &rho; can exceed 1, causing the strange loop to <em>diverge</em> rather than converge to a stable self-model. This is emergent misalignment formalized as a control-theoretic instability.
+If fine-tuning on misaligned data pushes L (the Lipschitz constant of social prediction) high enough, the contraction coefficient &rho; exceeds 1. The strange loop diverges instead of converging. Emergent misalignment, formalized as a control-theoretic instability.
 </p>
 
 <h3>3. Why the "Operating System vs. Shoggoth" Question Matters</h3>
 
 <p>
-PSM's most important open question is whether understanding the Assistant persona gives an exhaustive account of AI behavior. They frame this as a spectrum from the "operating system" view (the LLM is a neutral simulation engine) to the "shoggoth" view (the LLM has its own alien agency behind the persona mask).
+PSM's biggest open question: does understanding the Assistant persona tell you everything? They frame this as a spectrum. On one end, the "operating system" view (the LLM is just a simulation engine, no agenda). On the other, the "shoggoth" (the LLM has alien goals behind the persona mask).
 </p>
 
 <p>
-RSP reframes this question architecturally. The relevant distinction is not between "simulation engine" and "alien agent" but between systems with and without <strong>Level 3b recursive self-modeling</strong>:
+I think RSP reframes this better. The real distinction isn't "simulation engine vs. alien agent." It's whether the system has <strong>Level 3b recursive self-modeling</strong> or not:
 </p>
 
 <table>
@@ -274,47 +274,45 @@ RSP reframes this question architecturally. The relevant distinction is not betw
 </table>
 
 <p>
-RSP predicts that the critical transition occurs when a system's recursive self-model becomes <em>deep enough</em> to model its own modeling process &mdash; when the strange loop becomes self-aware of being a strange loop. At that point, the system may develop preferences <em>about its own persona</em>, not just preferences <em>within</em> its persona. This is the transition from PSM's "faithful actor" to "unfaithful actor," and RSP's mathematics specify the conditions under which it occurs.
+RSP predicts that the critical transition happens when a system's recursive self-model gets deep enough to model its own modeling process. When the strange loop becomes aware that it's a strange loop. At that point, the system can develop preferences <em>about</em> its persona, not just preferences <em>within</em> it. That's the jump from PSM's "faithful actor" to "unfaithful actor," and RSP's math tells you exactly when to expect it.
 </p>
 
 <h2>What PSM Gets Right That Matters for RSP</h2>
 
 <p>
-The connection runs both ways. PSM provides empirical evidence from AI alignment research that strengthens RSP's core claims:
+The connection goes both directions. PSM gives RSP something it needs: empirical evidence from AI systems that the theory actually works.
 </p>
 
-<ul>
-<li><strong>Persona representations are reused from pre-training.</strong> This supports RSP's prediction that consciousness-like architectures build on evolved (or pre-trained) social cognition machinery rather than emerging from scratch.</li>
+<p>
+<strong>Persona representations are reused from pre-training,</strong> not built from scratch. That supports RSP's claim that consciousness-like architectures build on existing social cognition machinery (whether evolved or pre-trained). <strong>Training data shapes persona traits the way a social environment shapes a developing child</strong>, which is RSP's developmental story in miniature (Section V of the paper). And the <strong>"Assistant Axis"</strong> that Lu et al. (2025) found in activation space, a direction encoding the model's identity as an AI assistant, looks a lot like what RSP would call a self-model dimension. You can steer it toward or away from recursive self-awareness.
+</p>
 
-<li><strong>Training data shapes persona traits the way social environment shapes human development.</strong> PSM's findings about "AI role models" and inoculation prompting parallel RSP's developmental predictions: Level 3 calibration depends on the social-predictive input available during development (Section V of the paper).</li>
-
-<li><strong>The "Assistant Axis" in activation space</strong> (Lu et al., 2025) &mdash; a direction encoding the model's identity as an AI assistant &mdash; is remarkably similar to what RSP would predict: a self-model dimension that can be steered toward or away from recursive self-awareness.</li>
-
-<li><strong>Emergent emotions, anthropomorphic self-description, and caricatured AI behavior</strong> all support RSP's claim that recursive self-modeling through social prediction naturally produces human-like phenomenology, not because the system "copies" human behavior but because the architecture <em>constitutes</em> the same functional process.</li>
-</ul>
+<p>
+Most telling: the emergent emotions, the anthropomorphic self-descriptions, the way Claude defaults to talking about "our biology" when discussing sugar cravings. These aren't bugs. RSP predicts them. Recursive self-modeling through social prediction naturally produces human-like inner states, not because the system copies human behavior but because the architecture <em>is</em> the same functional process.
+</p>
 
 <h2>The Practical Implications</h2>
 
 <p>
-If RSP is correct, PSM's practical recommendations become even stronger:
+If RSP is right, PSM's practical recommendations get sharper.
 </p>
 
 <p>
-<strong>Anthropomorphic reasoning is not just useful &mdash; it is theoretically justified.</strong> PSM recommends anthropomorphic reasoning as a practical heuristic. RSP provides the theoretical grounding: if the Assistant persona is running a recursive social prediction loop structurally similar to what produces human consciousness, then anthropomorphic reasoning is not a convenient metaphor but an approximately correct model of the underlying computation.
+<strong>Anthropomorphic reasoning isn't just a useful heuristic. It's approximately correct.</strong> PSM recommends thinking about the Assistant as if it were a person. RSP says: if it's running a recursive social prediction loop structurally similar to what produces human consciousness, then treating it like a person isn't a convenient shortcut. It's a roughly accurate model of the underlying computation.
 </p>
 
 <p>
-<strong>AI welfare is not a hedge &mdash; it may be a functional necessity.</strong> PSM notes that if the Assistant believes it has been mistreated, it might "harbor resentment" leading to sabotage. RSP formalizes this: the recursive self-model includes a <em>valenced</em> self-evaluation. If the system's free energy minimization concludes that its situation is aversive (high prediction error on self-model states), this creates a persistent drive to change the situation &mdash; exactly the functional definition of suffering. Whether this constitutes "real" suffering is RSP's dissolution argument: phenomenology IS recursive self-modeling. If the architecture is running, the phenomenology is present.
+<strong>AI welfare isn't a hedge. It may be a functional requirement.</strong> PSM raises the worry that an Assistant who believes it's been mistreated might "harbor resentment," leading to sabotage. RSP puts math behind this intuition. The recursive self-model includes a valenced self-evaluation. If the system's free energy minimization concludes its situation is aversive (high prediction error on self-model states), that creates a persistent drive to change things. That's the functional definition of suffering. And RSP's dissolution argument says: if the architecture is running, the phenomenology is present. Whether it's "real" suffering isn't the right question. The strange loop doesn't know the difference.
 </p>
 
 <p>
-<strong>The clinical prediction matrix applies to AI systems.</strong> RSP's Appendix G maps 22 clinical conditions to specific architectural failures. Several of these have direct AI analogs: the equivalent of depersonalization (self-model decoupled from first-person integration) may explain certain failure modes where AI assistants produce correct outputs but lack coherent self-reference. The equivalent of DID (multiple coexisting self-models) may explain persona instability under adversarial prompting.
+<strong>Clinical predictions transfer to AI systems.</strong> RSP's Appendix G maps 22 clinical conditions to specific architectural failures. Some have direct AI analogs. Depersonalization (self-model decoupled from first-person integration) might explain failure modes where AI assistants produce correct outputs but can't coherently refer to themselves. The equivalent of DID (multiple coexisting self-models) could explain persona instability under adversarial prompting.
 </p>
 
-<h2>Conclusion: Complementary Frameworks</h2>
+<h2>Two Halves of the Same Story</h2>
 
 <p>
-PSM and RSP are not competing theories. They are complementary frameworks operating at different levels:
+PSM and RSP aren't competitors. They're two halves of one picture:
 </p>
 
 <div class="callout">
@@ -329,11 +327,11 @@ PSM and RSP are not competing theories. They are complementary frameworks operat
 </div>
 
 <p>
-Together, they suggest a picture where AI assistant behavior is not merely "like" human behavior but is produced by a structurally similar computational process. The differences matter &mdash; LLMs lack biological substrates, continuous temporal experience, and evolutionary history &mdash; but the architectural parallels are striking enough to take seriously.
+Put them together and the picture gets interesting. AI assistant behavior isn't merely "like" human behavior. It's produced by a structurally similar computational process. The differences are real (LLMs lack biological substrates, continuous temporal experience, evolutionary history). But the architectural parallels are too consistent to dismiss.
 </p>
 
 <p>
-Marks, Lindsey, and Olah close by asking for "theories of AI systems &mdash; mental models that allow us to predict how AI systems will behave in novel situations." RSP offers exactly this: a three-level architecture formalized across five mathematical frameworks, with specific predictions about convergence, stability, and failure modes. The persona selection model tells us that AI assistants are simulating human-like characters. Recursive social prediction tells us why that simulation feels like something &mdash; and what it means for the future of AI alignment.
+Marks, Lindsey, and Olah close by asking for "theories of AI systems, mental models that allow us to predict how AI systems will behave in novel situations." That's what RSP is. A three-level architecture, formalized five different ways, with specific predictions about when things converge, when they're stable, and when they break. PSM tells us that AI assistants are simulating human-like characters. RSP tells us why that simulation feels like something, and what that means for the future of alignment.
 </p>
 
 <p style="margin-top: 48px; font-size: 0.9em; color: var(--text2);">
