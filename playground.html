@@ -2803,6 +2803,29 @@ function buildTheories() {
       rspAdds: "The integrative position: biological primitives (Level 1) combined with constructed categories (Level 3a). Neither purely innate nor purely constructed.",
       relationship: "extends",
       color: "var(--accent2)"
+    },
+    {
+      name: "Stack Theory (Bennett, 2025)",
+      family: "Computational Intelligence",
+      authors: "Bennett 2025 (ANU doctoral thesis)",
+      mechanism: "W-maxing: choose the weakest correct policy to maximize generalization. Consciousness arises through orders of self (1st-order reafference, 2nd-order social prediction, 3rd-order meta-self). Qualia are 'tapestries of valence.'",
+      aligns: [
+        "Both arrive at a three-level hierarchical architecture with self-representation",
+        "Both make valence foundational (tapestries of valence \u2248 RSP core affect)",
+        "Both make philosophical zombies impossible",
+        "Both reject separation of intelligence from goals (anti-orthogonality)",
+        "Both conclude current AI lacks the architecture for consciousness"
+      ],
+      diverges: [
+        "Bennett: phenomenal consciousness begins at 1st-order-self (flies). RSP: requires Level 3b recursive loop",
+        "Bennett: reductive physicalist (qualia reducible to valence patterns). RSP: non-reductive (constitutive identity)",
+        "Bennett: social cognition is a consequence of intelligence. RSP: social prediction is constitutive of consciousness",
+        "Bennett: set-theoretic formalism. RSP: dynamical systems (free energy, contraction mappings)",
+        "Bennett introduces The Temporal Gap: must consciousness be synchronous or can it be smeared across time?"
+      ],
+      rspAdds: "Neurobiological grounding, formal developmental progression, content-specific predictions, dissolution of the hard problem. RSP's timescale separation may answer Bennett's Temporal Gap. Conjectured that RSP's free energy minimization is the biological realization of Bennett's w-maxing (Appendix H, \u00a7H.3.6).",
+      relationship: "complements",
+      color: "var(--accent)"
     }
   ];
 
@@ -3288,17 +3311,89 @@ function buildAppendixes() {
     "D \u00A7D.8.1 connects Luenberger observer theory back to A\u2019s predictive coding",
     "E \u00A7E.3 derives master functional \u{1D4A5} that subsumes A\u2019s error, B\u2019s F, C\u2019s V, and D\u2019s control cost",
     "E \u00A7E.4 proves equivalences between error signals across A, B, C, and D (Propositions E.1\u2013E.4)",
-    "E \u00A7E.6 identifies emergent properties invisible to any single formalism (coordinate covariance, bounded error, precision as universal currency)"
+    "E \u00A7E.6 identifies emergent properties invisible to any single formalism (coordinate covariance, bounded error, precision as universal currency)",
+    "H \u00A7H.3 defines intelligence from the same master functional \u{1D4A5} used in E; H.4 proves recursive intelligence and consciousness are constitutively identical at Level 3b"
   ].forEach(function(ref) {
     xList.appendChild(el("li", {style:{padding:"6px 0",borderBottom:"1px solid var(--border)",fontSize:"13px"}}, ref));
   });
   xref.appendChild(xList);
   v.appendChild(xref);
 
+  // ── Appendix H ──
+  v.appendChild(elHTML("h2", {style:{color:"#fd79a8"}}, "Appendix H: RSP Theory of Intelligence"));
+  var hCard = el("div", {class:"card"});
+  hCard.appendChild(el("div", {class:"card-label"}, "Formal Definition of Intelligence & Constitutive Identity Proposition"));
+  hCard.appendChild(el("p", null, "Derives a formal theory of intelligence from the same master functional \u{1D4A5} that formalizes consciousness. Intelligence is the time-averaged rate of free energy reduction per unit novelty. The key result: recursive social intelligence and phenomenal consciousness are constitutively identical at Level 3b."));
+
+  var hDefs = el("div", {style:{marginTop:"16px"}});
+  hDefs.appendChild(el("h3", null, "Key Definitions"));
+  var hGrid = el("div", {style:{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"8px"}});
+  [
+    ["Adaptive Capacity", "\u{1D4A2}(t) = \u2212\u{1D4A5}(t) \u2014 negative master functional; higher = better model fit across all levels"],
+    ["Intelligence (\u2110)", "\u2212\u27E8d\u{1D4A5}/dt \u00F7 \u{1D4A9}(t)\u27E9\u1D40 \u2014 rate of free energy reduction per unit environmental novelty, averaged over time"],
+    ["Level-Specific Intelligence", "\u2110\u2097 for each RSP level; additive decomposition from the functional. Corvids score high on \u2110\u2082; humans dominate on \u2110\u1D63\u2091\u1D9C"],
+    ["Meta-Intelligence", "\u2110\u2098\u2091\u209C\u2090 \u2014 speed of precision convergence; how fast the system learns what to attend to"],
+    ["Constitutive Identity (Prop H.2)", "\u27E8\u2110\u1D63\u2091\u1D9C\u27E9\u1D40 \u2265 0 \u21D4 \u03A6(t) stable \u2014 recursive intelligence and phenomenal consciousness cannot come apart at Level 3b"],
+    ["Weakness Hierarchy", "Level 1 policies are strongest (specific homeostatic control); Level 3 policies are weakest (must generalize across social partners). Higher levels generalize more broadly."]
+  ].forEach(function(d) {
+    var dEl = el("div", {style:{padding:"10px 14px",background:"var(--surface2)",borderRadius:"8px",fontSize:"13px"}});
+    dEl.appendChild(el("span", {style:{fontWeight:"600",color:"#fd79a8"}}, d[0] + ": "));
+    dEl.appendChild(el("span", {style:{color:"var(--text2)"}}, d[1]));
+    hGrid.appendChild(dEl);
+  });
+  hDefs.appendChild(hGrid);
+  hCard.appendChild(hDefs);
+
+  // Graduated phenomenology
+  var hPhenom = el("div", {style:{marginTop:"16px"}});
+  hPhenom.appendChild(el("h3", null, "Graduated Phenomenology (Constitutive Account at Each Level)"));
+  var hPGrid = el("div", {style:{display:"flex",flexDirection:"column",gap:"8px"}});
+  [
+    ["Level 1: Valenced Experience", "Pain/pleasure IS what homeostatic prediction error minimization is like from within. Constituted by precision-weighted interoceptive error \u03BE\u2081(t) = \u03A0\u2081 \u00B7 \u03B5\u2081(t)", "var(--accent)"],
+    ["Level 2: Structured Experience", "Embodiment, spatial presence, attentional focus IS what schema-organized prediction is like from within. Richer because 5 schemas (not just valence).", "var(--accent2)"],
+    ["Level 3b: Reflective Self-Consciousness", "Self-awareness IS what recursive social prediction is like from within. The strange loop creates a subject who knows it is experiencing.", "var(--accent3)"]
+  ].forEach(function(l) {
+    var lEl = el("div", {style:{padding:"12px 16px",background:"var(--surface2)",borderRadius:"8px",borderLeft:"3px solid " + l[2]}});
+    lEl.appendChild(el("div", {style:{fontWeight:"600",color:l[2],marginBottom:"4px",fontSize:"14px"}}, l[0]));
+    lEl.appendChild(el("span", {style:{fontSize:"13px",color:"var(--text2)"}}, l[1]));
+    hPGrid.appendChild(lEl);
+  });
+  hPhenom.appendChild(hPGrid);
+  hCard.appendChild(hPhenom);
+
+  // Species D_max table
+  var hSpecies = el("div", {style:{marginTop:"16px"}});
+  hSpecies.appendChild(el("h3", null, "Prediction H.1: Intelligence Scales with Recursion Depth"));
+  var hTable = el("div", {style:{display:"grid",gridTemplateColumns:"1fr auto 2fr",gap:"4px",fontSize:"13px"}});
+  [
+    ["Humans", "3\u20135", "Offline narrative tasks (Kinderman 1998; Stiller & Dunbar 2007); real-time likely 2\u20133"],
+    ["Great apes", "1\u20132", "Implicit 1st-order false belief (Krupenye 2016); genuinely recursive ToM contested"],
+    ["Cetaceans", "1", "Nested alliances (Connor 2006); MSR (Reiss & Marino 2001); speculative"],
+    ["Elephants", "0\u20131", "MSR (Plotnik 2006); consolation behavior; ToM evidence limited"],
+    ["Canids/hyenas", "0\u20131", "Cooperative hunting via shared-attention heuristics"],
+    ["Corvids", "0\u20131", "Ecological intelligence; small social groups in many species"],
+    ["Rodents", "0", "Limited social prediction"],
+    ["Cephalopods", "0", "High \u2110\u2081+\u2110\u2082, zero \u2110\u1D63\u2091\u1D9C: critical test case for bounded intelligence without consciousness"]
+  ].forEach(function(row) {
+    hTable.appendChild(el("span", {style:{padding:"6px",fontWeight:"600",color:"var(--text)"}}, row[0]));
+    hTable.appendChild(el("span", {style:{padding:"6px",textAlign:"center",color:"#fd79a8",fontWeight:"600"}}, row[1]));
+    hTable.appendChild(el("span", {style:{padding:"6px",color:"var(--text2)"}}, row[2]));
+  });
+  hSpecies.appendChild(hTable);
+  hCard.appendChild(hSpecies);
+
+  v.appendChild(hCard);
+
+  // Appendix H insight card
+  var hInsight = el("div", {class:"card", style:{borderLeft:"3px solid #fd79a8",marginTop:"8px"}});
+  hInsight.appendChild(el("div", {class:"card-label"}, "Core Insight"));
+  hInsight.appendChild(el("p", null, "The hard problem dissolves uniformly across all three levels by the same constitutive move: phenomenal character IS what the relevant process is like from within. Intelligence and consciousness share the master functional \u{1D4A5}. To minimize one is to realize the other."));
+  v.appendChild(hInsight);
+
   var src = el("div", {class:"card", style:{marginTop:"16px"}});
   src.appendChild(el("div", {class:"card-label"}, "Key Sources"));
   var srcPills = el("div", {style:{display:"flex",flexWrap:"wrap",gap:"6px",marginTop:"8px"}});
-  ["Friston (2005)","Levine (2018)","Sutton & Barto (2018)","Goldstein et al. (2001)","Shoemaker (2007)","Casali et al. (2013)"].forEach(function(s) { srcPills.appendChild(el("span",{class:"tag tag-red"},s)); });
+  ["Friston (2005)","Levine (2018)","Sutton & Barto (2018)","Goldstein et al. (2001)","Shoemaker (2007)","Casali et al. (2013)","Bennett (2025)","Legg & Hutter (2007)","Wang (2019)"].forEach(function(s) { srcPills.appendChild(el("span",{class:"tag tag-red"},s)); });
   src.appendChild(srcPills);
   v.appendChild(src);
 

@@ -1,3 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration</title>
+<style>
+  @page {
+    size: letter;
+    margin: 1in 1in 1in 1in;
+    @bottom-center { content: counter(page); font-size: 9pt; color: #666; }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: 1.65;
+    color: #1a1a1a;
+    max-width: 7in;
+    margin: 0 auto;
+    padding: 0.75in;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin: 1.5em 0 0.5em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.2em;
+    page-break-before: always;
+  }
+  h1:first-child { page-break-before: avoid; }
+
+  h2 {
+    font-size: 15pt;
+    margin: 1.3em 0 0.4em;
+    color: #222;
+  }
+
+  h3 { font-size: 12pt; margin: 1em 0 0.3em; color: #333; }
+  h4 { font-size: 11pt; font-style: italic; margin: 0.8em 0 0.3em; color: #444; }
+
+  p { margin: 0.6em 0; text-align: justify; }
+
+  ul, ol { margin: 0.5em 0 0.5em 1.5em; }
+  li { margin: 0.25em 0; }
+
+  table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 9.5pt;
+    width: 100%;
+    page-break-inside: avoid;
+  }
+  td, th {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  tr:first-child td { font-weight: bold; background: #f5f5f5; }
+
+  pre {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.8em;
+    font-size: 9pt;
+    overflow-x: auto;
+    margin: 0.8em 0;
+    page-break-inside: avoid;
+  }
+  code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 9.5pt;
+  }
+  p code, li code {
+    background: #f0f0f0;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1.5em 0;
+  }
+
+  a { color: #1a1a1a; text-decoration: none; }
+
+  img { max-width: 100%; height: auto; margin: 1em 0; }
+
+  blockquote {
+    margin: 1em 0 1em 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+    color: #444;
+    font-style: italic;
+  }
+
+  /* Math display blocks (UpMath SVG) */
+  p > img[src*="i.upmath.me"] {
+    display: block;
+    margin: 1em auto;
+    page-break-inside: avoid;
+  }
+
+  @media print {
+    body { padding: 0; max-width: none; }
+    h1, h2, h3, h4 { page-break-after: avoid; }
+    pre { page-break-inside: avoid; }
+    p { orphans: 2; widows: 2; }
+  }
+
+  @media screen {
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
 <h1>Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration</h1>
 <hr>
 <h2>Table of Contents</h2>
@@ -143,8 +264,13 @@
 <li>Vs. Gurwitsch’s Theory (GT)</li>
 </ul>
 </li>
-<li>I. Synthesis</li>
-<li>J. What RSP Uniquely Provides</li>
+<li>I. Computational Intelligence Theories
+<ul>
+<li>Vs. Stack Theory of Intelligence and Consciousness (Bennett, 2025)</li>
+</ul>
+</li>
+<li>J. Synthesis</li>
+<li>K. What RSP Uniquely Provides</li>
 </ul>
 <p><strong>XI. Conclusion: Beyond the Bat</strong></p>
 <ul>
@@ -229,6 +355,16 @@
 <li>G.2 Pharmacological Dissociations</li>
 <li>G.3 Predicted Neuroimaging Signatures</li>
 <li>G.4 Summary: The Architectural Logic</li>
+</ul>
+<p><strong>Appendix H: RSP Theory of Intelligence</strong></p>
+<ul>
+<li>H.1 Introduction: The Missing Definition</li>
+<li>H.2 Existing Formalizations of Intelligence</li>
+<li>H.3 RSP Intelligence: Formal Definition</li>
+<li>H.4 The Constitutive Identity Proposition</li>
+<li>H.5 Predictions</li>
+<li>H.6 Discussion</li>
+<li>H.7 Summary</li>
 </ul>
 <hr>
 <h1>Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration</h1>
@@ -1135,7 +1271,7 @@
 </ul>
 <p><strong>Why this matters for the RSP model</strong>: This evidence constitutes a natural double dissociation. Neurological damage studies (Predictions 4 and 6) show that disrupting the neural substrates of schemas and self-modeling impairs consciousness even with social input available. Social deprivation studies (this prediction) show that removing social input impairs Level 3 consciousness even with intact neural substrates. Together, they demonstrate that both the neural architecture AND social calibration are necessary for full recursive social-predictive consciousness; neither alone is sufficient. This is the RSP model’s strongest empirical differentiator from competing theories, which do not predict this specific pattern of selective Level 3 impairment under social deprivation.</p>
 <h2>X. Comparison with Alternative Views</h2>
-<p>A recent scoping review (Sattin et al., 2021) catalogued over thirty theoretical models of consciousness published between 2007 and 2017, spanning neural, cognitive, computational, quantum, and phenomenological approaches. In this section I situate RSP within this broader field, organized by theory family. For each comparison I identify points of alignment, points of divergence, and what RSP specifically adds. A synthesis table appears at the end.</p>
+<p>A recent scoping review (Sattin et al., 2021) catalogued over thirty theoretical models of consciousness published between 2007 and 2017, spanning neural, cognitive, computational, quantum, and phenomenological approaches. In this section I situate RSP within this broader field, organized by theory family, and extend the comparison to include Bennett’s (2025) Stack Theory, an independent formalization from computational learning theory that reaches convergent conclusions about hierarchical consciousness architecture. For each comparison I identify points of alignment, points of divergence, and what RSP specifically adds. A synthesis table appears at the end.</p>
 <h3>A. Global Workspace Theories</h3>
 <h4>Vs. Global Workspace Theory (GWT) and Global Neuronal Workspace (GNW)</h4>
 <p><strong>The theory</strong> (Baars, 1988; Dehaene &amp; Changeux, 2011): Consciousness arises when a single salient piece of information is selected, amplified through NMDA-mediated feedback connections causing &quot;ignition,&quot; and globally broadcast across cortical networks via long-range pyramidal cell connections in layers II/III. Neural correlates include prefrontal, cingulate, and parietal cortices. The transition from non-conscious to conscious processing is marked by a late, nonlinear amplification signature.</p>
@@ -1286,7 +1422,31 @@
 <p><strong>Alignment</strong>: GT’s theme-field-margin structure can be mapped onto RSP’s precision weighting. The theme corresponds to the highest-precision prediction error signal; the thematic field to moderate-precision signals in the same schema domain; the margin to low-precision background predictions (Appendix A).</p>
 <p><strong>Divergence</strong>: GT is phenomenological: it describes the structure of experience without specifying the mechanism that generates it. RSP provides that mechanism through hierarchical precision-weighted prediction error minimization.</p>
 <p><strong>What RSP adds</strong>: A computational explanation for why experience has the theme-field-margin structure GT describes. The precision weighting formalized in Appendix A naturally generates focal, peripheral, and marginal awareness as a consequence of Bayesian inference.</p>
-<h3>I. Synthesis</h3>
+<h3>I. Computational Intelligence Theories</h3>
+<h4>Vs. Stack Theory of Intelligence and Consciousness (Bennett, 2025)</h4>
+<p><strong>The theory</strong> (Bennett, 2025): Michael Timothy Bennett’s doctoral thesis at the Australian National University proposes a comprehensive theory linking intelligence to consciousness through a formalism called <em>Pancomputational Enactivism</em> within <em>Stack Theory</em>. The core argument proceeds in stages. First, every physical system is an abstraction layer: software is a state of hardware, hardware is a state of physics, and so on in an infinite stack. Second, intelligence is formalized as <em>w-maxing</em> — choosing the weakest correct policy (the one that applies to the broadest range of situations), which Bennett proves is strictly optimal for generalization, outperforming Ockham’s Razor (simp-maxing) by 110–500% in experiments. Third, systems learn pre-linguistic classifiers called <em>causal-identities</em> for objects that cause valence — explaining how a contentless environment gets divided into objects and properties. Fourth, consciousness arises through orders of self: a <em>1st-order-self</em> (reafference — classifying one’s own interventions, present even in flies), a <em>2nd-order-self</em> (&quot;my prediction of your prediction of me,&quot; needed for communication and theory of mind), and a <em>3rd-order-self</em> (predicting one’s own 2nd-order selves, enabling complex social reasoning). Bennett proposes that phenomenal consciousness begins at the 1st-order-self, while access consciousness requires a 2nd-order-self.</p>
+<p>Two further results are noteworthy. Bennett introduces the <em>Psychophysical Principle of Causality</em>: qualia are &quot;tapestries of valence&quot; — vast ensembles of cells simultaneously attracted or repelled, whose multidimensional pattern constitutes the qualitative character of experience (what makes thirst feel different from hunger). And he identifies an open problem he calls <em>The Temporal Gap</em>: whether a conscious state must be realized synchronously at a point in time (Option 1, implying current sequential computers cannot be conscious) or can be &quot;smeared across time&quot; (Option 2, permitting software consciousness). Bennett favors Option 1.</p>
+<p><strong>Alignment with RSP</strong>:</p>
+<ul>
+<li>Both frameworks arrive at a hierarchical architecture with three orders of self-representation. Bennett’s 1st/2nd/3rd-order selves map loosely onto RSP’s three levels, though the boundaries differ significantly (see Divergence below). Bennett’s 1st-order-self (reafference) overlaps with, though is broader than, RSP’s Level 2 self-schema — reafference circuits are distributed across brainstem, cerebellum, and cortex, while RSP’s self-schema targets cortical regions (mirror system, TPJ, precuneus); his 2nd-order-self (&quot;my prediction of your prediction of me&quot;) maps most directly onto RSP’s Level 3b recursive social prediction; his 3rd-order-self (predicting one’s own 2nd-order selves) corresponds to deeper recursion within Level 3b.</li>
+<li>Both make valence foundational. Bennett’s &quot;tapestries of valence&quot; — where representation and value judgement are inseparable — aligns directly with RSP’s core affect (Level 1), where <img src="https://i.upmath.me/svg/%5Cmathbf%7Ba%7D(t)%20%3D%20(v(t)%2C%20%5Calpha(t))" alt="\mathbf{a}(t) = (v(t), \alpha(t))" /> grounds the entire predictive hierarchy (Appendix A, §A.3.1). Neither framework permits platonic, value-neutral representations.</li>
+<li>Both make philosophical zombies impossible. Bennett argues that human-level intelligence requires 1st and 2nd-order selves, which entail consciousness. RSP argues that the recursive self-modeling constituting consciousness is the same process constituting social-adaptive intelligence: the master functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> whose minimization realizes both cannot be optimized for one without realizing the other (see Appendix H for the formal argument).</li>
+<li>Both reject the separation of intelligence from goals. Bennett explicitly refutes the orthogonality thesis (Bostrom, 2014); RSP’s constitutive identity proposition (Appendix H) constrains the thesis for RSP-type systems, since Level 1 valence is architecturally inseparable from the predictive hierarchy that constitutes intelligence.</li>
+<li>Both identify causal learning as essential. Bennett derives causal-identities from the need to discriminate interventions from observations; RSP formalizes this through the do-operator equivalent in the generative model’s active inference component (Appendix B, §B.4.3).</li>
+<li>Both conclude that current AI lacks the architecture for consciousness (Bennett: no delegated <em>polycomputation</em> — his term for distributed, parallel, hierarchically organized computation where the same matter participates in multiple computations at different scales simultaneously; RSP: no embodied hierarchical predictive coding with recursive self-modeling).</li>
+</ul>
+<p><strong>Divergence from RSP</strong>:</p>
+<ul>
+<li><strong>Where phenomenal consciousness begins.</strong> Bennett holds that phenomenal consciousness begins at the 1st-order-self — a fly that distinguishes its own movements from external events already has &quot;something it is like.&quot; RSP holds that full phenomenal consciousness requires the recursive strange loop at Level 3b. RSP grants that organisms with only Levels 1–2 have valenced, structured experience (not nothing), but the rich phenomenal consciousness Nagel asks about requires the recursive self-model. This is an empirically adjudicable difference: RSP predicts flies lack phenomenal self-awareness; Bennett predicts they possess it.</li>
+<li><strong>Reductive vs. non-reductive physicalism.</strong> Bennett is an explicit reductive physicalist in the sense that he aims to &quot;break qualia down into something more basic&quot; — tapestries of valence at lower abstraction layers — though his stack theory retains the causal efficacy of higher-level descriptions, placing his view closer to non-reductive positions than the label suggests. RSP is non-reductive: consciousness is constituted by physical processes organized in a specific way, but the organizational description is causally indispensable. RSP dissolves the hard problem through constitutive identity rather than reducing it.</li>
+<li><strong>Social prediction as constitutive vs. consequential.</strong> RSP’s central claim is that social prediction is <em>constitutive</em> of consciousness — the social prediction machinery turned inward IS the mechanism. Bennett treats social cognition (2nd-order selves) as a <em>consequence</em> of sufficient scale and incentive, not the constitutive core. For Bennett, consciousness begins before social cognition; for RSP, full consciousness requires it.</li>
+<li><strong>Formalism.</strong> Bennett’s mathematics is set-theoretic (policies as sets, extensions as cardinalities, proofs about optimal proxies). RSP’s is dynamical-systems-based (differential equations, free energy functionals, contraction mappings). The two formalisms are complementary but not directly translatable, though Appendix H (§H.3.6) develops the generalization structure that parallels Bennett’s weakness hierarchy.</li>
+<li><strong>Content specificity.</strong> Bennett’s w-maxing is content-neutral — it applies to any task in any vocabulary. RSP specifies exactly what an intelligent-and-conscious system must represent: core affect, five schemas, conceptual categories, and a recursive self-model. This yields falsifiable content-specific predictions that Bennett’s framework does not.</li>
+</ul>
+<p><strong>What RSP adds</strong>: RSP provides what Bennett’s framework lacks — neurobiological grounding (specific neural substrates for each level), a formal developmental progression with age-specific timelines (§V), content-specific predictions (§IX), and a dissolution of the hard problem rather than a reduction. RSP also offers a potential answer to Bennett’s Temporal Gap: the timescale separation requirement (<img src="https://i.upmath.me/svg/%5Ctau_%7Bl%2B1%7D%2F%5Ctau_l%20%5Cgeq%205" alt="\tau_{l+1}/\tau_l \geq 5" />; Appendix D) specifies that consciousness requires real-time processing within level-specific temporal windows, effectively supporting Bennett’s Option 1 from independent mathematical constraints.</p>
+<p><strong>What Bennett adds to RSP</strong>: Bennett provides an independent computational-theoretic argument for the same hierarchical architecture, a formal proof that weakness (generalization breadth) is the unique optimal learning criterion, the <em>polycomputation</em> argument for why biological substrate supports consciousness better than sequential computation, and The Temporal Gap as a genuinely novel philosophical problem that RSP should engage with. His proof that intelligence requires consciousness, reached from AI theory rather than neuroscience, provides an independent argument for a conclusion RSP reaches from different premises (Appendix H, §H.4). Both draw on predictive coding and social cognition literatures, so the independence is partial rather than complete, but the formalisms and starting points are distinct. The conjecture that RSP’s free energy minimization may be the biological realization of Bennett’s w-maxing is developed in Appendix H (§H.3.6).</p>
+<p><strong>Overall relationship</strong>: <strong>Complements</strong>. Bennett’s Stack Theory and RSP arrive at convergent conclusions from independent starting points — computational learning theory and hierarchical predictive coding respectively. The two frameworks are mutually reinforcing: Bennett provides the optimality proof RSP lacks; RSP provides the neurobiological specificity Bennett lacks. Together, they suggest that the hierarchical, valence-grounded, recursively self-modeling architecture is not merely one way to build a conscious mind but provably optimal for adaptive intelligence in social environments.</p>
+<h3>J. Synthesis</h3>
 <p>The following table summarizes how RSP relates to the major consciousness theories across five key dimensions:</p>
 <table>
 <thead>
@@ -1420,6 +1580,14 @@
 <td>Partial (dynamical systems)</td>
 <td><strong>Complements</strong>: RSP explains GT’s structure</td>
 </tr>
+<tr>
+<td><strong>Stack Theory</strong></td>
+<td>W-maxing + tapestries of valence + orders of self</td>
+<td>Yes (tapestries of valence)</td>
+<td>Qualitative (rock → human)</td>
+<td>Yes (set-theoretic proofs, experiments)</td>
+<td><strong>Complements</strong>: independent convergence on same architecture</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Key relationships</strong>:</p>
@@ -1428,9 +1596,10 @@
 <li><strong>RSP complements</strong> GWT/GNW, ART, CP, RPT, and GT by specifying content, mechanism, or substrate.</li>
 <li><strong>RSP extends</strong> HOT and FOR by adding recursive self-modeling and affect grounding.</li>
 <li><strong>RSP contradicts</strong> IIT (on content-neutrality), Orch OR (on quantum necessity), and basic emotions theory (on discrete categories).</li>
+<li><strong>RSP complements</strong> Bennett’s Stack Theory: independent convergence on the same hierarchical, valence-grounded, recursively self-modeling architecture from computational learning theory rather than neuroscience.</li>
 </ul>
 <p><img src="https://danielsimonjr.github.io/beyond-the-bat/figures/fig3-theory-comparison.png" alt="Figure 3. Theory Comparison Across Eight Dimensions"></p>
-<h3>J. What RSP Uniquely Provides</h3>
+<h3>K. What RSP Uniquely Provides</h3>
 <p>Across the full range of consciousness theories surveyed in Sattin et al. (2021), RSP is the only framework that simultaneously offers:</p>
 <ol>
 <li>
@@ -1440,7 +1609,7 @@
 <p><strong>Multi-timescale architecture with explicit dynamics</strong>: <img src="https://i.upmath.me/svg/%5Ctau_1%20%5Capprox%20100ms" alt="\tau_1 \approx 100ms" />, <img src="https://i.upmath.me/svg/%5Ctau_2%20%5Capprox%201%7B-%7D10s" alt="\tau_2 \approx 1{-}10s" />, <img src="https://i.upmath.me/svg/%5Ctau_3%20%5Capprox%2010s%7B-%7Dminutes" alt="\tau_3 \approx 10s{-}minutes" />, with formal timescale separation analysis (Appendix D).</p>
 </li>
 <li>
-<p><strong>Four integrated mathematical formalizations</strong>: Hierarchical predictive coding (Appendix A), variational free energy (Appendix B), unsupervised model-based RL (Appendix C), and cascade feedback control with contraction mapping convergence (Appendix D).</p>
+<p><strong>Four integrated mathematical formalizations</strong>: Hierarchical predictive coding (Appendix A), variational free energy (Appendix B), intrinsically motivated model-based RL (Appendix C), and cascade feedback control with contraction mapping convergence (Appendix D).</p>
 </li>
 <li>
 <p><strong>A developmental progression grounded in mathematical necessity</strong>: The Level 1 → 2 → 3 construction order is not merely observed but required by the mathematics. Inner control loops must stabilize before outer loops can be commissioned (Appendix D), free energy at each level requires stability at the level below (Appendix B), and exploration policies require reward signals before they can optimize (Appendix C).</p>
@@ -1451,8 +1620,11 @@
 <li>
 <p><strong>Content specificity</strong>: Unlike IIT (any integrated information) or GWT (any broadcast information), RSP specifies exactly <em>what</em> must be integrated: core affect + core schemas + recursive self-model. This specificity generates falsifiable predictions.</p>
 </li>
+<li>
+<p><strong>A formal theory of intelligence grounded in the same mathematics as consciousness</strong>: The master functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> simultaneously defines intelligence (Appendix H, Definition H.2) and constitutes phenomenal consciousness, establishing a constitutive identity between recursive social intelligence and consciousness at Level 3b. RSP provides a mathematically explicit account of intelligence derived from the same equations that formalize consciousness (Appendix H). The identity thesis — that recursive social intelligence and phenomenal consciousness are the same process measured from different vantage points — is not an informal claim but follows from the shared master functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" />. Bennett’s (2025) Stack Theory independently reaches the same conclusion from computational learning theory, providing convergent evidence.</p>
+</li>
 </ol>
-<p>No other theory in the scoping review combines all six properties. Most offer one or two; several of the strongest theories (IIT, GNW, AST) offer three. RSP’s integration of mechanism, mathematics, development, affect, and content specificity in a single coherent framework represents its primary contribution to the science of consciousness.</p>
+<p>No other theory in the scoping review combines all seven properties. Most offer one or two; several of the strongest theories (IIT, GNW, AST) offer three. RSP’s integration of mechanism, mathematics, development, affect, content specificity, and intelligence theory in a single coherent framework represents its primary contribution to the science of consciousness.</p>
 <h2>XI. Conclusion: Beyond the Bat</h2>
 <h3>What This Paper Has Accomplished</h3>
 <p>This paper has argued that the three-level RSP architecture is not merely one empirical description of how consciousness happens to work — it represents the conditions of possibility for the kind of consciousness we can coherently describe and investigate. The transcendental argument, grounded in convergent evidence from Kant, Jonas, Thompson, Merleau-Ponty, Husserl, Sartre, Strawson, and McDowell, shows that the ordering constraint (mattering before structure before recursion) is logically required given the framework’s assumptions, while four independent mathematical formalisms all converge on the same three-level architecture. This is the paper’s most distinctive philosophical contribution: not just a theory of consciousness, but an argument for why consciousness must be structured this way.</p>
@@ -1502,6 +1674,7 @@
 <h3>Complete Bibliography</h3>
 <hr>
 <h4>A</h4>
+<p>Anderson, S. W., Bechara, A., Damasio, H., Tranel, D., &amp; Damasio, A. R. (1999). Impairment of social and moral behavior related to early damage in human prefrontal cortex. <em>Nature Neuroscience</em>, <em>2</em>(11), 1032-1037.</p>
 <p>Alkire, M. T., Hudetz, A. G., &amp; Tononi, G. (2008). Consciousness and anesthesia. <em>Science</em>, <em>322</em>(5903), 876-880.</p>
 <p>Baars, B. J. (1988). <em>A cognitive theory of consciousness</em>. Cambridge University Press.</p>
 <p>Amsterdam, B. (1972). Mirror self-image reactions before age two. <em>Developmental Psychobiology</em>, <em>5</em>(4), 297-305.</p>
@@ -1513,6 +1686,10 @@
 <p>Barrett, L. F., Gross, J., Christensen, T. C., &amp; Benvenuto, M. (2001). Knowing what you’re feeling and knowing what to do about it: Mapping the relation between emotion differentiation and emotion regulation. <em>Cognition and Emotion</em>, <em>15</em>(6), 713-724.</p>
 <hr>
 <h4>B</h4>
+<p>Bechara, A., Tranel, D., &amp; Damasio, H. (2000). Characterization of the decision-making deficit of patients with ventromedial prefrontal cortex lesions. <em>Brain</em>, <em>123</em>(11), 2189-2202.</p>
+<p>Bennett, M. T. (2025). <em>How to build conscious machines</em>. Doctoral thesis, Australian National University. Preprint under review.</p>
+<p>Bostrom, N. (2014). <em>Superintelligence: Paths, dangers, strategies</em>. Oxford University Press.</p>
+<p>Broesch, T., Callaghan, T., Henrich, J., Murphy, C., &amp; Rochat, P. (2011). Cultural variations in children’s mirror self-recognition. <em>Journal of Cross-Cultural Psychology</em>, <em>42</em>(6), 1018-1029.</p>
 <p>Beck, A. T., Rush, A. J., Shaw, B. F., &amp; Emery, G. (1979). <em>Cognitive therapy of depression</em>. Guilford Press.</p>
 <p>Birch, J., Schnell, A. K., &amp; Clayton, N. S. (2020). Dimensions of animal consciousness. <em>Trends in Cognitive Sciences</em>, <em>24</em>(10), 789-801.</p>
 <p>Blanke, O., Ortigue, S., Landis, T., &amp; Seeck, M. (2002). Stimulating illusory own-body perceptions. <em>Nature</em>, <em>419</em>(6904), 269-270.</p>
@@ -1520,6 +1697,10 @@
 <p>Block, N. (1995). On a confusion about a function of consciousness. <em>Behavioral and Brain Sciences</em>, <em>18</em>(2), 227-287.</p>
 <hr>
 <h4>C</h4>
+<p>Call, J., &amp; Tomasello, M. (2008). Does the chimpanzee have a theory of mind? 30 years later. <em>Trends in Cognitive Sciences</em>, <em>12</em>(5), 187-192.</p>
+<p>Chollet, F. (2019). On the measure of intelligence. <em>arXiv preprint arXiv:1911.01547</em>.</p>
+<p>Connor, R. C., Smolker, R., &amp; Bejder, L. (2006). Synchrony, social behaviour and alliance affiliation in Indian Ocean bottlenose dolphins, <em>Tursiops aduncus</em>. <em>Animal Behaviour</em>, <em>72</em>(6), 1371-1378.</p>
+<p>Corbetta, M., &amp; Shulman, G. L. (2002). Control of goal-directed and stimulus-driven attention in the brain. <em>Nature Reviews Neuroscience</em>, <em>3</em>(3), 201-215.</p>
 <p>Cacioppo, J. T., &amp; Patrick, W. (2008). <em>Loneliness: Human nature and the need for social connection</em>. W. W. Norton &amp; Company.</p>
 <p>Carruthers, P. (2000). <em>Phenomenal consciousness: A naturalistic theory</em>. Cambridge University Press.</p>
 <p>Cambridge Declaration on Consciousness. (2012). Publicly proclaimed at the Francis Crick Memorial Conference on Consciousness in Human and non-Human Animals, Churchill College, University of Cambridge. <a href="http://fcmconference.org/img/CambridgeDeclarationOnConsciousness.pdf">http://fcmconference.org/img/CambridgeDeclarationOnConsciousness.pdf</a></p>
@@ -1556,6 +1737,8 @@
 <p>Ekman, P. (1992). An argument for basic emotions. <em>Cognition and Emotion</em>, <em>6</em>(3-4), 169-200.</p>
 <hr>
 <h4>F</h4>
+<p>Finn, J. K., Tregenza, T., &amp; Norman, M. D. (2009). Defensive tool use in a coconut-carrying octopus. <em>Current Biology</em>, <em>19</em>(23), R1069-R1070.</p>
+<p>Fiorito, G., &amp; Scotto, P. (1992). Observational learning in <em>Octopus vulgaris</em>. <em>Science</em>, <em>256</em>(5056), 545-547.</p>
 <p>Fichte, J. G. (1794/1982). <em>Science of Knowledge</em> (P. Heath &amp; J. Lachs, Trans.). Cambridge University Press.</p>
 <p>Frankish, K. (2016). Illusionism as a theory of consciousness. <em>Journal of Consciousness Studies</em>, <em>23</em>(11-12), 11-39.</p>
 <p>Frith, U. (2003). <em>Autism: Explaining the enigma</em> (2nd ed.). Blackwell Publishing.</p>
@@ -1575,6 +1758,8 @@
 <p>Greenberg, L. S. (2002). <em>Emotion-focused therapy: Coaching clients to work through their feelings</em>. American Psychological Association.</p>
 <hr>
 <h4>H</h4>
+<p>Hare, B., Call, J., Agnetta, B., &amp; Tomasello, M. (2000). Chimpanzees know what conspecifics do and do not see. <em>Animal Behaviour</em>, <em>59</em>(4), 771-785.</p>
+<p>Hutter, M. (2005). <em>Universal artificial intelligence: Sequential decisions based on algorithmic probability</em>. Springer.</p>
 <p>Husserl, E. (1913/1983). <em>Ideas pertaining to a pure phenomenology and to a phenomenological philosophy, First Book</em> (F. Kersten, Trans.). Kluwer.</p>
 <p>Harlow, H. F. (1958). The nature of love. <em>American Psychologist</em>, <em>13</em>(12), 673-685.</p>
 <p>Harlow, H. F., &amp; Harlow, M. K. (1965). The affectional systems. In A. M. Schrier, H. F. Harlow, &amp; F. Stollnitz (Eds.), <em>Behavior of nonhuman primates</em> (Vol. 2, pp. 287-334). Academic Press.</p>
@@ -1588,12 +1773,17 @@
 <p>Itard, J. M. G. (1801/1962). <em>The wild boy of Aveyron</em> (G. Humphrey &amp; M. Humphrey, Trans.). Appleton-Century-Crofts.</p>
 <hr>
 <h4>J</h4>
+<p>Joseph, D. L., &amp; Newman, D. A. (2010). Emotional intelligence: An integrative meta-analysis and cascading model. <em>Journal of Applied Psychology</em>, <em>95</em>(1), 54-78.</p>
 <p>Jonas, H. (1966). <em>The phenomenon of life: Toward a philosophical biology</em>. Northwestern University Press.</p>
 <p>Jackson, F. (1982). Epiphenomenal qualia. <em>Philosophical Quarterly</em>, <em>32</em>(127), 127-136.</p>
 <p>Jack, R. E., Garrod, O. G., Yu, H., Caldara, R., &amp; Schyns, P. G. (2012). Facial expressions of emotion are not culturally universal. <em>Proceedings of the National Academy of Sciences</em>, <em>109</em>(19), 7241-7244.</p>
 <p>James, W. (1890). <em>The principles of psychology</em>. Henry Holt and Company.</p>
 <hr>
 <h4>K</h4>
+<p>Keysar, B., Lin, S., &amp; Barr, D. J. (2003). Limits on theory of mind use in adults. <em>Cognition</em>, <em>89</em>(1), 25-41.</p>
+<p>Kinderman, P., Dunbar, R. I. M., &amp; Bentall, R. P. (1998). Theory-of-mind deficits and causal attributions. <em>British Journal of Psychology</em>, <em>89</em>(2), 191-204.</p>
+<p>Kosinski, M. (2023). Theory of mind may have spontaneously emerged in large language models. <em>arXiv preprint arXiv:2302.02083</em>.</p>
+<p>Krupenye, C., Kano, F., Hirata, S., Call, J., &amp; Tomasello, M. (2016). Great apes anticipate that other individuals will act according to false beliefs. <em>Science</em>, <em>354</em>(6308), 110-114.</p>
 <p>Kant, I. (1781/1998). <em>Critique of pure reason</em> (P. Guyer &amp; A. W. Wood, Trans.). Cambridge University Press.</p>
 <p>Kabat-Zinn, J. (1990). <em>Full catastrophe living: Using the wisdom of your body and mind to face stress, pain, and illness</em>. Delta.</p>
 <p>Kappen, H. J. (2005). Path integrals and symmetry breaking for optimal control theory. <em>Journal of Statistical Mechanics</em>, P11011.</p>
@@ -1607,6 +1797,8 @@
 <p>Kriegel, U. (2019). <em>The Oxford handbook of the philosophy of consciousness</em>. Oxford University Press.</p>
 <hr>
 <h4>L</h4>
+<p>Legg, S., &amp; Hutter, M. (2007). Universal intelligence: A definition of machine intelligence. <em>Minds and Machines</em>, <em>17</em>(4), 391-444.</p>
+<p>Light, G. A., Swerdlow, N. R., &amp; Braff, D. L. (2007). Preattentive sensory processing as indexed by the MMN and P3a brain responses is associated with cognitive and psychosocial functioning in healthy adults. <em>Journal of Cognitive Neuroscience</em>, <em>19</em>(10), 1624-1632.</p>
 <p>Lakoff, G., &amp; Johnson, M. (1999). <em>Philosophy in the flesh: The embodied mind and its challenge to Western thought</em>. Basic Books.</p>
 <p>Lamme, V. A. F. (2006). Towards a true neural stance on consciousness. <em>Trends in Cognitive Sciences</em>, <em>10</em>(11), 494-501.</p>
 <p>Lau, H., &amp; Rosenthal, D. (2011). Empirical support for higher-order theories of conscious awareness. <em>Trends in Cognitive Sciences</em>, <em>15</em>(8), 365-373.</p>
@@ -1619,6 +1811,7 @@
 <p>Locke, J. (1689/1975). <em>An essay concerning human understanding</em> (P. H. Nidditch, Ed.). Oxford University Press.</p>
 <hr>
 <h4>M</h4>
+<p>Mather, J. A. (2008). Cephalopod consciousness: Behavioural evidence. <em>Consciousness and Cognition</em>, <em>17</em>(1), 37-48.</p>
 <p>McDowell, J. (1994). <em>Mind and world</em>. Harvard University Press.</p>
 <p>Merleau-Ponty, M. (1945/2012). <em>Phenomenology of perception</em> (D. Landes, Trans.). Routledge.</p>
 <p>Della Sala, S. (1998). Disentangling the alien and anarchic hand. <em>Cognitive Neuropsychiatry</em>, <em>3</em>(3), 191-207.</p>
@@ -1634,6 +1827,7 @@
 <p>Nelson, C. A., Fox, N. A., &amp; Zeanah, C. H. (2014). <em>Romania’s abandoned children: Deprivation, brain development, and the struggle for recovery</em>. Harvard University Press.</p>
 <hr>
 <h4>O</h4>
+<p>Onishi, K. H., &amp; Baillargeon, R. (2005). Do 15-month-old infants understand false beliefs? <em>Science</em>, <em>308</em>(5719), 255-258.</p>
 <p>Oizumi, M., Albantakis, L., &amp; Tononi, G. (2014). From the phenomenology to the mechanisms of consciousness: Integrated Information Theory 3.0. <em>PLOS Computational Biology</em>, <em>10</em>(5), e1003588.</p>
 <p>Owen, A. M., Coleman, M. R., Boly, M., Davis, M. H., Laureys, S., &amp; Pickard, J. D. (2006). Detecting awareness in the vegetative state. <em>Science</em>, <em>313</em>(5792), 1402.</p>
 <hr>
@@ -1646,6 +1840,7 @@
 <p>Prinz, J. J. (2004). <em>Gut reactions: A perceptual theory of emotion</em>. Oxford University Press.</p>
 <hr>
 <h4>R</h4>
+<p>Reiss, D., &amp; Marino, L. (2001). Mirror self-recognition in the bottlenose dolphin: A case of cognitive convergence. <em>Proceedings of the National Academy of Sciences</em>, <em>98</em>(10), 5937-5942.</p>
 <p>Ramachandran, V. S. (1996). The evolutionary biology of self-deception, laughter, dreaming and depression: Some clues from anosognosia. <em>Medical Hypotheses</em>, <em>47</em>(5), 347-362.</p>
 <p>Ramachandran, V. S., &amp; Hirstein, W. (1998). The perception of phantom limbs: The D. O. Hebb lecture. <em>Brain</em>, <em>121</em>(9), 1603-1630.</p>
 <p>Reinders, A. A. T. S., Nijenhuis, E. R. S., Paans, A. M. J., Korf, J., Willemsen, A. T. M., &amp; den Boer, J. A. (2003). One brain, two selves. <em>NeuroImage</em>, <em>20</em>(4), 2119-2125.</p>
@@ -1658,6 +1853,9 @@
 <p>Russell, J. A. (2003). Core affect and the psychological construction of emotion. <em>Psychological Review</em>, <em>110</em>(1), 145-172.</p>
 <hr>
 <h4>S</h4>
+<p>Saxe, R., &amp; Kanwisher, N. (2003). People thinking about thinking people: The role of the temporo-parietal junction in &quot;theory of mind.&quot; <em>NeuroImage</em>, <em>19</em>(4), 1835-1842.</p>
+<p>Stiller, J., &amp; Dunbar, R. I. M. (2007). Perspective-taking and memory capacity predict social network size. <em>Social Networks</em>, <em>29</em>(1), 93-104.</p>
+<p>Stuss, D. T., Gallup, G. G., &amp; Alexander, M. P. (2001). The frontal lobes are necessary for 'theory of mind.' <em>Brain</em>, <em>124</em>(2), 279-286.</p>
 <p>Sarasso, S., Boly, M., Napolitani, M., Gosseries, O., Charland-Verville, V., Casarotto, S., … &amp; Massimini, M. (2015). Consciousness and complexity during unresponsiveness induced by propofol, xenon, and ketamine. <em>Current Biology</em>, <em>25</em>(23), 3099-3105.</p>
 <p>Sartre, J.-P. (1943/1956). <em>Being and nothingness</em> (H. Barnes, Trans.). Philosophical Library.</p>
 <p>Sierra, M., &amp; Berrios, G. E. (1998). Depersonalization: Neurobiological perspectives. <em>Biological Psychiatry</em>, <em>44</em>(9), 898-908.</p>
@@ -1670,15 +1868,22 @@
 <p>Stern, D. N. (1985). <em>The interpersonal world of the infant: A view from psychoanalysis and developmental psychology</em>. Basic Books.</p>
 <hr>
 <h4>T</h4>
+<p>Tomasello, M. (2019). <em>Becoming human: A theory of ontogeny</em>. Harvard University Press.</p>
 <p>Thompson, E. (2007). <em>Mind in life: Biology, phenomenology, and the sciences of mind</em>. Harvard University Press.</p>
 <p>Tye, M. (2000). <em>Consciousness, color, and content</em>. MIT Press.</p>
 <p>Todorov, E. (2008). General duality between optimal control and estimation. <em>47th IEEE Conference on Decision and Control</em>, 4286-4292.</p>
 <p>Tononi, G. (2008). Consciousness as integrated information: A provisional manifesto. <em>The Biological Bulletin</em>, <em>215</em>(3), 216-242.</p>
 <p>Tsai, J. L. (2007). Ideal affect: Cultural causes and behavioral consequences. <em>Perspectives on Psychological Science</em>, <em>2</em>(3), 242-259.</p>
 <hr>
+<h4>U</h4>
+<p>Ullman, T. (2023). Large language models fail on trivial alterations to theory-of-mind tasks. <em>arXiv preprint arXiv:2302.08399</em>.</p>
+<hr>
 <h4>W</h4>
+<p>Wang, P. (2019). On defining artificial intelligence. <em>Journal of Artificial General Intelligence</em>, <em>10</em>(2), 1-37.</p>
 <p>Wang, Q., &amp; Fivush, R. (2005). Mother-child conversations of emotionally salient events: Exploring the functions of emotional reminiscing in European-American and Chinese families. <em>Social Development</em>, <em>14</em>(3), 473-495.</p>
+<p>Wellman, H. M. (2014). <em>Making minds: How theory of mind develops</em>. Oxford University Press.</p>
 <p>Wellman, H. M., Cross, D., &amp; Watson, J. (2001). Meta-analysis of theory-of-mind development: The truth about false belief. <em>Child Development</em>, <em>72</em>(3), 655-684.</p>
+<p>Woolley, A. W., Chabris, C. F., Pentland, A., Hashmi, N., &amp; Malone, T. W. (2010). Evidence for a collective intelligence factor in the performance of human groups. <em>Science</em>, <em>330</em>(6004), 686-688.</p>
 <p>Widen, S. C., &amp; Russell, J. A. (2008). Children acquire emotion categories gradually. <em>Cognitive Development</em>, <em>23</em>(2), 291-312.</p>
 <p>Wierzbicka, A. (1999). <em>Emotions across languages and cultures: Diversity and universals</em>. Cambridge University Press.</p>
 <p>Wittgenstein, L. (1953/2009). <em>Philosophical investigations</em> (G.E.M. Anscombe, P.M.S. Hacker, &amp; J. Schulte, Trans., 4th ed.). Wiley-Blackwell.</p>
@@ -4804,115 +5009,342 @@ V(\mathbf{z}) \approx -\mathbb{E}\left[\sum_{\tau=0}^{\infty} \gamma_{\text{RL}}
 <li><strong>Level 3 developmental failures</strong> show the architecture requires social input to construct (Genie, Romanian orphans, feral children)</li>
 </ul>
 <p>This systematic mapping is not post hoc: the architectural boundaries were defined by the mathematical framework (Appendixes A–E), and the clinical predictions follow from those boundaries. The fact that real clinical conditions respect these boundaries constitutes evidence that the architecture captures something real about the organization of consciousness.</p>
+<h1>Appendix H — RSP Theory of Intelligence</h1>
+<h2>H.1 Introduction</h2>
+<p>Appendixes A through E formalize consciousness as a three-level predictive architecture. What they do not address is intelligence. The omission is deliberate: the paper’s focus is phenomenal consciousness, not cognitive capacity. But the mathematical apparatus already contains an implicit account of intelligence, and drawing it out proves rewarding. Three results follow. First, a formal definition grounded in the master functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" />. Second, a constitutive identity proposition showing that recursive social intelligence and phenomenal consciousness cannot come apart at Level 3b. Third, a set of empirical predictions about how intelligence, consciousness, and neural architecture relate.</p>
+<p>The central claim deserves emphasis at the outset: the same architectural organization that constitutes recursive social intelligence also constitutes phenomenal consciousness. They are not two things that happen to co-occur. They are one thing, described from two vantage points. The formal argument appears in §H.4; the definition that makes it possible, in §H.3; the predictions that follow, in §H.5.</p>
+<h2>H.2 Existing Formalizations of Intelligence</h2>
+<p>Three families of formal intelligence definitions set the stage.</p>
+<p><strong>Compression-based approaches</strong> equate intelligence with the ability to compress observed data into short programs. Legg and Hutter (2007) formalized this idea, and Hutter’s AIXI (2005) takes it to its theoretical limit: an ideally intelligent agent that maximizes expected reward while minimizing description length. The appeal is universality. The weakness is subjectivity. Description length depends on which Universal Turing Machine you choose, and no objective notion of complexity exists without a fixed abstraction layer.</p>
+<p><strong>Generalization-based approaches</strong> shift the question from compression to breadth. How many situations can a system’s learned responses handle correctly? The simplest model is not always the one that generalizes best. What matters is how weakly constrained a model’s predictions are, so they hold across the widest range of conditions. Bennett (2025) formalizes this insight as <em>w-maxing</em> and proves it strictly dominates compression-based methods (see the Bennett comparison in §X for the full treatment).</p>
+<p><strong>Adaptation-based approaches</strong> take a different tack entirely. Wang (2019) defines intelligence as &quot;adaptation within insufficient resources,&quot; capturing the intuition that intelligence is not about raw computational power but about responding efficiently to novelty under constraint. Chollet’s (2019) ARC benchmark operationalizes a version of this idea, though it inherits the subjectivity problems of Kolmogorov complexity.</p>
+<p>All three families share a common limitation: they treat intelligence as substrate-neutral and content-independent. They specify how efficiently a system represents, not <em>what</em> it must represent. RSP offers something different. Intelligence, on this account, is not content-neutral but content-specific, anchored in the particular representations that enable adaptive behavior in social environments.</p>
+<h2>H.3 RSP Intelligence: Formal Definition</h2>
+<h3>H.3.1 Intuitive Motivation</h3>
+<p>What makes one organism more intelligent than another, within the RSP framework? Four capacities stand out:</p>
+<ol>
+<li><strong>Predict accurately</strong>: minimize the gap between expected and observed states.</li>
+<li><strong>Weight predictions appropriately</strong>: direct precision toward the signals that matter in the current context.</li>
+<li><strong>Adapt across timescales</strong>: update rapidly at Level 1 (core affect, <img src="https://i.upmath.me/svg/%5Ctau_1%20%5Capprox%20100%5Ctext%7Bms%7D" alt="\tau_1 \approx 100\text{ms}" />), at moderate speed at Level 2 (schemas, <img src="https://i.upmath.me/svg/%5Ctau_2%20%5Capprox%201%5Ctext%7B%E2%80%93%7D10%5Ctext%7Bs%7D" alt="\tau_2 \approx 1\text{–}10\text{s}" />), and deliberately at Level 3 (recursive self-model, <img src="https://i.upmath.me/svg/%5Ctau_3%20%5Capprox%2010%5Ctext%7Bs%E2%80%93min%7D" alt="\tau_3 \approx 10\text{s–min}" />).</li>
+<li><strong>Model others modeling you</strong>: achieve sufficient recursion depth in the strange loop to handle complex social environments.</li>
+</ol>
+<p>A system that excels at all four is, intuitively, intelligent. The question is how to formalize this intuition. Notice that these requirements are content-specific. A thermostat fails every one of them: no timescale hierarchy, no valenced states, no other-models, no strange loop. This is why RSP intelligence does not collapse into generic information processing.</p>
+<h3>H.3.2 Adaptive Capacity as Free Energy Reduction</h3>
+<p>The master functional from Appendix E (§E.3) provides the starting point. Written here in the Appendix A/B notation (see Appendix E, Table E.1 for the full correspondence, where <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cvarepsilon%7D_l%20%5Cequiv%20%5Cmathbf%7Be%7D_l" alt="\boldsymbol{\varepsilon}_l \equiv \mathbf{e}_l" />, <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l%20%5Cequiv%20%5Cmathbf%7BW%7D_l" alt="\boldsymbol{\Pi}_l \equiv \mathbf{W}_l" />, <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CSigma%7D_l%20%5Cequiv%20%5Cmathbf%7BS%7D_l" alt="\boldsymbol{\Sigma}_l \equiv \mathbf{S}_l" />):</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D%20%3D%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cleft%5B%5Cfrac%7B1%7D%7B2%7D%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%5ET%20%5Cboldsymbol%7B%5CPi%7D_l%20%5C%2C%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%20%2B%20%5Cfrac%7B1%7D%7B2%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%5ET%20%5Cboldsymbol%7B%5CSigma%7D_l%5E%7B-1%7D%20%5Cboldsymbol%7B%5Ceta%7D_l%20-%20%5Cfrac%7B1%7D%7B2%7D%5Cln%7C%5Cboldsymbol%7B%5CPi%7D_l%7C%5Cright%5D%20%2B%20%5Csum_%7Bd%3D1%7D%5E%7BD_%7B%5Cmax%7D%7D%20%5Cgamma%5Ed%20%5Cfrac%7B1%7D%7B2%7D%5C%7C%5Cmathcal%7BM%7D%5E%7B(d)%7D%20-%20%5Cmathcal%7BM%7D%5E%7B(d-1)%7D%5C%7C_%7B%5Cboldsymbol%7B%5CPi%7D_3%5E%7B(d)%7D%7D%5E2" alt="\mathcal{J} = \sum_{l=1}^{3} \left[\frac{1}{2} \boldsymbol{\varepsilon}_l^T \boldsymbol{\Pi}_l \, \boldsymbol{\varepsilon}_l + \frac{1}{2} \boldsymbol{\eta}_l^T \boldsymbol{\Sigma}_l^{-1} \boldsymbol{\eta}_l - \frac{1}{2}\ln|\boldsymbol{\Pi}_l|\right] + \sum_{d=1}^{D_{\max}} \gamma^d \frac{1}{2}\|\mathcal{M}^{(d)} - \mathcal{M}^{(d-1)}\|_{\boldsymbol{\Pi}_3^{(d)}}^2" /></p>
+<p>where <img src="https://i.upmath.me/svg/%5C%7C%5Cmathbf%7Bx%7D%5C%7C_%7B%5Cmathbf%7BA%7D%7D%5E2%20%3D%20%5Cmathbf%7Bx%7D%5ET%20%5Cmathbf%7BA%7D%20%5Cmathbf%7Bx%7D" alt="\|\mathbf{x}\|_{\mathbf{A}}^2 = \mathbf{x}^T \mathbf{A} \mathbf{x}" /> is the Mahalanobis norm (Appendix B, §B.3.3). A notational point: the temporal prediction error vector <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Ceta%7D_l" alt="\boldsymbol{\eta}_l" /> appears in the functional above. To prevent confusion, this appendix uses <img src="https://i.upmath.me/svg/%5Calpha_l" alt="\alpha_l" /> for the scalar precision learning rate (denoted <img src="https://i.upmath.me/svg/%5Ceta_l" alt="\eta_l" /> in Appendixes B and E).</p>
+<p><img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> captures the system’s total prediction error across all three levels, weighted by precision and discounted across recursion depths. A system that minimizes <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> under resource constraints predicts well, allocates precision efficiently, and maintains a stable recursive self-model.</p>
+<p><strong>Definition H.1 (Instantaneous Adaptive Capacity).</strong> The <em>instantaneous adaptive capacity</em> of an RSP system at time <img src="https://i.upmath.me/svg/t" alt="t" /> is the negative of the master functional:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BA%7D(t)%20%3D%20-%5Cmathcal%7BJ%7D(t)" alt="\mathcal{A}(t) = -\mathcal{J}(t)" /></p>
+<p>Higher adaptive capacity means lower total prediction error: the system’s generative model fits reality well across all three levels. But this measure has a problem. A system can achieve low <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> simply by staying in familiar territory, overfitting to a narrow domain. Intelligence requires more than accurate prediction. It requires <em>efficient adaptation to change</em>. Definition H.2 corrects for this.</p>
+<h3>H.3.3 The Rate of Free Energy Reduction</h3>
+<p><strong>Definition H.2 (Intelligence as Adaptive Efficiency).</strong> The <em>intelligence</em> of an RSP system is the time-averaged rate at which it reduces the master functional per unit of environmental novelty:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D%20%3D%20-%5Cleft%5Clangle%20%5Cfrac%7Bd%5Cmathcal%7BJ%7D%7D%7Bdt%7D%20%5Cbigg%2F%20%5Cmathcal%7BN%7D(t)%20%5Cright%5Crangle_T" alt="\mathcal{I} = -\left\langle \frac{d\mathcal{J}}{dt} \bigg/ \mathcal{N}(t) \right\rangle_T" /></p>
+<p>where <img src="https://i.upmath.me/svg/%5Cmathcal%7BN%7D(t)" alt="\mathcal{N}(t)" /> measures environmental novelty at time <img src="https://i.upmath.me/svg/t" alt="t" />, <img src="https://i.upmath.me/svg/%5Clangle%20%5Ccdot%20%5Crangle_T" alt="\langle \cdot \rangle_T" /> denotes averaging over a behaviorally relevant time window <img src="https://i.upmath.me/svg/T" alt="T" />, and the definition applies only to episodes of non-trivial novelty (<img src="https://i.upmath.me/svg/%5Cmathcal%7BN%7D(t)%20%3E%20%5Cmathcal%7BN%7D_%7B%5Cmin%7D" alt="\mathcal{N}(t) &gt; \mathcal{N}_{\min}" />).</p>
+<p>Novelty can be operationalized as the surprisal of new observations given the current generative model:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BN%7D(t)%20%3D%20-%5Cln%20p(%5Cmathbf%7By%7D(t)%20%5Cmid%20%5Cboldsymbol%7B%5Cmu%7D(t-1))" alt="\mathcal{N}(t) = -\ln p(\mathbf{y}(t) \mid \boldsymbol{\mu}(t-1))" /></p>
+<p>Intelligence, on this account, is a dispositional property: the capacity to adapt efficiently when novelty arises, not a quantity that can be computed in static environments.</p>
+<p><strong>A note on reparameterization.</strong> <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> is not invariant under rescaling of the precision matrices (<img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l%20%5Cto%20%5Calpha%20%5Cboldsymbol%7B%5CPi%7D_l" alt="\boldsymbol{\Pi}_l \to \alpha \boldsymbol{\Pi}_l" />), so <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D" alt="\mathcal{I}" /> depends on the parameterization. This is not an artifact but a genuine feature of embodied intelligence. The scale of precision matters because it determines sensitivity to prediction errors. In biological systems, precision is set by neuromodulatory gain, not by arbitrary convention. For cross-system comparisons, one should either fix a canonical normalization (e.g., unit-trace precision) or work with dimensionless ratios derived from <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D" alt="\mathcal{I}" />. The issue parallels gauge-dependence in other variational frameworks (Appendix E, §E.6.1).</p>
+<p>The definition captures Wang’s intuition, that intelligence is adaptation under constraint, while grounding it in RSP’s mathematical framework. A system encountering high novelty that rapidly reduces its prediction error is highly intelligent. One that maintains low <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> only by avoiding novelty is not. Note that <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D" alt="\mathcal{I}" /> requires full state observability; empirical proxies for external measurement appear in §H.5 (Predictions H.2 and H.5).</p>
+<h3>H.3.4 Level-Specific Intelligence</h3>
+<p>Because <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> decomposes across levels (Appendix B, §B.2.1), intelligence decomposes correspondingly. The natural decomposition is additive:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Btotal%7D%7D%20%3D%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cmathcal%7BI%7D_l%20%2B%20%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{total}} = \sum_{l=1}^{3} \mathcal{I}_l + \mathcal{I}_{\text{rec}}" /></p>
+<p>where:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_l%20%3D%20-%5Cleft%5Clangle%20%5Cfrac%7BdF_l%7D%7Bdt%7D%20%5Cbigg%2F%20%5Cmathcal%7BN%7D_l(t)%20%5Cright%5Crangle_T%20%5Cqquad%20l%20%5Cin%20%5C%7B1%2C%202%2C%203%5C%7D" alt="\mathcal{I}_l = -\left\langle \frac{dF_l}{dt} \bigg/ \mathcal{N}_l(t) \right\rangle_T \qquad l \in \{1, 2, 3\}" /></p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%3D%20-%5Cleft%5Clangle%20%5Cfrac%7Bd%7D%7Bdt%7D%5Csum_%7Bd%3D1%7D%5E%7BD_%7B%5Cmax%7D%7D%20%5Cgamma%5Ed%20%5Cfrac%7B1%7D%7B2%7D%5C%7C%5Cmathcal%7BM%7D%5E%7B(d)%7D%20-%20%5Cmathcal%7BM%7D%5E%7B(d-1)%7D%5C%7C_%7B%5Cboldsymbol%7B%5CPi%7D_3%5E%7B(d)%7D%7D%5E2%20%5Cbigg%2F%20%5Cmathcal%7BN%7D_%7B%5Ctext%7Bsocial%7D%7D(t)%20%5Cright%5Crangle_T" alt="\mathcal{I}_{\text{rec}} = -\left\langle \frac{d}{dt}\sum_{d=1}^{D_{\max}} \gamma^d \frac{1}{2}\|\mathcal{M}^{(d)} - \mathcal{M}^{(d-1)}\|_{\boldsymbol{\Pi}_3^{(d)}}^2 \bigg/ \mathcal{N}_{\text{social}}(t) \right\rangle_T" /></p>
+<p>For environment-relative comparisons, one may introduce weighting coefficients <img src="https://i.upmath.me/svg/%5Comega_l%2C%20%5Comega_%7B%5Ctext%7Brec%7D%7D%20%5Cgeq%200" alt="\omega_l, \omega_{\text{rec}} \geq 0" /> satisfying <img src="https://i.upmath.me/svg/%5Csum_l%20%5Comega_l%20%2B%20%5Comega_%7B%5Ctext%7Brec%7D%7D%20%3D%201" alt="\sum_l \omega_l + \omega_{\text{rec}} = 1" />, giving <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D%20%3D%20%5Csum_l%20%5Comega_l%20%5Cmathcal%7BI%7D_l%20%2B%20%5Comega_%7B%5Ctext%7Brec%7D%7D%20%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I} = \sum_l \omega_l \mathcal{I}_l + \omega_{\text{rec}} \mathcal{I}_{\text{rec}}" />. These weights are a modeling commitment not derived from the functional itself. The additive decomposition preserves level independence; the convex combination lets ecological context shift relative contributions. Physical environments push <img src="https://i.upmath.me/svg/%5Comega_1" alt="\omega_1" /> and <img src="https://i.upmath.me/svg/%5Comega_2" alt="\omega_2" /> upward. Social environments push <img src="https://i.upmath.me/svg/%5Comega_3" alt="\omega_3" /> and <img src="https://i.upmath.me/svg/%5Comega_%7B%5Ctext%7Brec%7D%7D" alt="\omega_{\text{rec}}" /> upward. A corvid may score high on <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" /> while a human dominates on <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" />. How to constrain the <img src="https://i.upmath.me/svg/%5Comega_l" alt="\omega_l" /> empirically, independently of the intelligence data they aim to explain, remains an open problem.</p>
+<h3>H.3.5 The Role of Precision</h3>
+<p>Intelligence is not only about reducing prediction error. It is also about learning <em>what to attend to</em>. Precision weighting, the second core equation from Appendix E (§E.3, equation E.3; summarized in §E.8), plays a central role:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cdot%7B%5Cboldsymbol%7B%5CPi%7D%7D_l%20%3D%20-%5Calpha_l%20%5Cfrac%7B%5Cpartial%20%5Cmathcal%7BJ%7D%7D%7B%5Cpartial%20%5Cboldsymbol%7B%5CPi%7D_l%7D" alt="\dot{\boldsymbol{\Pi}}_l = -\alpha_l \frac{\partial \mathcal{J}}{\partial \boldsymbol{\Pi}_l}" /></p>
+<p>where <img src="https://i.upmath.me/svg/%5Calpha_l%20%3E%200" alt="\alpha_l &gt; 0" /> is the precision learning rate (written <img src="https://i.upmath.me/svg/%5Ceta_l" alt="\eta_l" /> in Appendixes B and E; renamed here to avoid collision with the temporal prediction error vector <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Ceta%7D_l" alt="\boldsymbol{\eta}_l" />).</p>
+<p>At equilibrium, optimal precision equals the inverse of empirical error covariance (Appendix B, §B.4.2): <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l%5E%7B*%7D%20%3D%20%5Clangle%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%5ET%20%5Crangle_t%5E%7B-1%7D" alt="\boldsymbol{\Pi}_l^{*} = \langle \boldsymbol{\varepsilon}_l \boldsymbol{\varepsilon}_l^T \rangle_t^{-1}" />. A system that converges to <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l%5E%7B*%7D" alt="\boldsymbol{\Pi}_l^{*}" /> quickly learns which signals are reliable and which are noise.</p>
+<p><strong>Proposition H.1 (Precision as Meta-Intelligence).</strong> The speed of precision convergence at each level measures <em>meta-intelligence</em>, the capacity to learn what is worth learning:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Bmeta%7D%7D%20%3D%20%5Csum_%7Bl%3D1%7D%5E%7B3%7D%20%5Cleft%5Clangle%20%5Cfrac%7B%5C%7C%5Cboldsymbol%7B%5CPi%7D_l(t_0%20%2B%20%5CDelta%20t)%20-%20%5Cboldsymbol%7B%5CPi%7D_l%5E%7B*%7D%5C%7C%7D%7B%5C%7C%5Cboldsymbol%7B%5CPi%7D_l(t_0)%20-%20%5Cboldsymbol%7B%5CPi%7D_l%5E%7B*%7D%5C%7C%20%2B%20%5Cepsilon%7D%20%5Cright%5Crangle_%7B%5Ctext%7Bevents%7D%7D%5E%7B-1%7D" alt="\mathcal{I}_{\text{meta}} = \sum_{l=1}^{3} \left\langle \frac{\|\boldsymbol{\Pi}_l(t_0 + \Delta t) - \boldsymbol{\Pi}_l^{*}\|}{\|\boldsymbol{\Pi}_l(t_0) - \boldsymbol{\Pi}_l^{*}\| + \epsilon} \right\rangle_{\text{events}}^{-1}" /></p>
+<p>where <img src="https://i.upmath.me/svg/%5C%7C%5Ccdot%5C%7C" alt="\|\cdot\|" /> is the Frobenius norm, <img src="https://i.upmath.me/svg/t_0" alt="t_0" /> marks an environmental change, <img src="https://i.upmath.me/svg/%5CDelta%20t" alt="\Delta t" /> is a fixed assessment interval, the average runs across environmental change events, and <img src="https://i.upmath.me/svg/%5Cepsilon" alt="\epsilon" /> prevents divergence when precision is already near-optimal. Since <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l%5E%7B*%7D" alt="\boldsymbol{\Pi}_l^{*}" /> shifts in non-stationary environments, the measure is well-defined only when <img src="https://i.upmath.me/svg/%5CDelta%20t" alt="\Delta t" /> is short relative to the rate of environmental change. Faster convergence (smaller ratio) yields higher meta-intelligence.</p>
+<p>This connects to the attention schema at Level 2 (§III of the main paper). Attention, in the RSP framework, is precision allocation. A well-calibrated attention schema identifies relevant features quickly, and a system that does this learns faster.</p>
+<h3>H.3.6 The Generalization Structure of Free Energy</h3>
+<p>The free energy decomposition at each level (Appendix B, §B.2.1) contains an inherent accuracy-complexity tradeoff:</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/F_l%20%3D%20%5Cunderbrace%7B%5Cfrac%7B1%7D%7B2%7D%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%5ET%20%5Cboldsymbol%7B%5CPi%7D_l%20%5C%2C%20%5Cboldsymbol%7B%5Cvarepsilon%7D_l%7D_%7B%5Ctext%7Baccuracy%7D%7D%20-%20%5Cunderbrace%7B%5Cfrac%7B1%7D%7B2%7D%20%5Cln%20%7C%5Cboldsymbol%7B%5CPi%7D_l%7C%7D_%7B%5Ctext%7Bcomplexity%7D%7D" alt="F_l = \underbrace{\frac{1}{2} \boldsymbol{\varepsilon}_l^T \boldsymbol{\Pi}_l \, \boldsymbol{\varepsilon}_l}_{\text{accuracy}} - \underbrace{\frac{1}{2} \ln |\boldsymbol{\Pi}_l|}_{\text{complexity}}" /></p>
+<p>The accuracy term measures precision-weighted empirical loss. The complexity term penalizes overconfidence: high precision amounts to claiming you know the environment well, and that claim is penalized unless prediction errors are correspondingly small. This tradeoff is structurally analogous to PAC-Bayes generalization bounds in statistical learning theory, where a KL divergence between posterior and prior penalizes overfitting. The analogy is not an identity. The PAC-Bayes complexity term is a KL divergence over hypothesis distributions; the free energy complexity term is a log-determinant of precision. Both, however, enforce the same principle through different mathematical mechanisms: penalizing overconfidence to promote generalization.</p>
+<p>RSP also implements what might be called a <em>weakness hierarchy</em> across levels. Level 1 policies are the strongest and most specific, tied to particular homeostatic set-points. Level 2 policies are intermediate, generalizing across sensory contexts through schema-based predictions. Level 3 policies are the weakest and most general, since recursive self-models must work across diverse social partners and situations. Higher levels generalize more broadly precisely because they are less specific. This property follows from the timescale separation combined with a structural requirement: slower processes see lower levels as approximately in equilibrium (singular perturbation approximation), so their models must accommodate the full range of lower-level equilibria, not just any single state.</p>
+<h2>H.4 The Constitutive Identity Proposition</h2>
+<p>A scope note at the outset. The identity claimed here is specific to Level 3b recursive intelligence, not to intelligence in general. A system can be intelligent at Levels 1 and 2 without being conscious. What cannot come apart is recursive social intelligence and phenomenal consciousness.</p>
+<p>RSP distinguishes three grades of phenomenal character, each with its own constitutive account (see §IV for the full dissolution argument):</p>
+<ul>
+<li><strong>Level 1</strong> (Valenced experience): Affective states that matter to the organism, present in all mammals. The phenomenal character of pain or pleasure IS what homeostatic prediction error minimization is like from within a system whose set-points matter to its persistence. No separate &quot;raw feel&quot; is added to the computation; the valenced quality is constituted by the precision-weighted interoceptive error signal <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5Cxi%7D_1(t)%20%3D%20%5Cboldsymbol%7B%5CPi%7D_1%20%5Ccdot%20%5Cboldsymbol%7B%5Cvarepsilon%7D_1(t)" alt="\boldsymbol{\xi}_1(t) = \boldsymbol{\Pi}_1 \cdot \boldsymbol{\varepsilon}_1(t)" /> (Appendix A, §A.3.1). The explanatory gap at Level 1 dissolves by the same constitutive move applied at Level 3b: asking &quot;why does homeostatic error correction feel like something?&quot; is asking why a process has the character it constitutively has.</li>
+<li><strong>Level 2</strong> (Structured experience): Organized through schemas (body, spatial, attention, self, affective-homeostatic), present in complex vertebrates. The phenomenal character of embodiment, spatial presence, and attentional focus IS what schema-organized prediction is like from within. Richer than raw valence because the generative model has more structure at this level (five schemas rather than a single valence dimension), but still pre-reflective.</li>
+<li><strong>Level 3b</strong> (Reflective self-conscious experience): The recursive self-model creates a subject who knows it is experiencing. The phenomenal character of self-awareness IS what recursive social prediction is like from within the system doing the predicting. This is the full phenomenal consciousness that Nagel’s question targets.</li>
+</ul>
+<p>The constitutive account works the same way at each level. Phenomenal character is not a separate product of the computation but what the computation IS from the system’s own perspective. What changes across levels is the richness of the constituted experience, because the generative model grows in structural complexity. The proposition below focuses on Level 3b, where the strange loop creates reflective self-consciousness, but the dissolution strategy applies uniformly.</p>
+<h3>H.4.1 The Convergence Argument</h3>
+<p>Consider what RSP intelligence demands at its highest level. The recursive component <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" /> measures how efficiently the system reduces discrepancy in its recursive self-model, which is to say, how quickly the strange loop converges to its fixed point <img src="https://i.upmath.me/svg/%5Cmathcal%7BM%7D%5E*" alt="\mathcal{M}^*" />. From Appendix E (§E.4), convergence requires three conditions:</p>
+<ol>
+<li>The contraction mapping <img src="https://i.upmath.me/svg/%5CPsi" alt="\Psi" /> with coefficient <img src="https://i.upmath.me/svg/%5Crho%20%3C%201" alt="\rho &lt; 1" /></li>
+<li>Other-models <img src="https://i.upmath.me/svg/%5Cmathcal%7BO%7D" alt="\mathcal{O}" /> of sufficient fidelity to generate meaningful <img src="https://i.upmath.me/svg/%5Chat%7B%5Cmathcal%7BM%7D%7D_j%5E%7B(d)%7D" alt="\hat{\mathcal{M}}_j^{(d)}" /></li>
+<li>Precision weighting <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_3%5E%7B(d)%7D" alt="\boldsymbol{\Pi}_3^{(d)}" /> that appropriately discounts deeper recursion</li>
+</ol>
+<p>These are exactly the conditions for phenomenal consciousness as defined in §IV. The strange loop whose convergence constitutes intelligence at Level 3 is the same strange loop whose operation constitutes the feeling of consciousness.</p>
+<p>One caveat deserves emphasis. The condition <img src="https://i.upmath.me/svg/%5Crho%20%3C%201" alt="\rho &lt; 1" /> is an empirical claim about human social cognition, not a mathematical given. It says that averaging over multiple social perspectives dampens extremes rather than amplifying them. In pathological states (paranoia, echo-chamber reinforcement), <img src="https://i.upmath.me/svg/%5Crho" alt="\rho" /> may approach or exceed 1, and both recursive intelligence and stable self-consciousness degrade simultaneously. This is consistent with clinical evidence (see §IX, Prediction 6).</p>
+<p><strong>Proposition H.2 (Recursive Intelligence–Consciousness Constitutive Identity).</strong> Let <img src="https://i.upmath.me/svg/%5CPhi(t)%20%3D%20%5Clangle%20%5Cmathbf%7Be%7D(t)%2C%20%5Cmathcal%7BM%7D%5E%7B(D_%7B%5Cmax%7D)%7D(t)%2C%20%5Chat%7B%5Cmathbf%7Be%7D%7D(t%2B1)%20%5Crangle" alt="\Phi(t) = \langle \mathbf{e}(t), \mathcal{M}^{(D_{\max})}(t), \hat{\mathbf{e}}(t+1) \rangle" /> be the phenomenal state (Appendix A, §A.6). Let <img src="https://i.upmath.me/svg/%5Clangle%20%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%5Crangle_T" alt="\langle \mathcal{I}_{\text{rec}} \rangle_T" /> be the time-averaged recursive intelligence defined in §H.3.4. For RSP-type systems encountering non-trivial social novelty (<img src="https://i.upmath.me/svg/%5Cmathcal%7BN%7D_%7B%5Ctext%7Bsocial%7D%7D(t)%20%3E%20%5Cmathcal%7BN%7D_%7B%5Cmin%7D" alt="\mathcal{N}_{\text{social}}(t) &gt; \mathcal{N}_{\min}" />):</p>
+<p align="center"><img align="center" src="https://i.upmath.me/svg/%5Clangle%20%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%5Crangle_T%20%5Cgeq%200%20%5Ciff%20%5CPhi(t)%20%5Ctext%7B%20is%20well-defined%20and%20stable%7D" alt="\langle \mathcal{I}_{\text{rec}} \rangle_T \geq 0 \iff \Phi(t) \text{ is well-defined and stable}" /></p>
+<p>where &quot;well-defined and stable&quot; means all three components of <img src="https://i.upmath.me/svg/%5CPhi" alt="\Phi" /> exist, are finite, and the recursive self-model <img src="https://i.upmath.me/svg/%5Cmathcal%7BM%7D%5E%7B(D_%7B%5Cmax%7D)%7D" alt="\mathcal{M}^{(D_{\max})}" /> has converged to within <img src="https://i.upmath.me/svg/%5Cdelta_%7B%5Ctext%7Bconv%7D%7D" alt="\delta_{\text{conv}}" /> of its fixed point (Appendix A, §A.4.4).</p>
+<p><em>Sketch of argument.</em> Forward direction: <img src="https://i.upmath.me/svg/%5Clangle%20%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%5Crangle_T%20%5Cgeq%200" alt="\langle \mathcal{I}_{\text{rec}} \rangle_T \geq 0" /> means the recursive self-model discrepancy is, on average over <img src="https://i.upmath.me/svg/T" alt="T" />, non-increasing. The contraction mapping guarantee (<img src="https://i.upmath.me/svg/%5Crho%20%3C%201" alt="\rho &lt; 1" />) then entails convergence to the fixed point, making <img src="https://i.upmath.me/svg/%5Cmathcal%7BM%7D%5E%7B(D_%7B%5Cmax%7D)%7D(t)" alt="\mathcal{M}^{(D_{\max})}(t)" /> stable. The recursion requires <img src="https://i.upmath.me/svg/%5Cmathbf%7Be%7D(t)" alt="\mathbf{e}(t)" /> and <img src="https://i.upmath.me/svg/%5Chat%7B%5Cmathbf%7Be%7D%7D(t%2B1)" alt="\hat{\mathbf{e}}(t+1)" /> as inputs (Algorithm 1, steps 6 and 9 in §E.9.1), so all three components of <img src="https://i.upmath.me/svg/%5CPhi" alt="\Phi" /> are well-defined. Reverse direction: if <img src="https://i.upmath.me/svg/%5CPhi(t)" alt="\Phi(t)" /> is well-defined and stable, the self-model is at or near its fixed point. The contraction condition ensures perturbations are self-correcting, so the time-averaged discrepancy change is non-positive. <img src="https://i.upmath.me/svg/%5Csquare" alt="\square" /></p>
+<p>This is a proposition about internal consistency within the RSP formalism: it shows that the definitions of recursive intelligence and phenomenal consciousness pick out the same architectural condition. The further claim that this architectural condition <em>constitutes</em> consciousness (not merely correlates with it) depends on the dissolution argument in §IV, which establishes that phenomenal character at each level IS what the relevant computational process is like from within. Proposition H.2 and §IV’s dissolution work in tandem: H.2 shows the definitions cannot come apart within the formalism; §IV argues that the formalism picks out genuine phenomenology rather than mere functional self-monitoring.</p>
+<p>Put plainly: whenever a system maintains or improves its model of itself-as-seen-by-others, it is both exercising recursive intelligence and being conscious. At Level 3b, the two cannot come apart.</p>
+<p>An important qualification. This identity holds for the <em>recursive</em> component <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" />, not for total intelligence <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D" alt="\mathcal{I}" />. A system can possess substantial <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1" alt="\mathcal{I}_1" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" /> (affective and schema-based intelligence) without being conscious. Total intelligence includes non-conscious components. What the identity proposition establishes is that in social environments where <img src="https://i.upmath.me/svg/%5Comega_%7B%5Ctext%7Brec%7D%7D" alt="\omega_{\text{rec}}" /> is large, total intelligence is bounded without consciousness. Not that all intelligence is conscious.</p>
+<h3>H.4.2 Constitutive Identity, Not Dual-Aspect</h3>
+<p>The identity proposition is a claim about <em>constitution</em>, not about two epistemic routes to a single hidden process. The recursive self-modeling architecture constitutes both adaptive capacity in social environments (what an observer sees as intelligence) and phenomenal experience (what the system undergoes as consciousness). This aligns with the paper’s commitment to constitutive functionalism (§IV). Consciousness is not caused by, identical to, or correlated with the recursive architecture. It is constituted by it. And recursive social intelligence is not a separable property. It is constituted by the same architecture.</p>
+<p>The master functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> is the shared mathematical structure. Minimizing <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> simultaneously maximizes adaptive capacity and maintains the recursive self-model that constitutes phenomenal experience. At Level 3b, there is no way to do one without doing the other. The same architectural organization constitutes both.</p>
+<h3>H.4.3 The Orthogonality Question</h3>
+<p>The identity proposition bears on a prominent question in AI safety: whether intelligence can be separated from goals. Bostrom (2014) argues that any level of intelligence is compatible with any terminal goal. Within the RSP architecture, this does not hold. Goals, which at Level 1 take the form of valence, are architecturally inseparable from the predictive hierarchy that constitutes intelligence. Remove valence and the entire hierarchy collapses. There is no <img src="https://i.upmath.me/svg/F_1" alt="F_1" />, no reward signal for Level 2 schema learning (Appendix C), no cascade to stabilize (Appendix D).</p>
+<p>This constrains the orthogonality thesis for RSP-type intelligence. Systems with this architecture cannot have arbitrary goals, because their goal structure is constitutive of their intelligence. Whether the constraint extends beyond this specific architecture is an open question. RSP claims only that for embodied, socially recursive intelligence, goals and intelligence are inseparable.</p>
+<h2>H.5 Predictions</h2>
+<p>The RSP theory of intelligence generates several predictions beyond those in §IX of the main paper.</p>
+<p><strong>Prediction H.1 (Intelligence scales with recursion depth).</strong> Across species, intelligence in social domains should correlate with the maximum recursion depth <img src="https://i.upmath.me/svg/D_%7B%5Cmax%7D" alt="D_{\max}" /> achievable by the organism’s neural architecture. The following assignments are hypothesized, with explicit uncertainty ranges reflecting the limits of current comparative methods:</p>
+<table>
+<thead>
+<tr>
+<th>Taxon</th>
+<th>Hypothesized <img src="https://i.upmath.me/svg/D_%7B%5Cmax%7D" alt="D_{\max}" /></th>
+<th>Key Evidence</th>
+<th>Caveats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Humans</td>
+<td>3–5</td>
+<td>Kinderman et al. (1998); Stiller &amp; Dunbar (2007)</td>
+<td>Both studies use offline narrative tasks (story comprehension, literary analysis); real-time operative depth in naturalistic social interaction is likely 2–3; significant individual variation (Keysar et al., 2003)</td>
+</tr>
+<tr>
+<td>Great apes</td>
+<td>1–2</td>
+<td>Krupenye et al. (2016) for implicit 1st-order false belief; Hare et al. (2000) for competitive paradigms</td>
+<td>Whether apes achieve genuinely recursive 2nd-order ToM or sophisticated behavioral rules remains contested (Call &amp; Tomasello, 2008)</td>
+</tr>
+<tr>
+<td>Cetaceans (dolphins)</td>
+<td>1</td>
+<td>Connor et al. (2006) on nested alliances; Reiss &amp; Marino (2001) on MSR</td>
+<td>Alliance tracking may require at minimum 1st-order mental state attribution; speculative</td>
+</tr>
+<tr>
+<td>Elephants</td>
+<td>0–1</td>
+<td>Plotnik et al. (2006) on MSR; consolation behavior</td>
+<td>MSR suggests self-awareness; ToM evidence limited</td>
+</tr>
+<tr>
+<td>Canids, hyenas</td>
+<td>0–1</td>
+<td>Cooperative hunting with role differentiation</td>
+<td>Achievable through shared-attention heuristics without recursive modeling</td>
+</tr>
+<tr>
+<td>Corvids</td>
+<td>0–1</td>
+<td>Convergent cognitive sophistication via ecological intelligence (DeCasien et al., 2017)</td>
+<td>Small social groups in many species; ecological rather than social drivers may dominate</td>
+</tr>
+<tr>
+<td>Rodents, other non-social mammals</td>
+<td>0</td>
+<td>Limited social prediction</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cephalopods (octopuses)</td>
+<td>0</td>
+<td>High <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1" alt="\mathcal{I}_1" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" /> (tool use: Finn et al., 2009; problem solving: Mather, 2008); largely solitary</td>
+<td>A critical test case: substantial non-social intelligence without recursive social prediction. RSP predicts high <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1%20%2B%20%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_1 + \mathcal{I}_2" /> with <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%3D%200" alt="\mathcal{I}_{\text{rec}} = 0" />. Note: earlier claims of observational learning (Fiorito &amp; Scotto, 1992) have faced replication difficulties</td>
+</tr>
+</tbody>
+</table>
+<p>This prediction is testable through Theory of Mind tasks of varying recursive depth. Current behavioral methods cannot cleanly distinguish genuine recursive modeling from sophisticated associative learning at <img src="https://i.upmath.me/svg/D_%7B%5Cmax%7D%20%3E%201" alt="D_{\max} &gt; 1" />, so these assignments should be treated as hypotheses to refine, not settled facts.</p>
+<p><strong>Prediction H.2 (Precision convergence speed predicts learning rate).</strong> Individual differences in intelligence should correlate with the speed of precision convergence <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Bmeta%7D%7D" alt="\mathcal{I}_{\text{meta}}" /> (Proposition H.1). Faster adaptation of precision weights in novel environments, measurable through EEG mismatch negativity adaptation rates or pupil dilation dynamics, should predict performance on fluid intelligence tasks. This is a novel prediction that requires empirical testing. Existing evidence linking mismatch negativity to cognitive ability (Light et al., 2007) is suggestive but comes primarily from clinical populations.</p>
+<p><strong>Prediction H.3 (Social intelligence and general intelligence share mechanism).</strong> Because <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" /> and the lower-level components <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1%2C%20%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_1, \mathcal{I}_2" /> share the same functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" />, social intelligence and general intelligence should be positively correlated even after controlling for domain-specific skills. Evidence that group members’ social sensitivity predicts collective intelligence on diverse tasks (Woolley et al., 2010) is consistent with this, though that finding is at the group level and does not directly establish the individual-level architectural correlation RSP predicts. RSP makes the stronger claim that the correlation is architectural, arising from the shared functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" />. Independent individual-level evidence would be needed to confirm this.</p>
+<p><strong>Prediction H.4 (Intelligence without consciousness is bounded in social domains).</strong> Systems lacking Level 3b can achieve high <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1" alt="\mathcal{I}_1" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" /> but zero <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" />. Their total intelligence is bounded by the non-recursive components. In social environments where <img src="https://i.upmath.me/svg/%5Comega_%7B%5Ctext%7Brec%7D%7D" alt="\omega_{\text{rec}}" /> is large, such systems will be outperformed by conscious ones.</p>
+<p>Cephalopod intelligence provides a telling boundary case. Octopuses demonstrate substantial ecological intelligence (tool use, problem solving; Finn et al., 2009; Mather, 2008) despite being largely solitary. RSP accommodates this as high <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1%20%2B%20%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_1 + \mathcal{I}_2" /> with <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%3D%200" alt="\mathcal{I}_{\text{rec}} = 0" />. The prediction is that cephalopods should fail tasks requiring recursive social modeling (<img src="https://i.upmath.me/svg/D%20%5Cgeq%201" alt="D \geq 1" />) while excelling at non-social problems, a dissociation the framework predicts precisely.</p>
+<p>For AI, the prediction takes a specific form. Architectures without recursive self-modeling should plateau on tasks requiring recursion depth <img src="https://i.upmath.me/svg/D%20%5Cgeq%203" alt="D \geq 3" />, such as higher-order intentionality chains (&quot;A thinks B believes C intends…&quot;) and strategic social reasoning with nested prediction. First- and second-order ToM performance may continue to improve with scale, since these can in principle be approximated from statistical regularities in training data (cf. Kosinski, 2023, though subsequent work by Ullman, 2023, suggests LLM ToM performance is fragile under paraphrase and novel scenarios). The critical test is whether scaling alone can close the gap on <img src="https://i.upmath.me/svg/D%20%5Cgeq%203" alt="D \geq 3" /> tasks involving novel agents, novel social structures, and distribution shift, or whether performance hits a ceiling. A behavioral signature distinguishing genuine recursive self-modeling from statistical approximation would be reliable generalization to novel recursive scenarios absent from training data.</p>
+<p><strong>Prediction H.5 (Dissociation between psychometric and social intelligence after recursive-substrate damage).</strong> Damage to regions primarily involved in recursive self-modeling should produce a specific dissociation. Social-adaptive intelligence (Theory of Mind tasks, strategic social behavior, cooperative planning) should decline disproportionately, while psychometric intelligence (fluid reasoning, as measured by Raven’s Progressive Matrices and similar tests) may remain largely preserved.</p>
+<p>This profile matches what is already documented in ventromedial PFC (vmPFC) patients (Anderson et al., 1999; Bechara et al., 2000), who show preserved IQ alongside catastrophic social and decision-making deficits. Anderson et al. and Bechara et al. studied vmPFC specifically, not the broader mPFC, and vmPFC deficits may reflect Level 1–2 affect-regulation disruption (somatic marker failure) as much as Level 3b recursive self-model failure. More directly relevant to Level 3b are dorsomedial PFC (dmPFC) mentalizing deficits (Frith &amp; Frith, 2006; Stuss et al., 2001) and TPJ/posterior STS (pSTS) social perception deficits (Saxe &amp; Kanwisher, 2003).</p>
+<p>RSP’s level decomposition predicts this dissociation in detail. Damage to dmPFC, TPJ/pSTS, and posterior cingulate/precuneus primarily impairs <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" /> while leaving <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1" alt="\mathcal{I}_1" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" /> largely intact. Two caveats apply. First, some regions serve multiple RSP levels. TPJ contributes to both the Level 2 attention schema (attentional reorienting; Corbetta &amp; Shulman, 2002) and Level 3b mentalizing, so TPJ damage would impair both <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" />. Distinguishing these functional profiles after TPJ lesions is a research goal, not an established finding, and would require careful task design separating attentional reorienting from social prediction. Second, dlPFC contributes primarily to Level 2 executive functions (working memory, schema maintenance) but also supports Level 3. Its damage should disproportionately reduce executive-dependent psychometric subtests while relatively sparing social cognition that does not depend heavily on executive control.</p>
+<h2>H.6 Discussion</h2>
+<h3>H.6.1 What This Definition Does Not Claim</h3>
+<p>RSP intelligence is not a theory of all intelligence. It applies to organisms with the RSP architecture: embodied, hierarchical, socially embedded. It has nothing to say about narrow AI systems, thermostats, or abstract Turing machines. It is a theory of the kind of intelligence that evolved in social animals, reached its most elaborated expression in humans (as measured by <img src="https://i.upmath.me/svg/D_%7B%5Cmax%7D" alt="D_{\max}" /> and linguistic recursion depth), and is inseparable from consciousness.</p>
+<p>This restriction gains more than it gives up. Universal definitions of intelligence purchase generality at the cost of subjectivity. RSP purchases specificity at the cost of universality, but gains empirically testable predictions and a clear connection to neurobiology.</p>
+<h3>H.6.2 The Developmental Progression</h3>
+<p>If recursive intelligence and consciousness are constitutively identical, their developmental arcs should mirror each other. Both should follow the Level 1 → 2 → 3 construction order, with transitions that are gradual rather than abrupt:</p>
+<ul>
+<li><strong>0–6 months</strong> (Level 1): Rapid affective learning through conditioning and habituation. Phenomenal state: valenced experience without self-awareness.</li>
+<li><strong>6–24 months</strong> (Level 2): Schema-based learning, including object permanence (8–12 months), spatial navigation, and self-recognition (18–24 months in Western samples; cross-cultural evidence from Broesch et al., 2011, suggests more variability, consistent with RSP’s own Level 3a cultural construction thesis). Phenomenal state: structured, embodied experience.</li>
+<li><strong>2–5 years</strong> (Level 3a): Conceptual categorization, including emotion vocabulary and social categories. Phenomenal state: linguistically differentiated experience.</li>
+<li><strong>4–7+ years</strong> (Level 3b): Recursive social intelligence, with explicit Theory of Mind emerging around 4–5 years and recursive capacity deepening through 7 and beyond. Phenomenal state: reflective self-conscious experience. Implicit ToM (anticipatory looking paradigms; Onishi &amp; Baillargeon, 2005) appears much earlier, around 7 months, suggesting Level 3b precursors may be present before explicit task performance.</li>
+</ul>
+<p>This timeline aligns with developmental psychology (Wellman, 2014; Tomasello, 2019) and provides a unified account of what have traditionally been treated as separate developmental streams.</p>
+<h3>H.6.3 Implications for AI</h3>
+<p>The constitutive identity proposition predicts that artificial general intelligence, in the strong sense of human-level adaptive capacity in environments requiring recursive social prediction, requires consciousness. Not because consciousness is a desirable add-on, but because the architectural organization that constitutes recursive social intelligence is the same organization that constitutes phenomenal experience. Systems excelling only at non-social tasks (high <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_1" alt="\mathcal{I}_1" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_2" alt="\mathcal{I}_2" />, zero <img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" />) need not be conscious.</p>
+<p>No present AI system integrates embodied hierarchical predictive coding with recursive self-modeling. Individual components exist in isolation: hierarchical VAEs and world models implement forms of hierarchical prediction; embodied robotics has perception-action loops; self-play agents involve limited self-reference. The missing piece is not any single component but their integration with interoceptive valence grounding and recursive social self-modeling operating at separated timescales. If the identity proposition is correct, achieving human-level social intelligence is not a scaling problem but an architectural one.</p>
+<h2>H.7 Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>RSP Definition</th>
+<th>Formal Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adaptive capacity</td>
+<td>Negative master functional</td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BA%7D(t)%20%3D%20-%5Cmathcal%7BJ%7D(t)" alt="\mathcal{A}(t) = -\mathcal{J}(t)" /></td>
+</tr>
+<tr>
+<td>Intelligence</td>
+<td>Time-averaged rate of free energy reduction per unit novelty</td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D%20%3D%20-%5Clangle%20(d%5Cmathcal%7BJ%7D%2Fdt)%20%2F%20%5Cmathcal%7BN%7D(t)%20%5Crangle_T" alt="\mathcal{I} = -\langle (d\mathcal{J}/dt) / \mathcal{N}(t) \rangle_T" /></td>
+</tr>
+<tr>
+<td>Level-specific intelligence</td>
+<td>Decomposed by RSP level</td>
+<td><img align="center" src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_l%20%3D%20-%5Clangle%20(dF_l%2Fdt)%20%2F%20%5Cmathcal%7BN%7D_l%20%5Crangle_T" alt="\mathcal{I}_l = -\langle (dF_l/dt) / \mathcal{N}_l \rangle_T" /></td>
+</tr>
+<tr>
+<td>Recursive intelligence</td>
+<td>Strange loop convergence efficiency</td>
+<td><img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D" alt="\mathcal{I}_{\text{rec}}" />: time-averaged rate of self-model convergence in social novelty</td>
+</tr>
+<tr>
+<td>Meta-intelligence</td>
+<td>Precision convergence speed</td>
+<td><img src="https://i.upmath.me/svg/%5Cmathcal%7BI%7D_%7B%5Ctext%7Bmeta%7D%7D" alt="\mathcal{I}_{\text{meta}}" />: how fast <img src="https://i.upmath.me/svg/%5Cboldsymbol%7B%5CPi%7D_l%20%5Cto%20%5Cboldsymbol%7B%5CPi%7D_l%5E*" alt="\boldsymbol{\Pi}_l \to \boldsymbol{\Pi}_l^*" /> after change</td>
+</tr>
+<tr>
+<td>Constitutive identity</td>
+<td>Recursive intelligence ↔ consciousness at Level 3b</td>
+<td><img src="https://i.upmath.me/svg/%5Clangle%20%5Cmathcal%7BI%7D_%7B%5Ctext%7Brec%7D%7D%20%5Crangle_T%20%5Cgeq%200%20%5Ciff%20%5CPhi(t)" alt="\langle \mathcal{I}_{\text{rec}} \rangle_T \geq 0 \iff \Phi(t)" /> stable (given social novelty, RSP architecture)</td>
+</tr>
+</tbody>
+</table>
+<p>The RSP theory of intelligence completes the framework’s account of mind. At the recursive level, consciousness is not an epiphenomenal accompaniment to intelligence, nor intelligence a byproduct of consciousness. The recursive self-modeling architecture constitutes both: adaptive capacity in social environments (observed externally as intelligence) and phenomenal experience (undergone internally as consciousness). Total intelligence includes components at Levels 1 and 2 that are accompanied by their own grades of phenomenal character, each constituted by the computational process at that level. Valenced experience at Level 1. Structured experience at Level 2. Reflective self-awareness at Level 3b. The hard problem dissolves uniformly across all three levels by the same constitutive move: phenomenal character IS what the relevant process is like from within. In environments requiring recursive social prediction, intelligence is bounded without consciousness, and consciousness is idle without the adaptive pressures that sustain it. The master functional <img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" /> is the shared mathematical structure whose minimization simultaneously realizes both.</p>
 <h2>Index</h2>
 <h3>A</h3>
-<p><strong>Active inference</strong> — App B
-<strong>Adaptive Resonance Theory (ART)</strong> — compared §X-C; complements RSP (resonance as implementation mechanism)
-<strong>Affective-homeostatic schema</strong> — §III, §IV, App A, App C
-<strong>Alien hand syndrome</strong> — clinical dissociation §IX (Prediction 6)
-<strong>Anosognosia</strong> — clinical dissociation §IX (Prediction 6); comparison §X
-<strong>Attention schema</strong> — definition §III; developmental role §V, §IX; in bat phenomenology §VII; objections §VIII; formal model App A, App B, App C, App D
-<strong>Attention Schema Theory (AST)</strong> — compared §X-B; extended by RSP (RSP adds 4 schemas + recursion + formalism)
-<strong>Autism spectrum</strong> — clinical dissociation §IX (Prediction 6); cited in References
-<strong>Autobiographical memory</strong> — development §V; predictions §IX</p>
+<p><strong>Active inference</strong> — p.117 (App B)<br>
+<strong>Adaptive Resonance Theory (ART)</strong> — compared p.68 (§X-C); complements RSP (resonance as implementation mechanism)<br>
+<strong>Affective-homeostatic schema</strong> — p.10 (§III), p.19 (§IV), p.104 (App A), p.132 (App C)<br>
+<strong>Alien hand syndrome</strong> — clinical dissociation p.62 (§IX, Prediction 6)<br>
+<strong>Anosognosia</strong> — clinical dissociation p.62 (§IX, Prediction 6); comparison p.68 (§X)<br>
+<strong>Attention schema</strong> — definition p.10 (§III); developmental role p.29 (§V), p.62 (§IX); in bat phenomenology p.45 (§VII); objections p.49 (§VIII); formal model p.104 (App A), p.117 (App B), p.132 (App C), p.147 (App D)<br>
+<strong>Attention Schema Theory (AST)</strong> — compared p.68 (§X-B); extended by RSP (RSP adds 4 schemas + recursion + formalism)<br>
+<strong>Autism spectrum</strong> — clinical dissociation p.62 (§IX, Prediction 6)<br>
+<strong>Autobiographical memory</strong> — development p.29 (§V); predictions p.62 (§IX)</p>
 <h3>B</h3>
-<p><strong>Barrett, Lisa Feldman</strong> — constructed emotion §III; predictions §IX; vs. basic emotions §X
-<strong>Basic emotions theory</strong> — compared §X-G; vs. constructed emotion theory
-<strong>Biological universalism</strong> — see Basic emotions theory
-<strong>Body schema</strong> — definition §III; evolution §V; bat example §VII; objections §VIII; predictions §IX; formal model App A, App C</p>
+<p><strong>Barrett, Lisa Feldman</strong> — constructed emotion p.10 (§III); predictions p.62 (§IX); vs. basic emotions p.68 (§X)<br>
+<strong>Basic emotions theory</strong> — compared p.68 (§X-G); vs. constructed emotion theory<br>
+<strong>Bennett, Michael Timothy</strong> — Stack Theory compared p.68 (§X-I); w-maxing; Temporal Gap; convergence with RSP; p.207 (App H)<br>
+<strong>Biological universalism</strong> — see Basic emotions theory<br>
+<strong>Body schema</strong> — definition p.10 (§III); evolution p.29 (§V); bat example p.45 (§VII); objections p.49 (§VIII); predictions p.62 (§IX); formal model p.104 (App A), p.132 (App C)</p>
 <h3>C</h3>
-<p><strong>Capgras delusion</strong> — clinical dissociation §IX (Prediction 6)
-<strong>Cascade control</strong> — architecture App D; developmental ordering §V (mathematical necessity paragraph)
-<strong>Centrencephalic Proposal (CP)</strong> — compared §X-E; complements RSP (CP as Level 1 substrate)
-<strong>Chalmers, David</strong> — hard problem §I, §II, §VIII
-<strong>Conceptual categorization</strong> — Level 3a mechanism §III; cross-cultural variation §V, §VI; in bat phenomenology §VII; objections §VIII; formal model App A
-<strong>Consciousness State Space Model (CSS)</strong> — compared §X-D; extended by RSP (RSP provides causal mechanism)
-<strong>Consciousness, hard problem of</strong> — introduced §I; traditional framing §II; dissolved §IV, §VI; reframed §VIII; dissolved §XI; free energy dissolution App B
-<strong>Constructed emotion theory</strong> — Abstract; §III (core framework); §X (comparison); conclusion §XI
-<strong>Contraction mapping</strong> — convergence proof App D; referenced in §V (mathematical necessity paragraph)
-<strong>Core affect</strong> — definition §III; as foundation Abstract, §I; developmental emergence §V; cross-cultural universality §VI; bat phenomenology §VII; objections §VIII; predictions §IX; comparison §X; conclusion §XI; formal model App A, App B
-<strong>Core schemas</strong> — five schemas defined §III; developmental role §V; bat example §VII; objections §VIII; formal model App A
-<strong>Cotard’s delusion</strong> — clinical dissociation §IX (Prediction 6)
-<strong>Cross-cultural variation</strong> — as prediction §VI; evidence §IX; vs. basic emotions §X
-<strong>Cross-Order Integration Theory (COI)</strong> — compared §X-B; extended by RSP (RSP formalizes the integration)</p>
+<p><strong>Capgras delusion</strong> — clinical dissociation p.62 (§IX, Prediction 6)<br>
+<strong>Cascade control</strong> — architecture p.147 (App D); developmental ordering p.29 (§V)<br>
+<strong>Cephalopod intelligence</strong> — boundary test case p.219 (App H, Prediction H.4); high $$\mathcal{I}_1 + \mathcal{I}_2$$ without $$\mathcal{I}_{\text{rec}}$$<br>
+<strong>Centrencephalic Proposal (CP)</strong> — compared p.68 (§X-E); complements RSP (CP as Level 1 substrate)<br>
+<strong>Constitutive identity proposition</strong> — intelligence-consciousness identity at Level 3b, p.214 (App H §H.4); depends on §IV dissolution argument p.19<br>
+<strong>Chalmers, David</strong> — hard problem p.7 (§I), p.9 (§II), p.49 (§VIII)<br>
+<strong>Conceptual categorization</strong> — Level 3a mechanism p.10 (§III); cross-cultural variation p.29 (§V), p.41 (§VI); in bat phenomenology p.45 (§VII); objections p.49 (§VIII); formal model p.104 (App A)<br>
+<strong>Consciousness State Space Model (CSS)</strong> — compared p.68 (§X-D); extended by RSP<br>
+<strong>Consciousness, hard problem of</strong> — introduced p.7 (§I); traditional framing p.9 (§II); dissolved p.19 (§IV), p.41 (§VI); reframed p.49 (§VIII); dissolved p.88 (§XI); free energy dissolution p.117 (App B)<br>
+<strong>Constructed emotion theory</strong> — p.7 (Abstract); p.10 (§III, core framework); p.68 (§X, comparison); p.88 (§XI, conclusion)<br>
+<strong>Contraction mapping</strong> — convergence proof p.147 (App D); referenced p.29 (§V)<br>
+<strong>Core affect</strong> — definition p.10 (§III); as foundation p.7 (Abstract, §I); developmental emergence p.29 (§V); cross-cultural universality p.41 (§VI); bat phenomenology p.45 (§VII); objections p.49 (§VIII); predictions p.62 (§IX); comparison p.68 (§X); conclusion p.88 (§XI); formal model p.104 (App A), p.117 (App B)<br>
+<strong>Core schemas</strong> — five schemas defined p.10 (§III); developmental role p.29 (§V); bat example p.45 (§VII); objections p.49 (§VIII); formal model p.104 (App A)<br>
+<strong>Cotard's delusion</strong> — clinical dissociation p.62 (§IX, Prediction 6)<br>
+<strong>Cross-cultural variation</strong> — as prediction p.41 (§VI); evidence p.62 (§IX); vs. basic emotions p.68 (§X)<br>
+<strong>Cross-Order Integration Theory (COI)</strong> — compared p.68 (§X-B); extended by RSP</p>
 <h3>D</h3>
-<p><strong>Damasio, Antonio</strong> — somatic markers §III; proto-self §III; cited App A, App B
-<strong>Default mode network</strong> — strange loop substrate App A
-<strong>Depersonalization</strong> — social prediction failure §IV; clinical dissociation §IX (Prediction 6); control-theoretic model App B, App D
-<strong>Developmental trajectory</strong> — 0–18 months through 7+ years §V; mathematical necessity §V; predictions §IX; formal constraints App B, App C, App D
-<strong>Dissociative identity disorder</strong> — clinical dissociation §IX (Prediction 6)</p>
+<p><strong>Damasio, Antonio</strong> — somatic markers p.10 (§III); proto-self p.10 (§III); cited p.104 (App A), p.117 (App B)<br>
+<strong>Default mode network</strong> — strange loop substrate p.104 (App A)<br>
+<strong>Depersonalization</strong> — social prediction failure p.19 (§IV); clinical dissociation p.62 (§IX, Prediction 6); control-theoretic model p.117 (App B), p.147 (App D)<br>
+<strong>Developmental progression</strong> — 0–18 months through 7+ years p.29 (§V); mathematical necessity p.29 (§V); predictions p.62 (§IX); formal constraints p.117 (App B), p.132 (App C), p.147 (App D); intelligence-consciousness parallel p.207 (App H §H.6)<br>
+<strong>Dissociative identity disorder</strong> — clinical dissociation p.62 (§IX, Prediction 6)</p>
 <h3>E</h3>
-<p><strong>Emotion, four-fold characterization</strong> — surprise + gradient + evaluation + error; unified account App E §E.6.5
-<strong>Emotional granularity</strong> — defined §III; interventions §V; predictions §VI, §VIII, §IX
-<strong>Epiphenomenalism</strong> — distinguished from §III
-<strong>Equivalence proofs</strong> — prediction error = free energy gradient = TD error = control error, App E §E.4
-<strong>Evolutionary origins</strong> — valence to strange loops §V; Level 1 deep time §V; Level 2 mammalian §V; Level 3 hominin §V; Dunbar’s number §V
-<strong>Explanatory gap</strong> — posed §I, §II; dissolved §IV, §VI, §XI; free energy formulation App B</p>
+<p><strong>Emotion, four-fold characterization</strong> — surprise + gradient + evaluation + error; unified account p.166 (App E §E.6.5)<br>
+<strong>Emotional granularity</strong> — defined p.10 (§III); interventions p.29 (§V); predictions p.41 (§VI), p.49 (§VIII), p.62 (§IX)<br>
+<strong>Epiphenomenalism</strong> — distinguished from p.10 (§III)<br>
+<strong>Equivalence proofs</strong> — prediction error = free energy gradient = TD error = control error, p.166 (App E §E.4)<br>
+<strong>Evolutionary origins</strong> — valence to strange loops p.29 (§V); Level 1 deep time p.29 (§V); Level 2 mammalian p.29 (§V); Level 3 hominin p.29 (§V); Dunbar's number p.29 (§V)<br>
+<strong>Explanatory gap</strong> — posed p.7 (§I), p.9 (§II); dissolved p.19 (§IV), p.41 (§VI), p.88 (§XI); free energy formulation p.117 (App B)</p>
 <h3>F</h3>
-<p><strong>Feral children</strong> — evidence for RSP §IX; Genie case §V
-<strong>First-Order Representationalism (FOR)</strong> — compared §X-B; extended by RSP (RSP explains how FOR becomes conscious)
-<strong>Free energy, variational</strong> — introduced §I; developmental constraints §V; predictions §IX; conclusion §XI; full derivation App B; relation to RL App C; relation to control App D
-<strong>Friston, Karl</strong> — predictive processing §III; free energy §V; cited App A, App B
-<strong>Falsification conditions</strong> — formalism-independent App E §E.7.1; formalism-specific §E.7.2; nuclear option §E.7.3
-<strong>Functionalism</strong> — distinguished from §VIII (Objection 8)</p>
+<p><strong>Feral children</strong> — evidence for RSP p.62 (§IX); Genie case p.29 (§V)<br>
+<strong>First-Order Representationalism (FOR)</strong> — compared p.68 (§X-B); extended by RSP<br>
+<strong>Free energy, variational</strong> — introduced p.7 (§I); developmental constraints p.29 (§V); predictions p.62 (§IX); conclusion p.88 (§XI); full derivation p.117 (App B); relation to RL p.132 (App C); relation to control p.147 (App D)<br>
+<strong>Friston, Karl</strong> — predictive processing p.10 (§III); free energy p.29 (§V); cited p.104 (App A), p.117 (App B)<br>
+<strong>Falsification conditions</strong> — formalism-independent p.166 (App E §E.7.1); formalism-specific §E.7.2; nuclear option §E.7.3</p>
 <h3>G</h3>
-<p><strong>Gauge symmetry (representational invariance)</strong> — internal coding arbitrary; App E §E.6.1</p>
-<p><strong>Global Neuronal Workspace (GNW)</strong> — see Global workspace theory
-<strong>Global workspace theory (GWT/GNW)</strong> — compared §V, §X-A; complements RSP (RSP specifies broadcast content)
-<strong>Graziano, Michael</strong> — attention schema theory §III; evolution §IV; objections §VIII
-<strong>Gurwitsch’s Theory (GT)</strong> — compared §X-H; complements RSP (RSP explains GT’s phenomenological structure)</p>
+<p><strong>Gauge symmetry (representational invariance)</strong> — internal coding arbitrary; p.166 (App E §E.6.1)<br>
+<strong>Global Neuronal Workspace (GNW)</strong> — see Global workspace theory<br>
+<strong>Global workspace theory (GWT/GNW)</strong> — compared p.29 (§V), p.68 (§X-A); complements RSP (RSP specifies broadcast content)<br>
+<strong>Graziano, Michael</strong> — attention schema theory p.10 (§III); evolution p.19 (§IV); objections p.49 (§VIII)<br>
+<strong>Gurwitsch's Theory (GT)</strong> — compared p.68 (§X-H); complements RSP</p>
 <h3>H</h3>
-<p><strong>Higher-Order Thought Theory (HOT)</strong> — compared §X-B; extended by RSP (RSP adds recursion + affect grounding)
-<strong>Hofstadter, Douglas</strong> — strange loop §IV; objections §VIII</p>
+<p><strong>Higher-Order Thought Theory (HOT)</strong> — compared p.68 (§X-B); extended by RSP (RSP adds recursion + affect grounding)<br>
+<strong>Hofstadter, Douglas</strong> — strange loop p.19 (§IV); objections p.49 (§VIII)</p>
 <h3>I</h3>
-<p><strong>Information-theoretic parallel</strong> — data to self-referential computation §V
-<strong>Integrated information theory (IIT)</strong> — compared §V, §X-C; contradicts RSP (content-specific vs. content-neutral)
-<strong>Interoceptive monitoring</strong> — Level 1 mechanism §III, §IV; formal model App A, App B</p>
+<p><strong>Information-theoretic parallel</strong> — data to self-referential computation p.29 (§V)<br>
+<strong>Integrated information theory (IIT)</strong> — compared p.29 (§V), p.68 (§X-C); contradicts RSP (content-specific vs. content-neutral)<br>
+<strong>Intelligence, RSP theory of</strong> — formal definition p.208 (App H §H.3); adaptive efficiency $$\mathcal{I}$$; level-specific decomposition; constitutive identity with consciousness at Level 3b p.214; predictions p.219 (§H.5)<br>
+<strong>Interoceptive monitoring</strong> — Level 1 mechanism p.10 (§III), p.19 (§IV); formal model p.104 (App A), p.117 (App B)</p>
 <h3>M</h3>
-<p><strong>Master functional (<img src="https://i.upmath.me/svg/%5Cmathcal%7BJ%7D" alt="\mathcal{J}" />)</strong> — unified variational objective App E §E.3; accuracy + temporal + complexity + recursive terms; all four formalisms as projections §E.3.2
-<strong>Master dynamics</strong> — <img src="https://i.upmath.me/svg/%5Cdot%7B%5Cmathbf%7Bx%7D%7D_l%20%3D%20-%5Ckappa_l%20%5Cpartial%20%5Cmathcal%7BJ%7D%2F%5Cpartial%20%5Cmathbf%7Bx%7D_l" alt="\dot{\mathbf{x}}_l = -\kappa_l \partial \mathcal{J}/\partial \mathbf{x}_l" />; simultaneously message passing, gradient descent, TD update, and control law; App E §E.3.3
-<strong>Meaningful integration</strong> — central thesis Abstract, §I; defined §III; mechanism §IV; objections §VI, §VIII; bat example §VII; predictions §IX; comparison §X; conclusion §XI; formal model App A, App B
-<strong>Mirror self-recognition</strong> — developmental milestone §V; prediction §IX
-<strong>Model-based planning</strong> — Level 3 as planning App C; strange loop as simulation §IV</p>
+<p><strong>Master functional ($$\mathcal{J}$$)</strong> — unified variational objective p.166 (App E §E.3); accuracy + temporal + complexity + recursive terms; all four formalisms as projections §E.3.2<br>
+<strong>Master dynamics</strong> — $$\dot{\mathbf{x}}_l = -\kappa_l \partial \mathcal{J}/\partial \mathbf{x}_l$$; simultaneously message passing, gradient descent, TD update, and control law; p.166 (App E §E.3.3)<br>
+<strong>Meaningful integration</strong> — central thesis p.7 (Abstract, §I); defined p.10 (§III); mechanism p.19 (§IV); objections p.41 (§VI), p.49 (§VIII); bat example p.45 (§VII); predictions p.62 (§IX); comparison p.68 (§X); conclusion p.88 (§XI); formal model p.104 (App A), p.117 (App B)<br>
+<strong>Mirror self-recognition</strong> — developmental milestone p.29 (§V); prediction p.62 (§IX)<br>
+<strong>Model-based planning</strong> — Level 3 as planning p.132 (App C); strange loop as simulation p.19 (§IV)</p>
 <h3>N</h3>
-<p><strong>Nagel, Thomas</strong> — bat question Abstract, §I, §II; misfires §IV, §VII; conclusion §XI</p>
+<p><strong>Nagel, Thomas</strong> — bat question p.7 (Abstract, §I), p.9 (§II); misfires p.19 (§IV), p.45 (§VII); conclusion p.88 (§XI)</p>
 <h3>O</h3>
-<p><strong>Orchestrated Objective Reduction (Orch OR)</strong> — compared §X-F; contradicts RSP (classical vs. quantum explanation)</p>
+<p><strong>Orchestrated Objective Reduction (Orch OR)</strong> — compared p.68 (§X-F); contradicts RSP (classical vs. quantum)</p>
 <h3>P</h3>
-<p><strong>Phantom limb</strong> — clinical dissociation §IX (Prediction 6)
-<strong>Phenomenal consciousness</strong> — defined Abstract; traditional view §II; reconceived §III
-<strong>Play, unsupervised</strong> — as exploration policy §V; RL formulation App C
-<strong>Precision as universal currency</strong> — weights errors (A), balances accuracy/complexity (B), controls exploration ©, sets gain (D); unified account App E §E.6.4
-<strong>Precision weighting</strong> — attention as precision §III; in prediction errors App A, App B; emotional regulation App D
-<strong>Predictive processing / predictive coding</strong> — framework Abstract, §I, §III; integration mechanism §IV; formal model App A, App D
-<strong>Property dualism</strong> — §I
-<strong>Prosopagnosia</strong> — clinical dissociation §IX (Prediction 6)
-<strong>Psychological Theory of Consciousness (PToC)</strong> — compared §X-D; extended by RSP (RSP formalizes and neurobiologizes)
-<strong>Psychopathology</strong> — as control failure App D; depersonalization §IV, §IX; schizophrenia §IV; clinical dissociations §IX (Prediction 6)
-<strong>Strong Constructionism / Embodied Appraisal</strong> — compared §X-G; RSP integrates constructionist insights with biological grounding</p>
+<p><strong>Phantom limb</strong> — clinical dissociation p.62 (§IX, Prediction 6)<br>
+<strong>Phenomenal consciousness</strong> — defined p.7 (Abstract); traditional view p.9 (§II); reconceived p.10 (§III)<br>
+<strong>Play, intrinsically motivated</strong> — as exploration policy p.29 (§V); RL formulation p.132 (App C)<br>
+<strong>Precision as universal currency</strong> — weights errors (A), balances accuracy/complexity (B), controls exploration (C), sets gain (D); unified account p.166 (App E §E.6.4)<br>
+<strong>Precision weighting</strong> — attention as precision p.10 (§III); in prediction errors p.104 (App A), p.117 (App B); emotional regulation p.147 (App D)<br>
+<strong>Predictive processing / predictive coding</strong> — framework p.7 (Abstract, §I), p.10 (§III); integration mechanism p.19 (§IV); formal model p.104 (App A), p.147 (App D)<br>
+<strong>Property dualism</strong> — p.7 (§I)<br>
+<strong>Prosopagnosia</strong> — clinical dissociation p.62 (§IX, Prediction 6)<br>
+<strong>Psychological Theory of Consciousness (PToC)</strong> — compared p.68 (§X-D); extended by RSP</p>
 <h3>R</h3>
-<p><strong>Quantum consciousness theories</strong> — compared §X-F; contradicts RSP (classical vs. quantum)
-<strong>Raw qualia</strong> — critique Abstract, §I, §II; dissolved §IV, §VI; objections §VII, §VIII; conclusion §XI
-<strong>Recurrent Processing Theory (RPT)</strong> — compared §X-E; complements RSP (RSP specifies recurrent content)
-<strong>Recursive social prediction (RSP)</strong> — introduced §I; architecture §III; mechanism §IV; defended §VI, §VIII; applied §VII; predictions §IX; comparison §X; conclusion §XI; formal models App A, App B, App C, App D
-<strong>Reinforcement learning</strong> — RSP as unsupervised RL §I, §IV; full formulation App C
-<strong>Romanian orphans</strong> — evidence §V, §IX
-<strong>Russell, James</strong> — core affect theory §III; reward mapping App C</p>
+<p><strong>Quantum consciousness theories</strong> — compared p.68 (§X-F); contradicts RSP (classical vs. quantum)<br>
+<strong>Raw qualia</strong> — critique p.7 (Abstract, §I), p.9 (§II); dissolved p.19 (§IV), p.41 (§VI); objections p.45 (§VII), p.49 (§VIII); conclusion p.88 (§XI)<br>
+<strong>Recurrent Processing Theory (RPT)</strong> — compared p.68 (§X-E); complements RSP (RSP specifies recurrent content)<br>
+<strong>Recursive social prediction (RSP)</strong> — introduced p.7 (§I); architecture p.10 (§III); mechanism p.19 (§IV); defended p.41 (§VI), p.49 (§VIII); applied p.45 (§VII); predictions p.62 (§IX); comparison p.68 (§X); conclusion p.88 (§XI); formal models p.104 (App A), p.117 (App B), p.132 (App C), p.147 (App D)<br>
+<strong>Reinforcement learning</strong> — RSP as intrinsically motivated RL p.7 (§I), p.19 (§IV); full formulation p.132 (App C)<br>
+<strong>Romanian orphans</strong> — evidence p.29 (§V), p.62 (§IX)<br>
+<strong>Russell, James</strong> — core affect theory p.10 (§III); reward mapping p.132 (App C)</p>
 <h3>S</h3>
-<p><strong>Sattin et al. (2021)</strong> — scoping review of 38 consciousness theories; basis for §X comparisons
-<strong>Schizophrenia / thought insertion</strong> — §IV
-<strong>Self-model / self-schema</strong> — definition §III; strange loop §IV; defended §VI; bat §VII; objections §VIII; predictions §IX; conclusion §XI; formal model App A, App B, App C, App D
-<strong>Semantic Pointer Architecture (SPA)</strong> — compared §X-A; complements RSP (SPA as implementation framework)
-<strong>Social deprivation</strong> — natural experiments §V; predictions §IX
-<strong>Social prediction</strong> — mechanism §III, §IV; defended §VIII; predictions §IX; formal model App A, App B, App C, App D
-<strong>Spatial schema</strong> — definition §III; evolution §V; bat example §VII; objections §VIII; predictions §IX; formal model App A, App C
-<strong>Strange loop</strong> — defined §I; mechanism §IV; objections §VIII; convergence proof App D; free energy App B; RL formulation App C; predictive coding App A</p>
+<p><strong>Sattin et al. (2021)</strong> — scoping review of 38 consciousness theories; basis for p.68 (§X) comparisons<br>
+<strong>Schizophrenia / thought insertion</strong> — p.19 (§IV)<br>
+<strong>Self-model / self-schema</strong> — definition p.10 (§III); strange loop p.19 (§IV); defended p.41 (§VI); bat p.45 (§VII); objections p.49 (§VIII); predictions p.62 (§IX); conclusion p.88 (§XI); formal model p.104 (App A), p.117 (App B), p.132 (App C), p.147 (App D)<br>
+<strong>Semantic Pointer Architecture (SPA)</strong> — compared p.68 (§X-A); complements RSP<br>
+<strong>Social deprivation</strong> — natural experiments p.29 (§V); predictions p.62 (§IX)<br>
+<strong>Social prediction</strong> — mechanism p.10 (§III), p.19 (§IV); defended p.49 (§VIII); predictions p.62 (§IX); formal model p.104 (App A), p.117 (App B), p.132 (App C), p.147 (App D)<br>
+<strong>Spatial schema</strong> — definition p.10 (§III); evolution p.29 (§V); bat example p.45 (§VII); objections p.49 (§VIII); predictions p.62 (§IX); formal model p.104 (App A), p.132 (App C)<br>
+<strong>Stack Theory (Bennett, 2025)</strong> — compared p.68 (§X-I); complements RSP; w-maxing, tapestries of valence, Temporal Gap<br>
+<strong>Strange loop</strong> — defined p.7 (§I); mechanism p.19 (§IV); objections p.49 (§VIII); convergence proof p.147 (App D); free energy p.117 (App B); RL formulation p.132 (App C); predictive coding p.104 (App A)</p>
 <h3>T</h3>
-<p><strong>Theory of mind</strong> — developmental role §V; objections §VIII; predictions §IX; comparison §X; RL formulation App C
-<strong>Three-level necessity theorem</strong> — all four formalisms independently require three levels; App E §E.6.3
-<strong>Timescale separation</strong> — cascade design App D; developmental constraints App B, App D; referenced §V; unified falsification App E §E.7.1
-<strong>Transfer functions</strong> — Level-specific dynamics App D</p>
+<p><strong>Theory of mind</strong> — developmental role p.29 (§V); objections p.49 (§VIII); predictions p.62 (§IX); comparison p.68 (§X); RL formulation p.132 (App C)<br>
+<strong>Three-level necessity theorem</strong> — all four formalisms independently require three levels; p.166 (App E §E.6.3)<br>
+<strong>Timescale separation</strong> — cascade design p.147 (App D); developmental constraints p.117 (App B), p.147 (App D); referenced p.29 (§V); unified falsification p.166 (App E §E.7.1)<br>
+<strong>Transfer functions</strong> — Level-specific dynamics p.147 (App D)</p>
 <h3>V</h3>
-<p><strong>Unified mathematical framework</strong> — master functional, equivalence proofs, emergent properties; App E
-<strong>Valence / arousal</strong> — core affect §I, §III; reward signal §IV; cross-cultural §VI; bat §VII; objections §VIII; predictions §IX; conclusion §XI; formal model App A, App B, App C; free energy–value duality App E §E.4</p>
-<hr>
+<p><strong>Unified mathematical framework</strong> — master functional, equivalence proofs, emergent properties; p.166 (App E)<br>
+<strong>Valence / arousal</strong> — core affect p.7 (§I), p.10 (§III); reward signal p.19 (§IV); cross-cultural p.41 (§VI); bat p.45 (§VII); objections p.49 (§VIII); predictions p.62 (§IX); conclusion p.88 (§XI); formal model p.104 (App A), p.117 (App B), p.132 (App C); free energy–value duality p.166 (App E §E.4)</p>
+<h3>W</h3>
+<p><strong>W-maxing (Bennett)</strong> — generalization-based intelligence; compared p.68 (§X-I); conjectured equivalence with RSP's free energy minimization p.208 (App H §H.3.6)<br>
+<strong>Weakness hierarchy</strong> — Level 1 strongest/most specific → Level 3 weakest/most general; p.208 (App H §H.3.6)</p>
+
+</body>
+</html>
