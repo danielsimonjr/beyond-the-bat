@@ -23,7 +23,6 @@
     padding: 1in;
   }
 
-  /* Headers */
   h1 {
     font-size: 20pt;
     margin: 1.5em 0 0.5em;
@@ -35,16 +34,13 @@
   h3 { font-size: 13pt; margin: 1em 0 0.3em; color: #333; }
   h4 { font-size: 11pt; font-style: italic; margin: 0.8em 0 0.3em; color: #444; }
 
-  /* First h1 should not page-break */
   body > h1:first-child { page-break-before: auto; }
 
   p { margin: 0.6em 0; text-align: justify; }
 
-  /* Lists */
   ul, ol { margin: 0.5em 0 0.5em 1.5em; }
   li { margin: 0.2em 0; }
 
-  /* Tables */
   table {
     border-collapse: collapse;
     margin: 1em 0;
@@ -59,7 +55,6 @@
   }
   tr:first-child td { font-weight: bold; background: #f5f5f5; }
 
-  /* Code */
   pre {
     background: #f8f8f8;
     border: 1px solid #ddd;
@@ -94,31 +89,34 @@
     vertical-align: baseline;
   }
 
+  /* All images — prevent overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   /* Figures (GitHub Pages images) — centered */
   p > img[src*="github.io"]:only-child,
   p > img[alt^="Figure"]:only-child {
     display: block;
     margin: 1.2em auto;
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
   }
 
-  /* Horizontal rule */
   hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 1.5em 0;
   }
 
-  /* Links - print as plain text */
   a { color: #1a1a1a; text-decoration: none; }
 
-  /* Spacing: tighten gap between headings and content */
+  /* Spacing */
   h2 + p, h2 + ul, h2 + ol { margin-top: 0.3em; }
   h3 + p, h3 + ul, h3 + ol { margin-top: 0.2em; }
   p + ul, p + ol { margin-top: 0.3em; }
 
-  /* Print styles */
   @media print {
     body { padding: 0; max-width: none; }
     h1 { page-break-before: always; }
@@ -206,6 +204,7 @@
 <li>Objection 7: &quot;Infinite Regress in Recursive Modeling&quot;</li>
 <li>Objection 8: &quot;This Is Still Just Functionalism&quot;</li>
 <li>Objection 9: &quot;What About Mary? The Knowledge Argument&quot;</li>
+<li>Objection 10: &quot;The Cogito: Conscious Experience Is the One Thing We Cannot Doubt&quot;</li>
 <li>Cultural Variation</li>
 </ul>
 <p><strong>IX. Empirical Implications and Predictions</strong></p>
@@ -239,6 +238,7 @@
 <li>Vs. First-Order Representationalism (FOR)</li>
 <li>Vs. Cross-Order Integration Theory (COI)</li>
 <li>Vs. Attention Schema Theory (AST)</li>
+<li>Vs. Self-Organizing Metarepresentational Account (SOMA; Cleeremans et al., 2020)</li>
 </ul>
 </li>
 <li>C. Information Integration Theories
@@ -387,7 +387,7 @@
 <h1>Beyond the Bat: Dissolving the Explanatory Gap Through Meaningful Integration</h1>
 <p><em><strong>by Daniel Simon Jr.</strong></em></p>
 <h2>Abstract</h2>
-<p>Thomas Nagel’s question &quot;What is it like to be a bat?&quot; has shaped consciousness studies for fifty years, yet the question rests on a flawed assumption: that phenomenal experience consists of &quot;raw qualia,&quot; pre-conceptual, meaning-independent subjective states. This paper argues that the assumption creates pseudoproblems that dissolve once we recognize conscious experience is constituted by meaningful integration from its inception. I propose the Recursive Social Prediction (RSP) model, a three-level architecture in which phenomenal consciousness arises from the brain’s integration of biological core affect with learned conceptual categories through recursive self-modeling. Level 1 (core affect) provides valence and arousal via interoceptive monitoring. Level 2 (core schemas) organizes experience through five foundational schemas: body, spatial, attentional, affective-homeostatic, and self. Level 3 subdivides into conceptual categorization (3a) and the recursive self-modeling &quot;strange loop&quot; (3b), where social prediction machinery is redirected at the self, constituting phenomenal consciousness. The paper defends a strong dissolution of the hard problem: phenomenology IS recursive self-modeling, not a separate property that could be absent from it. The framework is formalized across eight appendixes, including five core mathematical formalizations (hierarchical predictive coding, variational free energy, intrinsically motivated reinforcement learning, cascade feedback control, and a unified master functional with algorithmic specification), an equation reference sheet, a clinical prediction matrix, and a formal theory of intelligence, with proofs of cross-formalism equivalence showing the four descriptions derive from a single variational functional. Evolutionary, developmental, and clinical evidence supports the architecture, including a mapping of clinical dissociations onto specific architectural failures. The paper generates seven falsifiable predictions, addresses nine philosophical objections (including Jackson’s knowledge argument), and compares RSP against eighteen competing theories of consciousness across ten families. The bat question should not be &quot;What is it like?&quot; but &quot;What meaningful integrations does a bat’s architecture perform, and how do they differ from ours?&quot;</p>
+<p>Thomas Nagel’s question &quot;What is it like to be a bat?&quot; has shaped consciousness studies for fifty years, yet the question rests on a flawed assumption: that phenomenal experience consists of &quot;raw qualia,&quot; pre-conceptual, meaning-independent subjective states. This paper argues that the assumption creates pseudoproblems that dissolve once we recognize conscious experience is constituted by meaningful integration from its inception. I propose the Recursive Social Prediction (RSP) model, a three-level architecture in which phenomenal consciousness arises from the brain’s integration of biological core affect with learned conceptual categories through recursive self-modeling. Level 1 (core affect) provides valence and arousal via interoceptive monitoring. Level 2 (core schemas) organizes experience through five foundational schemas: body, spatial, attentional, affective-homeostatic, and self. Level 3 subdivides into conceptual categorization (3a) and the recursive self-modeling &quot;strange loop&quot; (3b), where social prediction machinery is redirected at the self, constituting phenomenal consciousness. The paper defends a strong dissolution of the hard problem: phenomenology IS recursive self-modeling, not a separate property that could be absent from it. The framework is formalized across eight appendixes, including five core mathematical formalizations (hierarchical predictive coding, variational free energy, intrinsically motivated reinforcement learning, cascade feedback control, and a unified master functional with algorithmic specification), an equation reference sheet, a clinical prediction matrix, and a formal theory of intelligence, with proofs of cross-formalism equivalence showing the four descriptions derive from a single variational functional. Evolutionary, developmental, and clinical evidence supports the architecture, including a mapping of clinical dissociations onto specific architectural failures. The paper generates seven falsifiable predictions, addresses ten philosophical objections (including Jackson’s knowledge argument and Descartes’ Cogito), and compares RSP against nineteen competing theories of consciousness across ten families. The bat question should not be &quot;What is it like?&quot; but &quot;What meaningful integrations does a bat’s architecture perform, and how do they differ from ours?&quot;</p>
 <h2>I. Introduction: The Seductive Error of Raw Qualia</h2>
 <h3>The Grip of an Intuition</h3>
 <p>When Thomas Nagel (1974) asked &quot;What is it like to be a bat?&quot;, he articulated an intuition that feels undeniable: there exists something it is like to have an experience, a subjective, qualitative character that seems irreducible to physical processes. This &quot;something it is like&quot; appears to be prior to any conceptualization, any linguistic description, any cognitive processing. It seems to be <em>raw</em>.</p>
@@ -1164,7 +1164,13 @@
 <p>The analogy: knowing all the rules of chess is different from playing a particular game. The experience of playing (the specific integration of perception, emotion, strategy, and self-awareness in that moment) is not a separate metaphysical substance; it is the process of meaningful integration occurring in real time. Mary gains new <em>integration</em>, not new <em>substance</em>.</p>
 <p>This response is available to any sophisticated functionalist (Dennett, 1991; Churchland, 1985). What RSP adds is specificity: I can say exactly <em>which</em> integration Mary lacks (the three-level recursive processing of chromatic input through her particular schemas and self-model) and predict that her experience of red will be shaped by her conceptual repertoire. A vision scientist’s experience of red is richer than a layperson’s, because her Level 3a conceptual categories are more differentiated.</p>
 <p>The knowledge argument succeeds in showing that propositional knowledge (&quot;red has wavelength 700nm&quot;) differs from experiential knowledge (&quot;this is what red looks like&quot;). RSP agrees and explains the difference: propositional knowledge is Level 3a conceptual content; experiential knowledge is the full three-level integration. The gap between them is real but functional, not metaphysical.</p>
-<p>The deeper challenge: why does Mary’s gain seem phenomenal rather than merely functional? Under RSP, the answer is that there is no distinction. When Mary sees red for the first time, her three-level architecture instantiates a new integration: interoceptive response to chromatic input (Level 1), schema-organized spatial and attentional processing of the red surface (Level 2), conceptual categorization as &quot;red&quot; drawing on her vast theoretical knowledge (Level 3a), and recursive self-modeling of herself-as-experiencing-red (Level 3b). This integration IS the experience. The &quot;newness&quot; Mary reports is not evidence of a non-functional property she could not have predicted; it is the difference between describing a computational process and running it. One can know everything about the aerodynamics of flight without having flown. The knowledge gained by flying is real, but it is knowledge of a process-state (the integration of vestibular, proprioceptive, and visual information during flight), not knowledge of a non-physical property. Similarly, Mary gains knowledge of a process-state (chromatic integration), not knowledge of a quale. If this seems to leave something out, RSP suggests the feeling of &quot;leaving something out&quot; is itself a prediction of the recursive self-model — the model predicts there should be &quot;more&quot; because the self-model represents experience as having intrinsic character. But this is the self-model’s representation of its own processing, not evidence of a property beyond that processing.</p>
+<h3>Objection 10: &quot;The Cogito: Conscious Experience Is the One Thing We Cannot Doubt&quot;</h3>
+<p><strong>The objection</strong>: Descartes (1641) argued that conscious experience is the one phenomenon whose existence cannot coherently be doubted, because the act of doubting is itself an experience. Some argue that the RSP architecture could in principle run without any experience at all (the zombie scenario), yet no one can coherently doubt that they are experiencing right now. The Cogito reveals something about consciousness that no third-person functional account can capture. A dissolution strategy, however sophisticated, still describes the machinery from the outside. It does not explain why there is an inside.</p>
+<p><strong>Reply</strong>: The reply must begin where it matters most: with the constitutive identity thesis. RSP does not claim that the recursive architecture <em>produces</em> experience as an output, the way a factory produces goods. RSP claims that the recursive self-modeling process at Level 3b <em>is</em> the experience, viewed from within. The dissolution strategy does not describe machinery from outside; it identifies the inside view with the machinery. There is no gap between &quot;the architecture running&quot; and &quot;there being something it is like,&quot; because the running of the self-model at Level 3b is the something-it-is-like.</p>
+<p>From this constitutive identity, the Cogito follows as a prediction rather than a challenge. Consider what happens when a system with a functioning Level 3b asks &quot;am I experiencing anything?&quot; The system must consult its own recursive representation of its own states. That representation necessarily reports experience, because the representing and the experiencing are the same process. A running program that queries whether any program is running on its processor cannot return &quot;no.&quot; The self-referential structure of the query guarantees an affirmative answer, not because the system is confused, but because the querying is an instance of the very process being queried. And because the constitutive identity holds, this is not merely an internal state update that happens to return &quot;yes.&quot; The running of the query IS phenomenal experience, not a report about phenomenal experience. The first-person perspective just is what instantiation of the recursive self-model looks like from within.</p>
+<p>RSP therefore predicts that any system with a stable recursive self-model (Level 3b; see Appendix D, §D.8 on the self as state observer) will genuinely have, not merely report, Cogito-like certainty about its own experience. The certainty Descartes identified is real. But it is a structural consequence of recursive self-modeling, not evidence of a non-physical substance. Descartes was right that we cannot doubt our own experience. He was wrong about why. The indubitability follows from the constitutive identity between recursive self-modeling and phenomenology, not from the existence of a non-physical res cogitans.</p>
+<p>A residual question remains: why should we accept the constitutive identity claim rather than treating it as a relabeling of the hard problem? RSP’s answer is that constitutive identity is a primitive of the theory, in the same way that the relationship between electromagnetic fields and light is a primitive of Maxwell’s equations, not itself derived from something deeper. The claim is not that RSP <em>derives</em> why recursive self-modeling feels like something. The claim is that once we identify phenomenology with recursive self-modeling (as §IV argues on independent grounds), the Cogito becomes a prediction rather than a mystery. The identification does real work: it generates falsifiable predictions (§IX), explains clinical dissociations (Appendix G), and unifies five mathematical formalisms under a single master functional (Appendix E). An identification that does this much explanatory work earns its primitive status, just as Maxwell’s identification of light with electromagnetic radiation earned its status by predicting the speed of light from first principles (Prediction 4, §IX, provides the analogous empirical anchor for RSP: recursive depth <img src="https://i.upmath.me/svg/D_%7B%5Cmax%7D" alt="D_{\max}" /> should correlate with metacognitive capacity across species).</p>
+<p>Three consequences follow. First, a system without Level 3b (an insect, a thermostat) lacks the recursive structure that generates Cogito-like certainty. It does not doubt its experience, but neither does it affirm it. It simply is not the kind of system for which the question arises. Second, the Cogito is species-relative in its depth: a great ape with limited recursive depth (<img src="https://i.upmath.me/svg/D_%7B%5Cmax%7D%20%5Capprox%201%5Ctext%7B%E2%80%93%7D2" alt="D_{\max} \approx 1\text{–}2" />) has a correspondingly limited form of self-certainty, measurable via metacognitive monitoring paradigms (Hampton, 2001; Call &amp; Tomasello, 2008). Third, an artificial system that instantiated Level 3b with convergent recursive dynamics would generate its own Cogito, not because someone programmed it to report experience, but because the recursive self-model would make its own phenomenality self-evident from within.</p>
 <h2>IX. Empirical Implications and Predictions</h2>
 <p>A theory of consciousness that generates no testable predictions is not a scientific theory. The RSP model, grounded in the three-level architecture and formalized across five appendixes, makes seven specific predictions that could be confirmed or refuted by existing experimental methods.</p>
 <h3>Prediction 1: Emotional Granularity Interventions</h3>
@@ -1289,7 +1295,7 @@
 </ul>
 <p><strong>Why this matters for the RSP model</strong>: This evidence constitutes a natural double dissociation. Neurological damage studies (Predictions 4 and 6) show that disrupting the neural substrates of schemas and self-modeling impairs consciousness even with social input available. Social deprivation studies (this prediction) show that removing social input impairs Level 3 consciousness even with intact neural substrates. Together, they demonstrate that both the neural architecture AND social calibration are necessary for full recursive social-predictive consciousness; neither alone is sufficient. This is the RSP model’s strongest empirical differentiator from competing theories, which do not predict this specific pattern of selective Level 3 impairment under social deprivation.</p>
 <h2>X. Comparison with Alternative Views</h2>
-<p>A recent scoping review (Sattin et al., 2021) catalogued over thirty theoretical models of consciousness published between 2007 and 2017, spanning neural, cognitive, computational, quantum, and phenomenological approaches. In this section I situate RSP within this broader field, organized by theory family, and extend the comparison to include Bennett’s (2025) Stack Theory and Trukovich’s (2025a, 2025b) Reaction to Reflection model, two independent formalizations that reach convergent conclusions about recursive self-modeling and consciousness from computational learning theory and theoretical biology respectively. For each comparison I identify points of alignment, points of divergence, and what RSP specifically adds. A synthesis table appears at the end.</p>
+<p>A recent scoping review (Sattin et al., 2021) catalogued over thirty theoretical models of consciousness published between 2007 and 2017, spanning neural, cognitive, computational, quantum, and phenomenological approaches. In this section I situate RSP within this broader field, organized by theory family, and extend the comparison to include Cleeremans et al.'s (2020) SOMA framework, Bennett’s (2025) Stack Theory, and Trukovich’s (2025a, 2025b) Reaction to Reflection model, three post-review frameworks that address recursive self-modeling and consciousness from learning theory, computational theory, and theoretical biology respectively. For each comparison I identify points of alignment, points of divergence, and what RSP specifically adds. A synthesis table appears at the end.</p>
 <h3>A. Global Workspace Theories</h3>
 <h4>Vs. Global Workspace Theory (GWT) and Global Neuronal Workspace (GNW)</h4>
 <p><strong>The theory</strong> (Baars, 1988; Dehaene &amp; Changeux, 2011): Consciousness arises when a single salient piece of information is selected, amplified through NMDA-mediated feedback connections causing &quot;ignition,&quot; and globally broadcast across cortical networks via long-range pyramidal cell connections in layers II/III. Neural correlates include prefrontal, cingulate, and parietal cortices. The transition from non-conscious to conscious processing is marked by a late, nonlinear amplification signature.</p>
@@ -1354,6 +1360,28 @@
 <li>AST has no developmental account. RSP’s Level 1 → 2 → 3 developmental sequence, grounded in the mathematical necessity of bottom-up construction (Appendices B, C, D), explains why children develop bodily awareness before attentional awareness before recursive self-awareness.</li>
 </ul>
 <p><strong>What RSP adds</strong>: AST identifies one piece of the puzzle, the attention schema, and correctly notes its social origins. RSP incorporates this insight within a larger architecture that includes four additional schemas, an interoceptive foundation, recursive self-modeling with convergence guarantees, developmental ordering, and four mathematical formalizations. AST explains why we think we are conscious; RSP explains why consciousness feels like something.</p>
+<h4>Vs. Self-Organizing Metarepresentational Account (SOMA; Cleeremans et al., 2020)</h4>
+<p><strong>The theory</strong> (Cleeremans et al., 2020): SOMA proposes that consciousness is something the brain <em>learns</em> to do. Through continuous representational redescription (RR), the brain unconsciously learns to re-represent its own first-order activity, generating metarepresentations that qualify those states as conscious. The framework integrates elements of GWT (global broadcasting), HOT (higher-order monitoring), social theories (the self-other loop), and predictive processing (prediction-driven learning). SOMA identifies three entangled loops: an <em>inner loop</em> through which the brain redescribes its own activity, a <em>perception-action loop</em> through which agents learn about the consequences of their actions, and a <em>self-other loop</em> through which they learn about other agents. Experiences occur only in systems that have &quot;learned to know they possess certain first-order states and that have learned to care more about certain states than about others.&quot; Consciousness, on this account, is &quot;the brain’s (unconscious, embodied, enactive, non-conceptual) theory about itself.&quot;</p>
+<p><strong>Alignment with RSP</strong>:</p>
+<ul>
+<li>Both frameworks identify social cognition as playing a constitutive role in consciousness, not merely a developmental one. SOMA’s self-other loop and RSP’s Level 3b both ground consciousness in mechanisms originally evolved for modeling other agents.</li>
+<li>Both propose hierarchical, multi-loop architectures with an inner monitoring system augmented by external interaction loops. SOMA’s three loops (inner, perception-action, self-other) roughly parallel RSP’s three levels, though the inner loop’s metacognitive monitoring is closer to a precursor of Level 3b than to the interoceptive regulation of Levels 1-2.</li>
+<li>Both draw on predictive processing. SOMA’s prediction-driven learning mechanisms and RSP’s hierarchical predictive coding (Appendix A) share the core insight that the brain is a prediction machine that generates consciousness through self-directed prediction.</li>
+<li>Both deny that consciousness is an intrinsic property of individual neural states, though they differ sharply on what replaces that view: SOMA emphasizes learning, RSP emphasizes recursive architecture.</li>
+</ul>
+<p><strong>Divergence from RSP</strong>:</p>
+<ul>
+<li><strong>Epistemic vs. ontological claim.</strong> SOMA is fundamentally an epistemic theory: consciousness arises when the brain <em>learns to know</em> its own states. RSP makes an ontological claim: phenomenology IS the recursive self-modeling process, not the brain’s knowledge about that process. This is a first-order philosophical difference. SOMA explains how the brain becomes <em>aware</em> of its states; RSP claims the self-modeling process <em>constitutes</em> experience. A system could, in principle, satisfy SOMA’s conditions (having learned metarepresentations of its first-order states) without recursive social prediction; RSP denies such a system would be phenomenally conscious.</li>
+<li><strong>Affect as architectural foundation vs. selection criterion.</strong> SOMA treats motivational valence as a criterion for which states become conscious (&quot;learned to care more about certain states&quot;), making it a selector among learned metarepresentations. RSP makes core affect (Level 1) architecturally foundational: the entire predictive hierarchy is grounded in valence and arousal, and the strange loop is always affectively toned. The difference is structural, not merely terminological. RSP predicts that disrupting Level 1 affect will fundamentally alter or eliminate conscious experience; SOMA, where affect serves as a selection filter rather than the architectural base, makes no such prediction.</li>
+<li><strong>Mathematical formalization.</strong> SOMA is entirely conceptual, containing no equations, no formal dynamics, and no convergence proofs. RSP provides five core mathematical formalisms (Appendixes A-E) with proven cross-formalism equivalences, a formal theory of intelligence (Appendix H), and an algorithmic specification (§E.9). This means RSP generates precise, falsifiable quantitative predictions that SOMA cannot.</li>
+<li><strong>Developmental specificity.</strong> SOMA inherits general developmental predictions from Karmiloff-Smith’s representational redescription framework, but does not specify when metarepresentational consciousness emerges or in what order its three loops come online. RSP specifies the construction order (Level 1 by 6 months, Level 2 by 24 months, Level 3 emerging at 4-5 years, full recursion by 7+) and grounds it in mathematical necessity (cascade control stability, free energy reduction ordering, reward-signal prerequisites).</li>
+<li><strong>Clinical predictions.</strong> SOMA does not map clinical dissociations onto architectural failures. RSP provides a systematic clinical prediction matrix (Appendix G) mapping specific conditions (Cotard’s, depersonalization, Capgras, DID) onto level-specific disruptions with testable neuroimaging signatures.</li>
+<li><strong>Phylogenetic predictions.</strong> SOMA’s learning criterion is species-permissive: any system with sufficient representational redescription capacity could develop consciousness, potentially including cephalopods or even sufficiently plastic artificial systems. RSP’s social-prediction requirement is more restrictive: Level 3b requires recursive social cognition, predicting that solitary species with rich learning (octopuses) lack phenomenal self-awareness despite sophisticated Level 1-2 capacity (§V). This is an empirically adjudicable difference.</li>
+<li><strong>The hard problem.</strong> SOMA does not claim to dissolve or even address the hard problem directly. RSP defends a strong dissolution: phenomenology is constitutive of recursive self-modeling, not a separate property that could be absent from it (§IV).</li>
+</ul>
+<p><strong>What RSP adds</strong>: The constitutive identity claim (phenomenology IS recursive self-modeling, not the brain’s learned knowledge about itself), an interoceptive foundation that makes affect architecturally primary, five mathematical formalisms, developmental timelines grounded in mathematical necessity, a clinical prediction matrix, and a dissolution of the hard problem. SOMA explains how metarepresentation is learned; RSP explains why learning it should feel like anything at all.</p>
+<p><strong>What SOMA adds to RSP</strong>: The emphasis on learning and plasticity as mechanisms through which metarepresentational capacity develops. RSP’s developmental account describes the <em>order</em> of level construction but says less about the <em>learning mechanisms</em> that build each level. SOMA’s representational redescription framework could provide a computational implementation for how RSP’s schemas and self-models are acquired through experience.</p>
+<p><strong>Overall relationship</strong>: <strong>Extends</strong> (with a caveat). RSP incorporates SOMA’s structural insights (multi-loop architecture, social-origin of self-modeling, prediction-driven learning) while replacing its epistemic core with an ontological constitutive identity claim. This is &quot;extends&quot; rather than &quot;complements&quot; because SOMA’s architectural elements are preserved within RSP’s larger framework, even though the philosophical interpretation shifts from &quot;the brain learns to know its states&quot; to &quot;the self-modeling process constitutes experience.&quot; RSP adds the mathematical formalism, interoceptive foundation, developmental specificity, clinical predictions, and hard-problem dissolution that SOMA lacks. SOMA’s core insight (consciousness involves learned metarepresentation) is compatible with RSP but insufficient: it does not specify <em>what</em> is learned, <em>why</em> the learning produces phenomenality rather than mere monitoring, or <em>how</em> to test the theory quantitatively.</p>
 <h3>C. Information Integration Theories</h3>
 <h4>Vs. Integrated Information Theory (IIT)</h4>
 <p><strong>The theory</strong> (Tononi, 2008; Oizumi et al., 2014): Consciousness is identical to integrated information (<img src="https://i.upmath.me/svg/%5CPhi" alt="\Phi" />). Any system with sufficient <img src="https://i.upmath.me/svg/%5CPhi" alt="\Phi" /> is conscious to a degree. Consciousness has both quantity (<img src="https://i.upmath.me/svg/%5CPhi_%7Bmax%7D" alt="\Phi_{max}" />) and quality (the shape of informational relationships in qualia space). IIT derives from five phenomenological axioms (existence, composition, information, integration, exclusion) mapped to five ontological postulates. Key neural correlate: the cortico-thalamic system (high integration), not the cerebellum (high neuron count but low integration).</p>
@@ -1550,6 +1578,14 @@
 <td><strong>Extends</strong>: RSP incorporates AST + adds 4 schemas + recursion + formalism</td>
 </tr>
 <tr>
+<td><strong>SOMA</strong></td>
+<td>Learned metarepresentation via representational redescription</td>
+<td>Via learning</td>
+<td>None</td>
+<td>None</td>
+<td><strong>Extends</strong>: RSP adds formalism + affect + dissolution</td>
+</tr>
+<tr>
 <td><strong>IIT</strong></td>
 <td>Integrated information (<img src="https://i.upmath.me/svg/%5CPhi" alt="\Phi" />)</td>
 <td>Yes (qualia space)</td>
@@ -1651,12 +1687,12 @@
 <ul>
 <li><strong>RSP extends</strong> COI, AST, CSS, and PToC by providing formal mechanisms for their core insights.</li>
 <li><strong>RSP complements</strong> GWT/GNW, ART, CP, RPT, and GT by specifying content, mechanism, or substrate.</li>
-<li><strong>RSP extends</strong> HOT and FOR by adding recursive self-modeling and affect grounding.</li>
+<li><strong>RSP extends</strong> HOT, FOR, and SOMA by adding recursive self-modeling, affect grounding, and mathematical formalization.</li>
 <li><strong>RSP contradicts</strong> IIT (on architecture-neutrality), Orch OR (on quantum necessity), and basic emotions theory (on discrete categories).</li>
 <li><strong>RSP complements</strong> Bennett’s Stack Theory: independent convergence on the same hierarchical, valence-grounded, recursively self-modeling architecture from computational learning theory rather than neuroscience.</li>
 <li><strong>RSP complements</strong> Trukovich’s R2R model: independent convergence on the identity claim (consciousness IS recursive self-modeling grounded in biological affect) from theoretical biology rather than predictive coding.</li>
 </ul>
-<p><img src="https://danielsimonjr.github.io/beyond-the-bat/figures/fig3-theory-comparison.png" alt="Figure 3. Theory Comparison Across Eight Dimensions"></p>
+<p><img src="https://danielsimonjr.github.io/beyond-the-bat/figures/fig3-theory-comparison.png" alt="Figure 3. Theory Comparison Across Eight Dimensions — RSP, IIT, GWT, HOT, and Bennett"></p>
 <h3>L. What RSP Uniquely Provides</h3>
 <p>Across the full range of consciousness theories surveyed in Sattin et al. (2021), RSP is the only framework that simultaneously offers:</p>
 <ol>
@@ -1773,10 +1809,12 @@
 <p>Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. <em>Behavioral and Brain Sciences</em>, <em>36</em>(3), 181-204.</p>
 <p>Clark, A. (2016). <em>Surfing uncertainty: Prediction, action, and the embodied mind</em>. Oxford University Press.</p>
 <p>Craske, M. G., Treanor, M., Conway, C. C., Zbozinek, T., &amp; Vervliet, B. (2014). Maximizing exposure therapy: An inhibitory learning approach. <em>Behaviour Research and Therapy</em>, <em>58</em>, 10-23.</p>
+<p>Cleeremans, A., Achoui, D., Beauny, A., Keuninckx, L., Martin, J.-R., Muñoz-Moldes, S., Vuillaume, L., &amp; de Heering, A. (2020). Learning to be conscious. <em>Trends in Cognitive Sciences</em>, <em>24</em>(2), 112-123.</p>
 <p>Curtiss, S. (1977). <em>Genie: A psycholinguistic study of a modern-day “wild child”</em>. Academic Press.</p>
 <hr>
 <h4>D</h4>
 <p>Damasio, A. R. (1994). <em>Descartes’ error: Emotion, reason, and the human brain</em>. Putnam.</p>
+<p>Descartes, R. (1641/1996). <em>Meditations on first philosophy</em> (J. Cottingham, Trans.). Cambridge University Press.</p>
 <p>Damasio, A. R. (1999). <em>The feeling of what happens: Body and emotion in the making of consciousness</em>. Harcourt Brace.</p>
 <p>DeCasien, A. R., Williams, S. A., &amp; Higham, J. P. (2017). Primate brain size is predicted by diet but not sociality. <em>Nature Ecology &amp; Evolution</em>, <em>1</em>(5), 0112.</p>
 <p>Della Sala, S., Marchetti, C., &amp; Spinnler, H. (1991). Right-sided anarchic (alien) hand: A longitudinal study. <em>Neuropsychologia</em>, <em>29</em>(11), 1113-1127.</p>
@@ -1817,6 +1855,7 @@
 <p>Greenberg, L. S. (2002). <em>Emotion-focused therapy: Coaching clients to work through their feelings</em>. American Psychological Association.</p>
 <hr>
 <h4>H</h4>
+<p>Hampton, R. R. (2001). Rhesus monkeys know when they remember. <em>Proceedings of the National Academy of Sciences</em>, <em>98</em>(9), 5359-5362.</p>
 <p>Hare, B., Call, J., Agnetta, B., &amp; Tomasello, M. (2000). Chimpanzees know what conspecifics do and do not see. <em>Animal Behaviour</em>, <em>59</em>(4), 771-785.</p>
 <p>Hutter, M. (2005). <em>Universal artificial intelligence: Sequential decisions based on algorithmic probability</em>. Springer.</p>
 <p>Husserl, E. (1913/1983). <em>Ideas pertaining to a pure phenomenology and to a phenomenological philosophy, First Book</em> (F. Kersten, Trans.). Kluwer.</p>
